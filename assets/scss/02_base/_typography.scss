@@ -188,6 +188,17 @@
   color: v.$color-gray-300;
 }
 
+.site-footer-cta {
+  a {
+    font-family: v.$font-tatishvili;
+    font-size: 14px;
+    font-weight: 700;
+    color: v.$color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
 .geo {
   .section-title {
     font-family: v.$font-tatishvili;
@@ -257,5 +268,11 @@
 
   .site-footer-copy {
     font-family: v.$font-notosansgeo;
+  }
+
+  .site-footer-cta {
+    a {
+      font-family: v.$font-tatishvili;
+    }
   }
 }

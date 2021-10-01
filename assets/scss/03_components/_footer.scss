@@ -1,0 +1,80 @@
+@use '../02_base/variables' as v;
+
+.site-footer {
+  padding-right: 30px;
+  padding-bottom: 14px;
+  background: v.$color-blue-700;
+  background-image: url(../images/footer-lines.svg);
+  background-repeat: no-repeat;
+  background-position: 60px 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &:first-child {
+      margin-bottom: 50px;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .site-footer-cta {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      height: 42px;
+      padding: 0 12px 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: hsla(0, 79%, 44%, 0.4);
+
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  .footer-texts {
+    padding-top: 56px;
+    flex-grow: 1;
+    padding-left: 60px;
+
+    > div,
+    > nav {
+      margin-bottom: 50px;
+    }
+  }
+
+  .slide-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 50%;
+    flex-basis: 40px;
+    background: v.$color-red-700;
+
+    svg {
+      display: block;
+    }
+  }
+
+  .site-footer-copy {
+    margin-top: 26px;
+    padding-left: 24px;
+  }
+}
+
+.footer-columns {
+  display: flex;
+}
