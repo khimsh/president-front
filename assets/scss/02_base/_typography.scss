@@ -1,0 +1,204 @@
+@use './variables' as v;
+
+.site-navigation {
+  a {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.footer-navigation {
+  a {
+    font-size: 14px;
+    font-weight: 700;
+    color: v.$color-blue-100;
+    text-decoration: none;
+  }
+}
+
+.site-languages {
+  a {
+    font-size: 18px;
+    font-weight: bold;
+    color: v.$color-white;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    opacity: 0.6;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &.geo {
+      font-family: v.$font-notosansgeo;
+    }
+
+    &.eng,
+    &.abkh {
+      font-family: v.$font-notosans;
+    }
+  }
+}
+
+.banner-title {
+  font-size: 26px;
+}
+
+.page-title {
+  font-size: 26px;
+}
+
+.section {
+  &-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: v.$color-blue-900;
+  }
+
+  &-link {
+    font-size: 16px;
+    font-weight: 300;
+    color: v.$color-blue-900;
+  }
+}
+
+.body {
+  font-size: 14px;
+}
+
+.card {
+  &-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: v.$color-blue-900;
+    line-height: 1.1;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &-title-sm {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.address-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: v.$color-white;
+}
+
+.datetime-stamp {
+  font-size: 14px;
+  font-weight: 700;
+  color: v.$color-white;
+}
+
+.priority {
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: v.$color-blue-700;
+  }
+
+  a {
+    font-size: 9px;
+    font-weight: 300;
+    color: v.$color-blue-700;
+  }
+}
+
+.site-footer {
+  address {
+    font-style: normal;
+
+    h3 {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: v.$color-blue-100;
+    }
+
+    :is(li, a) {
+      font-size: 12px;
+      font-weight: 300;
+      color: v.$color-blue-100;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &-text {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+}
+
+.site-footer-copy {
+  font-size: 12px;
+  font-weight: 300;
+  color: v.$color-gray-300;
+}
+
+.geo {
+  .section-title {
+    font-family: v.$font-tatishvili;
+  }
+
+  .section-link {
+    font-family: v.$font-notosansgeo;
+  }
+
+  .card-title {
+    font-family: v.$font-bpgnino;
+  }
+
+  .datetime-stamp {
+    font-family: v.$font-tatishvili;
+  }
+
+  .body {
+    font-family: v.$font-notosansgeo;
+  }
+
+  .address-title {
+    font-family: v.$font-notosansgeo;
+  }
+
+  .priority {
+    h3 {
+      font-family: v.$font-tatishvili;
+    }
+
+    a {
+      font-family: v.$font-notosansgeo;
+    }
+  }
+
+  .site-footer {
+    address h3 {
+      font-family: v.$font-tatishvili;
+    }
+
+    :is(li, a) {
+      font-family: v.$font-notosansgeo;
+    }
+  }
+
+  .footer-navigation {
+    a {
+      font-family: v.$font-tatishvili;
+    }
+  }
+
+  .site-footer-copy {
+    font-family: v.$font-notosansgeo;
+  }
+}
