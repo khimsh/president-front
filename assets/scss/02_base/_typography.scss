@@ -86,6 +86,23 @@
   }
 }
 
+.card-fb {
+  time {
+    font-family: v.$font-notosansgeo;
+    font-size: 12px;
+    font-weight: 500;
+    color: v.$color-blue-900;
+  }
+}
+
+.fb-handle a {
+  font-family: v.$font-notosansgeo;
+  font-size: 7px;
+  font-weight: 500;
+  color: v.$color-blue-900;
+  text-decoration: none;
+}
+
 .address-title {
   font-size: 16px;
   font-weight: 700;
@@ -96,6 +113,28 @@
   font-size: 14px;
   font-weight: 700;
   color: v.$color-white;
+}
+
+.orbeliani-palace {
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: v.$color-white;
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: 300;
+    color: v.$color-white;
+  }
+}
+
+.priorities {
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: v.$color-red-700;
+  }
 }
 
 .priority {
@@ -170,6 +209,22 @@
 
   .address-title {
     font-family: v.$font-notosansgeo;
+  }
+
+  .orbeliani-palace {
+    h2 {
+      font-family: v.$font-tatishvili;
+    }
+
+    a {
+      font-family: v.$font-notosansgeo;
+    }
+  }
+
+  .priorities {
+    h2 {
+      font-family: v.$font-tatishvili;
+    }
   }
 
   .priority {
