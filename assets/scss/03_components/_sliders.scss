@@ -32,3 +32,22 @@
     }
   }
 }
+
+.address-slider {
+  .slick-arrow {
+    position: absolute;
+    bottom: -30px;
+
+    svg {
+      display: block;
+    }
+  }
+
+  .slick-prev {
+    right: 100px;
+  }
+
+  .slick-next {
+    right: 20px;
+  }
+}

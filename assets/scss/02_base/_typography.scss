@@ -18,13 +18,16 @@
 
 .site-languages {
   a {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: v.$color-white;
     text-decoration: none;
     text-transform: capitalize;
-
     opacity: 0.6;
+
+    @media only screen and (min-width: v.$xxs) {
+      font-size: 18px;
+    }
 
     &.active {
       opacity: 1;
