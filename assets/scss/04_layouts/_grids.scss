@@ -1,3 +1,15 @@
+@use '../02_base/variables' as v;
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: v.$lg) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+}
+
 .grid-priorities {
   margin-top: 34px;
   display: grid;

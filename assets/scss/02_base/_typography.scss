@@ -1,5 +1,11 @@
 @use './variables' as v;
 
+:is(p, li) {
+  font-size: 14px;
+  font-weight: 300;
+  color: v.$color-gray-900;
+}
+
 .site-navigation {
   a {
     font-size: 30px;
@@ -203,6 +209,10 @@
 }
 
 .geo {
+  :is(p, li) {
+    font-family: v.$font-notosansgeo;
+  }
+
   .section-title {
     font-family: v.$font-tatishvili;
   }
