@@ -1,11 +1,39 @@
 .banner {
+  position: relative;
   width: 100%;
   height: 320px;
+
+  &-overlay {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background: linear-gradient(
+        to top,
+        #071021,
+        hsla(219, 65%, 8%, 0.6),
+        hsla(219, 65%, 8%, 0)
+      );
+    }
+  }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  .container {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+  }
+
+  h1 {
+    max-width: 26ch;
   }
 }

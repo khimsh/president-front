@@ -1,0 +1,24 @@
+@use '../02_base/variables' as v;
+
+.aside-heading {
+  position: relative;
+  margin-bottom: 32px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    width: 100%;
+    background: v.$color-red-700;
+  }
+}
+
+.aside-title {
+  display: inline-block;
+  padding: 5px 12px;
+  background: v.$color-red-700;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}

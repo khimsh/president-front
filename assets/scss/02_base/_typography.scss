@@ -54,6 +54,14 @@
   font-size: 26px;
 }
 
+.banner {
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: v.$color-white;
+  }
+}
+
 .page-title {
   font-size: 26px;
 }
@@ -80,7 +88,7 @@
 
 .card {
   &-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: v.$color-blue-900;
     line-height: 1.1;
@@ -160,6 +168,12 @@
     font-weight: 300;
     color: v.$color-blue-700;
   }
+}
+
+.aside-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: v.$color-white;
 }
 
 .site-footer {
@@ -261,6 +275,16 @@
     a {
       font-family: v.$font-notosansgeo;
     }
+  }
+
+  .banner {
+    h1 {
+      font-family: v.$font-tatishvili;
+    }
+  }
+
+  .aside-title {
+    font-family: v.$font-tatishvili;
   }
 
   .site-footer {

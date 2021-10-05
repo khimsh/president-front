@@ -1,12 +1,46 @@
 @use '../02_base/variables' as v;
 
-.grid-2 {
+.grid-12 {
   display: grid;
   grid-template-columns: 1fr;
 
   @media only screen and (min-width: v.$lg) {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+  }
+
+  main {
+    grid-column: 1/9;
+  }
+
+  aside {
+    grid-column: 9/13;
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: v.$sm) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 50px;
+  }
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media only screen and (min-width: v.$lg) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 50px;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
