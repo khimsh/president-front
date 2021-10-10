@@ -16,6 +16,7 @@
 @use '03_components/header';
 @use '03_components/inputs';
 @use '03_components/links';
+@use '03_components/medal';
 @use '03_components/navigations';
 @use '03_components/sliders';
 @use '03_components/timestamp';
@@ -24,3 +25,4 @@
 @use '04_layouts/grids';
 
 @use '05_pages/biography';
+@use '05_pages/medals';

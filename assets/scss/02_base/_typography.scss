@@ -6,6 +6,14 @@
   color: v.$color-gray-900;
 }
 
+.btn {
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
 .site-navigation {
   a {
     font-size: 30px;
@@ -196,6 +204,15 @@
   }
 }
 
+.medal {
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: v.$color-gray-900;
+    text-align: center;
+  }
+}
+
 .site-footer {
   address {
     font-style: normal;
@@ -245,6 +262,12 @@
 .geo {
   :is(p, li) {
     font-family: v.$font-notosansgeo;
+  }
+
+  .btn {
+    span {
+      font-family: v.$font-notosansgeo;
+    }
   }
 
   .section-title {
@@ -323,6 +346,12 @@
     }
 
     p {
+      font-family: v.$font-notosansgeo;
+    }
+  }
+
+  .medal {
+    h2 {
       font-family: v.$font-notosansgeo;
     }
   }

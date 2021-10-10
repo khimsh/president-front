@@ -3,3 +3,33 @@ button {
   background: none;
   cursor: pointer;
 }
+
+.btn {
+  padding: 12px 20px;
+  text-decoration: none;
+
+  span {
+    display: block;
+  }
+
+  &-outline {
+    background: transparent;
+    border: 1px solid #fff;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-left: 10px;
+    }
+
+    .icon svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+  }
+}
