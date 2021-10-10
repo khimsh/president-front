@@ -176,6 +176,26 @@
   color: v.$color-white;
 }
 
+.administration-official {
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: v.$color-black;
+
+    a {
+      color: inherit;
+      font-family: inherit;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    color: v.$color-gray-900;
+  }
+}
+
 .site-footer {
   address {
     font-style: normal;
@@ -293,6 +313,16 @@
     }
 
     :is(li, a) {
+      font-family: v.$font-notosansgeo;
+    }
+  }
+
+  .administration-official {
+    h2 {
+      font-family: v.$font-bpgnino;
+    }
+
+    p {
       font-family: v.$font-notosansgeo;
     }
   }
