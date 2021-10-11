@@ -26,6 +26,21 @@ $(document).ready(function () {
     arrows: true,
     prevArrow: previousArrow,
     nextArrow: nextArrow,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  $('.foreign-press-slider').slick({
+    arrows: false,
+    dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
   });

@@ -1,0 +1,99 @@
+@use '../02_base/variables' as v;
+
+.index-block {
+  @media only screen and (min-width: v.$sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 320px auto;
+  }
+}
+
+.orbeliani-palace {
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      to left,
+      hsla(0, 79%, 44%, 0.7),
+      hsla(0, 79%, 44%, 0.7)
+    ),
+    url(../images/palace.jpg);
+  background-repeat: no-repeat;
+
+  @media only screen and (min-width: v.$sm) {
+    height: 100%;
+  }
+}
+
+.president-signature {
+  position: relative;
+  height: 480px;
+
+  @media only screen and (min-width: v.$sm) {
+    height: 100%;
+  }
+
+  .president {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .signature {
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    width: 132px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.foreign-press {
+  background: v.$color-red-700;
+  padding: 48px;
+
+  &-slider {
+    max-width: 400px;
+
+    @media only screen and (min-width: v.$sm) {
+      max-width: 280px;
+    }
+  }
+
+  &-article {
+    figure {
+      position: relative;
+      margin-bottom: 10px;
+
+      @media only screen and (min-width: v.$sm) {
+        height: 186px;
+        overflow: hidden;
+      }
+
+      figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-family: v.$font-tatishvili;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+    h3 {
+      font-family: v.$font-tatishvili;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+}
