@@ -21,6 +21,35 @@
   }
 }
 
+.hero-item {
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: v.$color-white;
+    line-height: 1.2;
+
+    @media only screen and (min-width: v.$sm) {
+      font-size: 30px;
+    }
+
+    @media only screen and (min-width: v.$md) {
+      font-size: 36px;
+    }
+
+    @media only screen and (min-width: v.$lg) {
+      font-size: 38px;
+    }
+
+    @media only screen and (min-width: v.$xl) {
+      font-size: 40px;
+    }
+
+    @media only screen and (min-width: v.$xxl) {
+      font-size: 50px;
+    }
+  }
+}
+
 .footer-navigation {
   a {
     font-size: 14px;
@@ -268,6 +297,12 @@
   .btn {
     span {
       font-family: v.$font-notosansgeo;
+    }
+  }
+
+  .hero-item {
+    h2 {
+      font-family: v.$font-tatishvili;
     }
   }
 
