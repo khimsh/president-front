@@ -6,7 +6,39 @@
 
   @media only screen and (min-width: v.$lg) {
     grid-template-columns: repeat(12, 1fr);
-    column-gap: 20px;
+    column-gap: 24px;
+
+    .span-3 {
+      grid-column: span 3;
+    }
+
+    .span-4 {
+      grid-column: span 4;
+    }
+
+    .span-5 {
+      grid-column: span 5;
+    }
+
+    .span-7 {
+      grid-column: span 7;
+    }
+
+    .span-8 {
+      grid-column: span 8;
+    }
+
+    .span-10 {
+      grid-column: span 10;
+    }
+
+    .span-12 {
+      grid-column: span 12;
+    }
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    column-gap: 40px;
   }
 
   main {

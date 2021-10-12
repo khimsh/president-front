@@ -15,6 +15,7 @@
 @use '03_components/footer';
 @use '03_components/header';
 @use '03_components/inputs';
+@use '03_components/legal-act';
 @use '03_components/links';
 @use '03_components/medal';
 @use '03_components/navigations';
@@ -26,5 +27,7 @@
 @use '04_layouts/section';
 
 @use '05_pages/index';
+@use '05_pages/about-geo';
 @use '05_pages/biography';
 @use '05_pages/medals';
+@use '05_pages/standard';

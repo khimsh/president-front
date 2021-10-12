@@ -4,10 +4,7 @@
   position: absolute;
   bottom: -5px;
   left: 15px;
-  padding: 4px 8px;
-  background: v.$color-red-700;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  width: 100%;
 
   &::before {
     content: '';
@@ -17,5 +14,14 @@
     width: 20px;
     height: 5px;
     background: v.$color-red-700;
+    transition: all 0.2s linear;
   }
+}
+
+.datetime-stamp {
+  display: inline-block;
+  padding: 4px 8px;
+  background: v.$color-red-700;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }

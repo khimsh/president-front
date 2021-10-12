@@ -19,6 +19,10 @@
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
+
+    svg {
+      fill: #acb9bb;
+    }
   }
 
   .site-footer-cta {
@@ -114,12 +118,19 @@
   }
 }
 
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .footer-columns {
   display: flex;
 }
 
 .site-footer-bottom {
   padding-left: 24px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
