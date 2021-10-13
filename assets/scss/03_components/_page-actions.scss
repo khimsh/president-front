@@ -1,0 +1,34 @@
+@use '../02_base/variables' as v;
+
+.page-actions {
+  width: 100%;
+  display: flex;
+
+  .start {
+    justify-self: flex-start;
+  }
+  .end {
+    margin-left: auto;
+  }
+
+  .back-link {
+    height: 48px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: v.$font-notosansgeo;
+    color: v.$color-white;
+    text-decoration: none;
+    background: v.$color-red-700;
+
+    .icon {
+      svg {
+        width: 10px;
+        height: 10px;
+        fill: v.$color-white;
+      }
+    }
+  }
+}

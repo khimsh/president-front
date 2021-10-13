@@ -10,6 +10,10 @@
   padding-bottom: 48px;
   border-bottom: 1px solid #e3e3e3;
 
+  &.ge {
+    font-family: v.$font-notosansgeo;
+  }
+
   &-content {
     flex-grow: 1;
     display: flex;
@@ -31,7 +35,7 @@
 
   &-title {
     margin-top: 5px;
-    font-family: v.$font-notosansgeo;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 700;
     color: v.$color-gray-900;
@@ -41,14 +45,14 @@
     display: block;
     margin-bottom: 8px;
     margin-top: 16px;
-    font-family: v.$font-notosansgeo;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 300;
     color: #666;
   }
 
   p {
-    font-family: v.$font-notosansgeo;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 500;
     color: v.$color-gray-900;
@@ -59,7 +63,7 @@
   &-link {
     margin-top: 4px;
     display: inline-block;
-    font-family: v.$font-notosansgeo;
+    font-family: inherit;
     font-size: 16px;
     font-weight: 300;
     color: v.$color-gray-900;
@@ -77,7 +81,7 @@
     }
 
     span {
-      font-family: v.$font-notosansgeo;
+      font-family: inherit;
       font-size: 14px;
       font-weight: 300;
       color: #666;
@@ -86,6 +90,72 @@
 
     svg {
       display: block;
+    }
+  }
+
+  &-detailed {
+    margin-bottom: 32px;
+
+    &.ge {
+      font-family: v.$font-notosansgeo;
+    }
+
+    &-meta {
+      margin-bottom: 48px;
+
+      time {
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 300;
+        color: v.$color-gray-900;
+      }
+
+      p {
+        font-family: inherit;
+        font-size: 16px;
+        color: v.$color-gray-900;
+      }
+
+      .legal-act-icon {
+        margin: 0;
+        margin-left: 8px;
+        padding-bottom: 5px;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (min-width: v.$sm) {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+
+    &-texts {
+      max-width: 74ch;
+      margin: 0 auto;
+
+      h2 {
+        margin: 8px 0 32px 0;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        color: v.$color-gray-900;
+      }
+
+      p {
+        margin-top: 16px;
+      }
+    }
+
+    &-about {
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 300;
+      color: v.$color-gray-900;
     }
   }
 }
