@@ -197,12 +197,20 @@
     font-size: 16px;
     font-weight: 700;
     color: v.$color-blue-700;
+
+    @media only screen and (min-width: v.$sm) {
+      font-size: 18px;
+    }
   }
 
   a {
     font-size: 9px;
     font-weight: 300;
     color: v.$color-blue-700;
+
+    @media only screen and (min-width: v.$sm) {
+      font-size: 12px;
+    }
   }
 }
 

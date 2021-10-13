@@ -1,0 +1,114 @@
+@use '../02_base/variables' as v;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-height: 100%;
+
+  &-backdrop {
+    width: 100%;
+    height: 100vh;
+    background: hsla(219, 65%, 8%, 0.6);
+  }
+
+  .region-news {
+    &-date {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    &-title {
+      a {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-regions {
+    &-content {
+      height: 100%;
+      padding: 60px;
+      max-width: 520px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #fff;
+      font-family: v.$font-notosansgeo;
+
+      overflow-y: scroll;
+      /* width */
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #e0dfdf;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: rgb(206, 206, 206);
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgb(167, 167, 167);
+      }
+    }
+
+    h3 {
+      margin-bottom: 32px;
+      font-family: v.$font-tatishvili;
+      font-size: 26px;
+      font-weight: 700;
+      color: v.$color-gray-900;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      color: v.$color-blue-700;
+    }
+
+    p {
+      margin-bottom: 32px;
+      font-size: 14px;
+      color: #464749;
+    }
+
+    ul {
+      margin-bottom: 64px;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
+    figure {
+      img {
+        max-width: 460px;
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+      }
+
+      figcaption {
+        margin-top: 8px;
+        font-size: 10px;
+        color: #1a1818;
+      }
+    }
+  }
+}
