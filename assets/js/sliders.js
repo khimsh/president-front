@@ -38,6 +38,22 @@ $(document).ready(function () {
     ],
   });
 
+  $('.associated-media-slider').slick({
+    arrows: true,
+    prevArrow: previousArrow,
+    nextArrow: nextArrow,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   $('.hero-slider').slick({
     arrows: true,
     dots: true,
