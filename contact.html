@@ -39,10 +39,10 @@
             <span class="form-msg"></span>
           </div>
 
-          <div class="form-control">
+          <div class="form-control form-control-error">
             <label for="idnumber">პირადი ნომერი</label>
             <input type="text" name="idnumber" id="idnumber" />
-            <span class="form-msg"></span>
+            <span class="form-msg">გთხოვთ მიუთითოთ პირადი ნომერი</span>
           </div>
 
           <div class="form-control">
@@ -63,22 +63,24 @@
             <span class="form-msg"></span>
           </div>
 
-          <div class="form-control">
+          <div class="form-control span-2">
             <label for="additionalinfo">დამატებითი ინფორმაცია</label>
             <textarea name="additionalinfo" id="additionalinfo"></textarea>
             <span class="form-msg"></span>
           </div>
 
-          <div class="form-control">
+          <div class="form-control span-2">
             <label for="application">განაცხადი</label>
             <input type="file" name="application" id="application" />
-            <span class="form-msg"
+            <span class="form-msg visible"
               >დამატებითი ინფორმაცია განაცხადის დოკუმენტისა და ფაილის
               გაფართოების შესახებ</span
             >
           </div>
 
-          <button type="submit" class="btn btn-red">გაგზავნა</button>
+          <div class="form-control">
+            <button type="submit" class="btn btn-red">გაგზავნა</button>
+          </div>
 
           <p class="form-msg"></p>
         </form>

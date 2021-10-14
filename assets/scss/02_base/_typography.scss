@@ -13,9 +13,26 @@ h2 {
   @include m.font(v.$font-bpgnino, 22px, 700, v.$color-gray-900);
 }
 
+label {
+  @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-gray-900);
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+textarea {
+  @include m.font(v.$font-notosansgeo, 16px, 300, v.$color-gray-900);
+}
+
+.form-msg {
+  @include m.font(v.$font-notosansgeo, 14px, 300, v.$color-gray-900);
+}
+
 .btn {
   &-red,
   &-blue {
+    @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-white);
+
     span {
       @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-white);
     }

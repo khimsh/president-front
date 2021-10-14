@@ -1,3 +1,5 @@
+@use '../02_base/variables' as v;
+
 button {
   border: none;
   background: none;
@@ -10,6 +12,10 @@ button {
 
   span {
     display: block;
+  }
+
+  &-red {
+    background: v.$color-red-700;
   }
 
   &-outline {

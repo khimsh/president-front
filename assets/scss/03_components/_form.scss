@@ -1,0 +1,65 @@
+@use '../02_base/variables' as v;
+
+.form {
+  max-width: 740px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: v.$sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+
+    .span-2 {
+      grid-column: span 2;
+    }
+  }
+
+  &-control {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+
+    &-error {
+      input,
+      textarea {
+        border-color: v.$color-red-700 !important;
+      }
+
+      .form-msg {
+        color: v.$color-red-700 !important;
+        display: block;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input[type='text'],
+  input[type='tel'],
+  input[type='email'] {
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  textarea {
+    height: 96px;
+    padding: 16px;
+  }
+
+  input,
+  textarea {
+    border: 1px solid #cccccc;
+  }
+
+  button[type='submit'] {
+    align-self: start;
+  }
+
+  &-msg {
+    display: none;
+    margin-top: 8px;
+  }
+}
