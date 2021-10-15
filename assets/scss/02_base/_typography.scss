@@ -1,7 +1,7 @@
 @use './variables' as v;
 @use './mixins' as m;
 
-:is(p, li) {
+:is(p, li, blockquote, cite, figcaption, pre) {
   @include m.font(v.$font-notosansgeo, 14px, 300, v.$color-gray-900);
 
   @media only screen and (min-width: v.$lg) {
@@ -41,7 +41,6 @@ textarea {
 
 .site-nav {
   :is(a, button) {
-    display: block;
     @include m.font(v.$font-tatishvili, 18px, 700, v.$color-white);
     text-decoration: none;
   }

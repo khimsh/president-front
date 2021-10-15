@@ -52,6 +52,14 @@
   }
 }
 
+.grid-2 {
+  @media only screen and (min-width: v.$lg) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 56px;
+  }
+}
+
 .grid-3 {
   display: grid;
   grid-template-columns: 1fr;

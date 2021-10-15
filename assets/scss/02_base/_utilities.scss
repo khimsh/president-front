@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 .sr-only {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -5,8 +7,8 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.text-center {
-  text-align: center;
+.mb-sm {
+  margin-bottom: 16px;
 }
 
 .mb-md {
@@ -19,4 +21,17 @@
 
 .text-wrap {
   max-width: 70ch;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.text-accented {
+  color: v.$color-red-700;
 }
