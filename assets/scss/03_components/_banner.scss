@@ -13,10 +13,6 @@
   background-size: cover;
   background-attachment: fixed;
 
-  @media only screen and (min-width: v.$sm) {
-    height: 460px;
-  }
-
   @media only screen and (min-width: v.$lg) {
     height: 420px;
   }
@@ -43,6 +39,6 @@
   }
 
   h1 {
-    max-width: 26ch;
+    max-width: 30ch;
   }
 }

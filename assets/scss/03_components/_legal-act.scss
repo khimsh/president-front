@@ -1,4 +1,54 @@
 @use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
+
+.file {
+  padding: 2em 0;
+  @include m.flex(column, space-between, flex-start);
+  gap: 1em;
+
+  @media only screen and (min-width: v.$sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-list {
+    li {
+      border-bottom: 1px solid #e3e3e3;
+    }
+  }
+
+  &-content {
+    display: flex;
+    gap: 16px;
+  }
+
+  &-icon {
+    flex-basis: 22px;
+    flex-grow: 1;
+    align-self: flex-start;
+    border-bottom: 4px solid v.$color-red-700;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 4px;
+    }
+  }
+
+  &-title {
+    margin-top: 5px;
+  }
+
+  &-action {
+    margin-left: 34px;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+}
 
 .legal-act {
   width: 100%;
@@ -6,71 +56,31 @@
   display: flex;
   flex-direction: row;
 
-  margin-bottom: 48px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid #e3e3e3;
-
-  &.ge {
-    font-family: v.$font-notosansgeo;
-  }
-
-  &-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    @media only screen and (min-width: v.$sm) {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
+  background: blue;
 
   &-icon {
+    width: 22px;
     margin-right: 16px;
     align-self: flex-start;
     border-bottom: 4px solid v.$color-red-700;
-  }
-
-  &-title {
-    margin-top: 5px;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 700;
-    color: v.$color-gray-900;
   }
 
   time {
     display: block;
     margin-bottom: 8px;
     margin-top: 16px;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 300;
-    color: #666;
   }
 
   p {
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 500;
-    color: v.$color-gray-900;
-
     max-width: 82ch;
   }
 
   &-link {
     margin-top: 4px;
     display: inline-block;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 300;
-    color: v.$color-gray-900;
   }
 
   &-download {
-    margin-top: 24px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -78,14 +88,6 @@
 
     @media only screen and (min-width: v.$sm) {
       margin-top: 0;
-    }
-
-    span {
-      font-family: inherit;
-      font-size: 14px;
-      font-weight: 300;
-      color: #666;
-      text-decoration: underline;
     }
 
     svg {
@@ -96,25 +98,8 @@
   &-detailed {
     margin-bottom: 32px;
 
-    &.ge {
-      font-family: v.$font-notosansgeo;
-    }
-
     &-meta {
       margin-bottom: 48px;
-
-      time {
-        font-family: inherit;
-        font-size: 16px;
-        font-weight: 300;
-        color: v.$color-gray-900;
-      }
-
-      p {
-        font-family: inherit;
-        font-size: 16px;
-        color: v.$color-gray-900;
-      }
 
       .legal-act-icon {
         margin: 0;
@@ -140,22 +125,11 @@
 
       h2 {
         margin: 8px 0 32px 0;
-        font-family: inherit;
-        font-size: 16px;
-        font-weight: 500;
-        color: v.$color-gray-900;
       }
 
       p {
         margin-top: 16px;
       }
-    }
-
-    &-about {
-      font-family: inherit;
-      font-size: 16px;
-      font-weight: 300;
-      color: v.$color-gray-900;
     }
   }
 }

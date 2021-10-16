@@ -2,7 +2,7 @@
 @use './mixins' as m;
 
 :is(p, li, blockquote, cite, figcaption, pre) {
-  @include m.font(v.$font-notosansgeo, 14px, 300, v.$color-gray-900);
+  @include m.font(v.$font-notosansgeo, 14px, 400, v.$color-gray-900);
 
   @media only screen and (min-width: v.$lg) {
     font-size: 16px;
@@ -22,6 +22,14 @@ input[type='tel'],
 input[type='email'],
 textarea {
   @include m.font(v.$font-notosansgeo, 16px, 300, v.$color-gray-900);
+}
+
+time {
+  @include m.font(v.$font-notosansgeo, 14px, 300, v.$color-gray-900);
+
+  @media only screen and (min-width: v.$lg) {
+    font-size: 16px;
+  }
 }
 
 .form-msg {
@@ -61,6 +69,14 @@ textarea {
       opacity: 1;
     }
   }
+}
+
+.file-title {
+  @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-gray-900);
+}
+
+.file-link {
+  @include m.font(v.$font-notosansgeo, 14px, 300, #666);
 }
 
 .hero-item {

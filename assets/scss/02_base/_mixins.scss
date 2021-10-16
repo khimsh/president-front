@@ -4,3 +4,18 @@
   font-weight: $font-weight;
   color: $color;
 }
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin pseudo($pos, $display, $width, $height) {
+  content: '';
+  position: $pos;
+  display: $display;
+  width: $width;
+  height: $height;
+}
