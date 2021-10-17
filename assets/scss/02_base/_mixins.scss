@@ -19,3 +19,10 @@
   width: $width;
   height: $height;
 }
+
+@mixin svg($width, $height, $fill) {
+  display: block;
+  width: $width;
+  height: $height;
+  fill: $fill;
+}

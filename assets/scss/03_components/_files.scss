@@ -59,14 +59,11 @@
     .icon {
       width: 32px;
       height: 32px;
-      border: 1px solid #102b4e;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      border: 1px solid v.$color-blue-700;
+      @include m.flex(row, center, center);
+
       svg {
-        width: 10px;
-        height: 10px;
-        fill: #102b4e;
+        @include m.svg(10px, 10px, v.$color-blue-700);
       }
     }
   }
@@ -153,5 +150,29 @@
         margin-top: 16px;
       }
     }
+  }
+}
+
+.links-list {
+  margin-bottom: 4em;
+  li {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.useful-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .icon {
+    display: inline-block;
+    border-bottom: 4px solid v.$color-red-700;
+  }
+
+  svg {
+    @include m.svg(16px, 16px, v.$color-black);
   }
 }

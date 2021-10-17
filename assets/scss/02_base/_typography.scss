@@ -89,6 +89,13 @@ time {
   @include m.font(v.$font-notosansgeo, 14px, 300, v.$color-gray-600);
 }
 
+.useful-link {
+  a {
+    @include m.font(v.$font-notosansgeo, 16px, 300, v.$color-gray-900);
+    text-decoration: none;
+  }
+}
+
 .title-underlined {
   display: inline-block;
   margin: 32px 0 16px 0;

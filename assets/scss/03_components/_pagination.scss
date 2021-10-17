@@ -26,9 +26,7 @@
     }
 
     svg {
-      width: 8px;
-      height: 8px;
-      fill: v.$color-white;
+      @include m.svg(8px, 8px, v.$color-white);
     }
   }
 }
