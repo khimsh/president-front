@@ -8,15 +8,20 @@
 }
 
 .mb-sm {
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 
 .mb-md {
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 
 .mb-lg {
-  margin-bottom: 64px;
+  margin-bottom: 64px !important;
+}
+
+.align-right {
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .text-wrap {
@@ -27,6 +32,10 @@
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .lead {
   font-size: 18px;
   font-weight: 700;
@@ -34,4 +43,11 @@
 
 .text-accented {
   color: v.$color-red-700;
+}
+
+.hide-on-lg {
+  display: none;
+  @media only screen and (min-width: v.$lg) {
+    display: block;
+  }
 }
