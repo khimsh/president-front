@@ -77,6 +77,12 @@ time {
 
 .file-title {
   @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-gray-900);
+
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .file-link {

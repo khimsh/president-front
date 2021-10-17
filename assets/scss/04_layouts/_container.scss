@@ -19,6 +19,25 @@
   }
 }
 
+.container-narrow {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media only screen and (min-width: v.$sm) {
+    padding: 0 54px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    width: 1080px;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    width: 1200px;
+  }
+}
+
 .content-wrapper {
   margin: 64px 0 100px 0;
 }
