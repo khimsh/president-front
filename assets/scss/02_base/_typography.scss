@@ -104,6 +104,14 @@ time {
   line-height: 1;
 }
 
+.image figcaption {
+  @include m.font(v.$font-notosansgeo, 16px, 300, v.$color-gray-900);
+}
+
+.gallery-item-title {
+  @include m.font(v.$font-bpgnino, 18px, 700, v.$color-gray-900);
+}
+
 .hero-item {
   h2 {
     font-size: 26px;

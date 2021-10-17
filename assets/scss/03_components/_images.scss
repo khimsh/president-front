@@ -1,0 +1,99 @@
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
+
+.image {
+  display: flex;
+
+  &-caption {
+    &-bottom {
+      margin: 0 auto;
+      flex-direction: column;
+      max-width: 600px;
+
+      figcaption {
+        margin-top: 40px;
+      }
+    }
+
+    &-left {
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: flex-end;
+
+      figcaption {
+        margin-right: 40px;
+      }
+    }
+
+    &-right {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+
+      figcaption {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  img {
+    max-width: 600px;
+  }
+
+  figcaption {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 70px;
+      height: 1px;
+      background: #666;
+    }
+  }
+}
+
+.gallery-item {
+  width: 100%;
+
+  figure {
+    position: relative;
+    max-height: 348px;
+    overflow: hidden;
+  }
+
+  img,
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-title {
+    margin-top: 0.75em;
+    text-align: center;
+  }
+
+  .imagebtn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+
+    svg {
+      @include m.svg(28px, 28px, v.$color-white);
+    }
+  }
+
+  .videobtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    svg {
+      @include m.svg(110px, 110px, v.$color-white);
+    }
+  }
+}
