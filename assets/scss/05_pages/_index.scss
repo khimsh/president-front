@@ -2,6 +2,8 @@
 
 .hero {
   position: relative;
+
+  // წითელი ხაზი
   &::after {
     content: '';
     position: absolute;
@@ -18,6 +20,7 @@
       transform: translateX(-50%);
     }
   }
+
   &-slider {
     height: 300px;
 
