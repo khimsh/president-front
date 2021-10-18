@@ -472,6 +472,18 @@ time {
   color: #1a1a1a;
 }
 
+.symbols-container figcaption {
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+@media only screen and (min-width: 768px) {
+  .symbols-container figcaption {
+    font-size: 20px;
+  }
+}
+
 .hero-item h2 {
   font-size: 26px;
   font-weight: 700;
@@ -2197,13 +2209,6 @@ button {
   margin: 64px 0 100px 0;
 }
 
-.symbols-container {
-  margin: 140px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
 .constitution {
   display: flex;
 }
@@ -2647,14 +2652,15 @@ button {
   text-decoration: none;
 }
 
+p.lead {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 .about-georgia p {
   line-height: 1.6;
   max-width: 80ch;
   margin: 1.5em auto;
-}
-.about-georgia p.lead {
-  margin-left: 0;
-  margin-right: auto;
 }
 
 .occupied {
@@ -2668,9 +2674,30 @@ button {
 .occupied p:first-child {
   margin-top: 0;
 }
-.occupied p.lead {
-  margin-left: 0;
-  margin-right: auto;
+
+.symbols-container {
+  margin: 6em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+@media only screen and (min-width: 768px) {
+  .symbols-container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .symbols-container {
+    margin: 8em 0;
+  }
+}
+.symbols-container img {
+  height: 190px;
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
 }
 
 .bio h1 {

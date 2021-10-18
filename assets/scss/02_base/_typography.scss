@@ -120,6 +120,14 @@ time {
   @include m.font(v.$font-bpgnino, 18px, 700, v.$color-gray-900);
 }
 
+.symbols-container figcaption {
+  @include m.font(v.$font-bpgnino, 16px, 700, v.$color-gray-900);
+
+  @media only screen and (min-width: v.$sm) {
+    font-size: 20px;
+  }
+}
+
 .hero-item {
   h2 {
     font-size: 26px;
