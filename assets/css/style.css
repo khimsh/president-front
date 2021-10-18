@@ -2657,6 +2657,22 @@ button {
   margin-right: auto;
 }
 
+.occupied {
+  display: flex;
+}
+.occupied p {
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 1.5em auto;
+}
+.occupied p:first-child {
+  margin-top: 0;
+}
+.occupied p.lead {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 .bio h1 {
   font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 26px;
