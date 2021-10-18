@@ -177,6 +177,14 @@
       grid-row: 2/3;
     }
   }
+
+  @media only screen and (min-width: v.$lg) {
+    grid-template-rows: 460px auto;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    grid-template-rows: 560px auto;
+  }
 }
 
 .orbeliani-palace {
@@ -212,9 +220,16 @@
     object-fit: cover;
   }
 
-  .signature {
+  > div {
     position: absolute;
+    padding: 0 1em;
+    width: 100%;
     bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .signature {
     left: 25px;
     width: 132px;
     height: auto;

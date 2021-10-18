@@ -42,4 +42,10 @@ button {
       @include m.svg(10px, 10px, v.$color-white);
     }
   }
+
+  &-group-red {
+    .btn:not(:last-child) {
+      border-right: 2px solid #b42323;
+    }
+  }
 }

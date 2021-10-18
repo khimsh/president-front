@@ -388,6 +388,25 @@ time {
   color: #fff;
 }
 
+.link {
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.link span {
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.link-red {
+  color: #c81717;
+}
+.link-red span {
+  color: #c81717;
+}
+
 .site-nav :is(a, button) {
   font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.125rem;
@@ -826,6 +845,12 @@ time {
   display: flex;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .aside-heading {
   position: relative;
   margin-bottom: 32px;
@@ -1047,6 +1072,9 @@ button {
   width: 10px;
   height: 10px;
   fill: #fff;
+}
+.btn-group-red .btn:not(:last-child) {
+  border-right: 2px solid #b42323;
 }
 
 .card:hover .timestamp::before {
@@ -1979,6 +2007,18 @@ button {
   fill: #fff;
 }
 
+.link-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.link-with-icon svg {
+  display: block;
+  width: 10px;
+  height: 10px;
+  fill: #c81717;
+}
+
 .map-of-georgia {
   display: flex;
   justify-content: center;
@@ -2745,6 +2785,16 @@ button {
     grid-row: 2/3;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .index-block {
+    grid-template-rows: 460px auto;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .index-block {
+    grid-template-rows: 560px auto;
+  }
+}
 
 .orbeliani-palace {
   height: 480px;
@@ -2775,9 +2825,15 @@ button {
   height: 100%;
   object-fit: cover;
 }
-.president-signature .signature {
+.president-signature > div {
   position: absolute;
+  padding: 0 1em;
+  width: 100%;
   bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.president-signature .signature {
   left: 25px;
   width: 132px;
   height: auto;
