@@ -2730,6 +2730,22 @@ button {
   }
 }
 
+.president-authority {
+  margin-bottom: 4em;
+}
+.president-authority ol {
+  list-style-type: numbers;
+}
+.president-authority ol ol {
+  list-style-type: georgian;
+  margin-left: 120px;
+}
+.president-authority ol li {
+  margin: 2em 0;
+  padding-left: 1em;
+  max-width: 110ch;
+}
+
 .standard h2 {
   margin-bottom: 48px;
   font-family: "BPG Nino Mtavruli", sans-serif;
