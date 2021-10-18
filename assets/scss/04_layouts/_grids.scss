@@ -53,8 +53,11 @@
 }
 
 .grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2em;
+
   @media only screen and (min-width: v.$lg) {
-    display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 56px;
   }
@@ -63,6 +66,7 @@
 .grid-3 {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 2em;
 
   @media only screen and (min-width: v.$sm) {
     grid-template-columns: repeat(3, 1fr);
@@ -74,6 +78,7 @@
 .grid-4 {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 2em;
 
   @media only screen and (min-width: v.$lg) {
     grid-template-columns: repeat(3, 1fr);

@@ -1767,7 +1767,7 @@ button {
 }
 .gallery-item figure {
   position: relative;
-  max-height: 348px;
+  height: 260px;
   overflow: hidden;
 }
 .gallery-item img,
@@ -1779,6 +1779,9 @@ button {
 .gallery-item-title {
   margin-top: 0.75em;
   text-align: center;
+}
+.gallery-item .file-link {
+  margin-top: 0.75em;
 }
 .gallery-item .imagebtn {
   position: absolute;
@@ -2248,6 +2251,10 @@ button {
   text-align: center;
 }
 
+.flex {
+  display: flex;
+}
+
 .grid-12 {
   display: grid;
   grid-template-columns: 1fr;
@@ -2293,9 +2300,13 @@ button {
   grid-column: 9/13;
 }
 
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2em;
+}
 @media only screen and (min-width: 1200px) {
   .grid-2 {
-    display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 56px;
   }
@@ -2304,6 +2315,7 @@ button {
 .grid-3 {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 2em;
 }
 @media only screen and (min-width: 768px) {
   .grid-3 {
@@ -2316,6 +2328,7 @@ button {
 .grid-4 {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 2em;
 }
 @media only screen and (min-width: 1200px) {
   .grid-4 {
