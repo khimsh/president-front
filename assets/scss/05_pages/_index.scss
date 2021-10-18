@@ -217,10 +217,10 @@
   padding: 48px;
 
   &-slider {
-    max-width: 400px;
+    max-width: 80vw;
 
     @media only screen and (min-width: v.$sm) {
-      max-width: 280px;
+      max-width: calc(50vw - 150px);
     }
   }
 
@@ -230,8 +230,24 @@
       margin-bottom: 10px;
 
       @media only screen and (min-width: v.$sm) {
-        height: 186px;
+        height: 180px;
         overflow: hidden;
+      }
+
+      @media only screen and (min-width: v.$lg) {
+        height: 240px;
+        overflow: hidden;
+      }
+
+      @media only screen and (min-width: v.$xl) {
+        height: 420px;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       figcaption {

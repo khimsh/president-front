@@ -29,6 +29,10 @@ button {
     border: 1px solid #fff;
   }
 
+  &-inline-flex {
+    display: inline-flex !important;
+  }
+
   &-with-icon {
     display: flex;
     align-items: center;

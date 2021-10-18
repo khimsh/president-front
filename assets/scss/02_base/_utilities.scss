@@ -11,6 +11,10 @@
   margin-bottom: 16px !important;
 }
 
+.mt-sm {
+  margin-top: 16px !important;
+}
+
 .mb-md {
   margin-bottom: 32px !important;
 }
@@ -22,6 +26,11 @@
 .align-right {
   margin-right: 0;
   margin-left: auto;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .text-wrap {

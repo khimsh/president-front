@@ -149,4 +149,18 @@
       grid-column: span 5;
     }
   }
+
+  @media only screen and (min-width: v.$lg) {
+    .card {
+      grid-column: span 4;
+    }
+
+    .card-featured {
+      grid-column: span 7;
+    }
+
+    .fb-cards-slider {
+      grid-column: span 5;
+    }
+  }
 }

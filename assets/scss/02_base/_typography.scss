@@ -42,7 +42,8 @@ time {
 
 .btn {
   &-red,
-  &-blue {
+  &-blue,
+  &-outline {
     @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-white);
 
     span {
