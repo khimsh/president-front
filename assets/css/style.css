@@ -485,34 +485,35 @@ time {
 }
 
 .hero-item h2 {
-  font-size: 26px;
+  font-family: "GL Tatishvili Metal", sans-serif;
+  font-size: 1.625rem;
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
 }
 @media only screen and (min-width: 768px) {
   .hero-item h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .hero-item h2 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .hero-item h2 {
-    font-size: 38px;
+    font-size: 2.375rem;
   }
 }
 @media only screen and (min-width: 1440px) {
   .hero-item h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   .hero-item h2 {
-    font-size: 50px;
+    font-size: 3.125rem;
   }
 }
 
@@ -643,29 +644,29 @@ time {
 }
 
 .priorities h2 {
-  font-size: 26px;
-  font-weight: 700;
   color: #c81717;
 }
 
 .priority h3 {
-  font-size: 16px;
+  font-family: "GL Tatishvili Metal", sans-serif;
+  font-size: 1rem;
   font-weight: 700;
   color: #102b4e;
 }
 @media only screen and (min-width: 768px) {
   .priority h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 .priority a {
-  font-size: 9px;
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 0.625rem;
   font-weight: 300;
   color: #102b4e;
 }
 @media only screen and (min-width: 768px) {
   .priority a {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
