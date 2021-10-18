@@ -75,6 +75,14 @@ time {
   }
 }
 
+.page-title {
+  @include m.font(v.$font-bpgnino, 22px, 700, v.$color-gray-900);
+
+  @media only screen and (min-width: v.$lg) {
+    font-size: 26px;
+  }
+}
+
 .file-title {
   @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-gray-900);
 
