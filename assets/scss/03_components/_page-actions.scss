@@ -1,34 +1,36 @@
 @use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .page-actions {
   width: 100%;
-  display: flex;
+  @include m.flex(row, space-between, center);
 
-  .start {
+  &-left {
     justify-self: flex-start;
   }
-  .end {
+  &-right {
     margin-left: auto;
   }
 
-  .back-link {
-    height: 48px;
-    padding: 0 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    font-family: v.$font-notosansgeo;
-    color: v.$color-white;
-    text-decoration: none;
-    background: v.$color-red-700;
+  button.btn-blue,
+  a.btn-blue {
+    &:not(:last-child) {
+      border-right: 1px solid v.$color-blue-700;
+    }
 
-    .icon {
-      svg {
-        width: 10px;
-        height: 10px;
-        fill: v.$color-white;
-      }
+    &.active {
+      background: v.$color-blue-700;
+    }
+  }
+
+  button.btn-red,
+  a.btn-red {
+    &:not(:last-child) {
+      border-right: 1px solid v.$color-red-500;
+    }
+
+    &.active {
+      background: #d22f28;
     }
   }
 }

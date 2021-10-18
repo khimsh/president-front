@@ -859,6 +859,7 @@ time {
 }
 
 button {
+  display: block;
   border: none;
   background: none;
   cursor: pointer;
@@ -869,26 +870,27 @@ button {
   text-decoration: none;
 }
 .btn span {
-  display: block;
+  display: inline-block;
 }
 .btn-red {
   background: #c81717;
+}
+.btn-blue {
+  background: #1a4680;
 }
 .btn-outline {
   background: transparent;
   border: 1px solid #fff;
 }
-.btn-icon {
+.btn-with-icon {
   display: flex;
   align-items: center;
+  gap: 1em;
 }
-.btn-icon .icon {
-  margin-left: 10px;
-}
-.btn-icon .icon svg {
+.btn-with-icon svg {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   fill: #fff;
 }
 
@@ -1981,29 +1983,31 @@ button {
 .page-actions {
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.page-actions .start {
+.page-actions-left {
   justify-self: flex-start;
 }
-.page-actions .end {
+.page-actions-right {
   margin-left: auto;
 }
-.page-actions .back-link {
-  height: 48px;
-  padding: 0 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  font-family: "Noto Sans Georgian AG", sans-serif;
-  color: #fff;
-  text-decoration: none;
-  background: #c81717;
+.page-actions button.btn-blue:not(:last-child),
+.page-actions a.btn-blue:not(:last-child) {
+  border-right: 1px solid #102b4e;
 }
-.page-actions .back-link .icon svg {
-  width: 10px;
-  height: 10px;
-  fill: #fff;
+.page-actions button.btn-blue.active,
+.page-actions a.btn-blue.active {
+  background: #102b4e;
+}
+.page-actions button.btn-red:not(:last-child),
+.page-actions a.btn-red:not(:last-child) {
+  border-right: 1px solid #d35454;
+}
+.page-actions button.btn-red.active,
+.page-actions a.btn-red.active {
+  background: #d22f28;
 }
 
 .pagination ul {

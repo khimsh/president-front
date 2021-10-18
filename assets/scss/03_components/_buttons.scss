@@ -1,6 +1,8 @@
 @use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 button {
+  display: block;
   border: none;
   background: none;
   cursor: pointer;
@@ -11,11 +13,15 @@ button {
   text-decoration: none;
 
   span {
-    display: block;
+    display: inline-block;
   }
 
   &-red {
     background: v.$color-red-700;
+  }
+
+  &-blue {
+    background: v.$color-blue-500;
   }
 
   &-outline {
@@ -23,19 +29,13 @@ button {
     border: 1px solid #fff;
   }
 
-  &-icon {
+  &-with-icon {
     display: flex;
     align-items: center;
+    gap: 1em;
 
-    .icon {
-      margin-left: 10px;
-    }
-
-    .icon svg {
-      display: block;
-      width: 20px;
-      height: 20px;
-      fill: #fff;
+    svg {
+      @include m.svg(10px, 10px, v.$color-white);
     }
   }
 }
