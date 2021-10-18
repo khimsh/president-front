@@ -1,34 +1,14 @@
 @use '../02_base/variables' as v;
 
 .about-georgia {
-  > * {
-    margin-bottom: 60px;
-  }
-
-  figure {
-    margin-left: 40px;
-
-    figcaption {
-      position: relative;
-      margin-top: 40px;
-      font-family: v.$font-notosansgeo;
-      font-size: 16px;
-      font-weight: 300;
-      color: v.$color-gray-900;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: -10px;
-        left: 0;
-        width: 70px;
-        height: 1px;
-        background: #666666;
-      }
-    }
-  }
-
   p {
     line-height: 1.6;
+    max-width: 80ch;
+    margin: 1.5em auto;
+
+    &.lead {
+      margin-left: 0;
+      margin-right: auto;
+    }
   }
 }

@@ -1722,6 +1722,10 @@ button {
 .image-caption-left figcaption {
   margin-right: 40px;
 }
+.image-caption-left figcaption::before {
+  right: 0 !important;
+  left: auto !important;
+}
 .image-caption-right {
   flex-direction: row;
   justify-content: center;
@@ -2643,31 +2647,14 @@ button {
   text-decoration: none;
 }
 
-.about-georgia > * {
-  margin-bottom: 60px;
-}
-.about-georgia figure {
-  margin-left: 40px;
-}
-.about-georgia figure figcaption {
-  position: relative;
-  margin-top: 40px;
-  font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  color: #1a1a1a;
-}
-.about-georgia figure figcaption::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 70px;
-  height: 1px;
-  background: #666666;
-}
 .about-georgia p {
   line-height: 1.6;
+  max-width: 80ch;
+  margin: 1.5em auto;
+}
+.about-georgia p.lead {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .bio h1 {
