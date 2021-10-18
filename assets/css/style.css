@@ -2539,11 +2539,18 @@ button {
   margin-left: 24px;
 }
 
+.index-block {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 @media only screen and (min-width: 768px) {
   .index-block {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 320px auto;
+  }
+  .index-block .priorities {
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
 }
 
