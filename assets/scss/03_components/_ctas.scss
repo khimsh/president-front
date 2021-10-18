@@ -41,7 +41,16 @@
 
 .article-cta-vertical {
   width: 40px;
-  margin-right: 60px;
+  margin-right: 1em;
+
+  @media only screen and (min-width: v.$sm) {
+    margin-right: 2em;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    margin-right: 4em;
+  }
+
   ul {
     margin: 0;
     padding: 0;

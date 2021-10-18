@@ -309,33 +309,33 @@ p:not(:last-child) {
 
 :is(p, li, blockquote, cite, figcaption, pre) {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #1a1a1a;
 }
 @media only screen and (min-width: 1200px) {
   :is(p, li, blockquote, cite, figcaption, pre) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 h2 {
   font-family: "BPG Nino Mtavruli", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 
 h3 {
   font-family: "BPG Nino Mtavruli", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 
 label {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
 }
@@ -345,14 +345,14 @@ input[type=tel],
 input[type=email],
 textarea {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
 }
 
 time {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #1a1a1a;
 }
@@ -364,27 +364,27 @@ time {
 
 .form-msg {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #1a1a1a;
 }
 
 .btn-red, .btn-blue, .btn-outline {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: #fff;
 }
 .btn-red span, .btn-blue span, .btn-outline span {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: #fff;
 }
 
 .site-nav :is(a, button) {
   font-family: "GL Tatishvili Metal", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
@@ -410,19 +410,19 @@ time {
 
 .page-title {
   font-family: "BPG Nino Mtavruli", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 @media only screen and (min-width: 1200px) {
   .page-title {
-    font-size: 26px;
+    font-size: 1.625rem;
   }
 }
 
 .file-title {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
 }
@@ -434,14 +434,14 @@ time {
 
 .file-link {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #666666;
 }
 
 .useful-link a {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
   text-decoration: none;
@@ -452,7 +452,7 @@ time {
   margin: 32px 0 16px 0;
   border-bottom: 4px solid #c81717;
   font-family: "GL Tatishvili Metal", sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #000;
   line-height: 1;
@@ -460,27 +460,27 @@ time {
 
 .image figcaption {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
 }
 
 .gallery-item-title {
   font-family: "BPG Nino Mtavruli", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 
 .symbols-container figcaption {
   font-family: "BPG Nino Mtavruli", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 @media only screen and (min-width: 768px) {
   .symbols-container figcaption {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -559,82 +559,85 @@ time {
 
 .banner h1 {
   font-family: "GL Tatishvili Metal", sans-serif;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 700;
   color: #fff;
 }
 @media only screen and (min-width: 768px) {
   .banner h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 @media only screen and (min-width: 1920px) {
   .banner h1 {
-    font-size: 50px;
+    font-size: 3.125rem;
   }
 }
 
 .page-title {
-  font-size: 26px;
+  font-size: 1.625rem;
 }
 
 .section-title {
-  font-size: 26px;
-  font-weight: bold;
+  font-family: "GL Tatishvili Metal", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 700;
   color: #071021;
   line-height: 1;
 }
 .section-link {
-  font-size: 16px;
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 1rem;
   font-weight: 300;
   color: #071021;
 }
 
 .card-title {
-  font-size: 18px;
-  font-weight: bold;
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
   color: #071021;
   line-height: 1.3;
-}
-.card-title-sm {
-  font-size: 16px;
-  font-weight: bold;
 }
 
 .card-fb time {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #071021;
 }
 
 .fb-handle a {
   font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 7px;
+  font-size: 0.5rem;
   font-weight: 500;
   color: #071021;
   text-decoration: none;
 }
 
 .address-title {
-  font-size: 16px;
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 1rem;
   font-weight: 700;
   color: #fff;
 }
 
 .datetime-stamp {
-  font-size: 14px;
+  font-family: "GL Tatishvili Metal", sans-serif;
+  font-size: 0.875rem;
   font-weight: 700;
   color: #fff;
 }
 
 .orbeliani-palace h2 {
-  font-size: 32px;
+  font-family: "BPG Nino Mtavruli", sans-serif;
+  font-size: 2rem;
   font-weight: 700;
   color: #fff;
 }
 .orbeliani-palace a {
-  font-size: 14px;
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #fff;
 }
@@ -667,84 +670,29 @@ time {
 }
 
 .aside-title {
-  font-size: 21px;
+  font-family: "GL Tatishvili Metal", sans-serif;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #fff;
 }
 
 .administration-official h2 {
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #000;
 }
 .administration-official h2 a {
   color: inherit;
-  font-family: inherit;
   text-decoration: none;
-}
-.administration-official p {
-  font-size: 14px;
-  font-weight: 300;
-  color: #1a1a1a;
 }
 
 .medal h2 {
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #1a1a1a;
   text-align: center;
-}
-
-.geo .hero-item h2 {
-  font-family: "GL Tatishvili Metal", sans-serif;
-}
-.geo .section-title {
-  font-family: "GL Tatishvili Metal", sans-serif;
-}
-.geo .section-link {
-  font-family: "Noto Sans Georgian AG", sans-serif;
-}
-.geo .card-title {
-  font-family: "BPG Nino Mtavruli", sans-serif;
-}
-.geo .datetime-stamp {
-  font-family: "GL Tatishvili Metal", sans-serif;
-}
-.geo .body {
-  font-family: "Noto Sans Georgian AG", sans-serif;
-}
-.geo .address-title {
-  font-family: "Noto Sans Georgian AG", sans-serif;
-}
-.geo .orbeliani-palace h2 {
-  font-family: "GL Tatishvili Metal", sans-serif;
-}
-.geo .orbeliani-palace a {
-  font-family: "Noto Sans Georgian AG", sans-serif;
-}
-.geo .priorities h2 {
-  font-family: "GL Tatishvili Metal", sans-serif;
-}
-.geo .priority h3 {
-  font-family: "GL Tatishvili Metal", sans-serif;
-}
-.geo .priority a {
-  font-family: "Noto Sans Georgian AG", sans-serif;
-}
-.geo .aside-title {
-  font-family: "GL Tatishvili Metal", sans-serif;
-}
-.geo .administration-official h2 {
-  font-family: "BPG Nino Mtavruli", sans-serif;
-}
-.geo .administration-official p {
-  font-family: "Noto Sans Georgian AG", sans-serif;
-}
-.geo .medal h2 {
-  font-family: "Noto Sans Georgian AG", sans-serif;
-}
-.geo .site-footer-cta a {
-  font-family: "GL Tatishvili Metal", sans-serif;
 }
 
 .sr-only {
@@ -807,6 +755,10 @@ time {
   .hide-on-lg {
     display: block;
   }
+}
+
+.flex {
+  display: flex;
 }
 
 .aside-heading {
@@ -1193,7 +1145,17 @@ button {
 
 .article-cta-vertical {
   width: 40px;
-  margin-right: 60px;
+  margin-right: 1em;
+}
+@media only screen and (min-width: 768px) {
+  .article-cta-vertical {
+    margin-right: 2em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .article-cta-vertical {
+    margin-right: 4em;
+  }
 }
 .article-cta-vertical ul {
   margin: 0;
@@ -1731,40 +1693,46 @@ button {
 
 .image {
   display: flex;
+  flex-direction: column;
 }
 .image-caption-bottom {
   margin: 0 auto;
   flex-direction: column;
   max-width: 600px;
 }
-.image-caption-bottom figcaption {
-  margin-top: 40px;
+@media only screen and (min-width: 576px) {
+  .image-caption-left {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .image-caption-left figcaption {
+    margin-top: 0;
+    margin-right: 40px;
+  }
+  .image-caption-left figcaption::before {
+    right: 0 !important;
+    left: auto !important;
+  }
 }
-.image-caption-left {
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: flex-end;
-}
-.image-caption-left figcaption {
-  margin-right: 40px;
-}
-.image-caption-left figcaption::before {
-  right: 0 !important;
-  left: auto !important;
-}
-.image-caption-right {
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-}
-.image-caption-right figcaption {
-  margin-left: 40px;
+@media only screen and (min-width: 576px) {
+  .image-caption-right {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .image-caption-right figcaption {
+    margin-left: 40px;
+    margin-top: 0;
+  }
 }
 .image img {
   max-width: 600px;
+  width: 100%;
 }
 .image figcaption {
   position: relative;
+  margin-top: 40px;
 }
 .image figcaption::before {
   content: "";
@@ -2118,6 +2086,11 @@ button {
   border: 1px solid #102b4e;
 }
 
+@media only screen and (min-width: 1200px) {
+  .address-slider {
+    width: calc(100% - 20px);
+  }
+}
 .address-slider .slick-slide {
   margin: 0 20px;
 }
@@ -2150,7 +2123,7 @@ button {
 .foreign-press-slider .slick-dots {
   position: absolute;
   right: -50px;
-  top: 50%;
+  top: 40%;
   flex-direction: column;
 }
 .foreign-press-slider button {
@@ -2231,49 +2204,6 @@ button {
 
 .content-wrapper {
   margin: 64px 0 100px 0;
-}
-
-.constitution {
-  display: flex;
-}
-.constitution .image {
-  margin: 3em 0 2em;
-}
-.constitution .image img {
-  width: 512px;
-  height: 462px;
-}
-.constitution p {
-  max-width: 1020px;
-}
-
-.independence {
-  display: flex;
-}
-.independence-act-photos {
-  display: flex;
-  flex-direction: column;
-  gap: 3em;
-}
-@media only screen and (min-width: 768px) {
-  .independence-act-photos {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
-.independence-act-photos figure {
-  flex-basis: 50%;
-}
-.independence-act-photos img {
-  margin: 0 auto;
-}
-.independence-act-photos figcaption {
-  margin-top: 1em;
-  text-align: center;
-}
-
-.flex {
-  display: flex;
 }
 
 .grid-12 {
@@ -2555,7 +2485,7 @@ button {
 .hero-item figcaption {
   position: absolute;
   width: 100%;
-  bottom: 50px;
+  bottom: 70px;
   z-index: 100;
 }
 .hero-item figcaption button {
@@ -2573,8 +2503,8 @@ button {
 .hero-item #muteVideo {
   padding: 0;
   position: absolute;
-  top: 82px;
-  right: 32px;
+  top: 100px;
+  right: 17px;
   z-index: 100;
   border: none;
 }
@@ -2760,6 +2690,51 @@ p.lead {
   width: auto;
   margin: 0 auto;
   margin-bottom: 1.5em;
+}
+
+.constitution {
+  display: flex;
+}
+.constitution .image {
+  margin: 3em 0 2em;
+}
+.constitution .image img {
+  width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 768px) {
+  .constitution .image img {
+    width: 512px;
+    height: 462px;
+  }
+}
+.constitution p {
+  max-width: 1020px;
+}
+
+.independence {
+  display: flex;
+}
+.independence-act-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+@media only screen and (min-width: 768px) {
+  .independence-act-photos {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.independence-act-photos figure {
+  flex-basis: 50%;
+}
+.independence-act-photos img {
+  margin: 0 auto;
+}
+.independence-act-photos figcaption {
+  margin-top: 1em;
+  text-align: center;
 }
 
 .bio h1 {

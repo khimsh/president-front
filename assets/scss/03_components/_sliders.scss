@@ -85,6 +85,10 @@
 }
 
 .address-slider {
+  @media only screen and (min-width: v.$lg) {
+    width: calc(100% - 20px);
+  }
+
   .slick-slide {
     margin: 0 20px;
   }
@@ -122,7 +126,7 @@
   .slick-dots {
     position: absolute;
     right: -50px;
-    top: 50%;
+    top: 40%;
     flex-direction: column;
   }
 
