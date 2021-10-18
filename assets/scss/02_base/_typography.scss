@@ -284,6 +284,22 @@ time {
   }
 }
 
+.foreign-press {
+  h3 {
+    @include m.font(v.$font-tatishvili, 1.125rem, 700, v.$color-white);
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  figcaption {
+    @include m.font(v.$font-tatishvili, 2rem, 700, v.$color-white);
+    line-height: 1;
+  }
+}
+
 .aside-title {
   @include m.font(v.$font-tatishvili, 1.375rem, 700, v.$color-white);
 }

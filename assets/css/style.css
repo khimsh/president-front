@@ -670,6 +670,24 @@ time {
   }
 }
 
+.foreign-press h3 {
+  font-family: "GL Tatishvili Metal", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+}
+.foreign-press h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.foreign-press figcaption {
+  font-family: "GL Tatishvili Metal", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
 .aside-title {
   font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.375rem;
@@ -2635,21 +2653,6 @@ button {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-family: "GL Tatishvili Metal", sans-serif;
-  color: #fff;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1;
-}
-.foreign-press-article h3 {
-  font-family: "GL Tatishvili Metal", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-}
-.foreign-press-article h3 a {
-  color: inherit;
-  text-decoration: none;
 }
 
 p.lead {
