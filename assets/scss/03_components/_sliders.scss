@@ -69,6 +69,13 @@
 }
 
 .fb-cards-slider {
+  max-width: 340px;
+  height: 100%;
+
+  @media only screen and (min-width: v.$xl) {
+    max-width: 476px;
+  }
+
   .slick-dots {
     margin: 0;
     margin-top: 34px;
