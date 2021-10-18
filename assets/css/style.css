@@ -358,7 +358,7 @@ time {
 }
 @media only screen and (min-width: 1200px) {
   time {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -369,16 +369,22 @@ time {
   color: #1a1a1a;
 }
 
-.btn-red, .btn-blue, .btn-outline {
+.btn {
   font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.btn span {
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.btn-red, .btn-blue, .btn-outline {
   color: #fff;
 }
 .btn-red span, .btn-blue span, .btn-outline span {
-  font-family: "Noto Sans Georgian AG", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
   color: #fff;
 }
 
@@ -827,10 +833,11 @@ time {
 .aside-heading::before {
   content: "";
   position: absolute;
+  display: block;
+  width: 100%;
+  height: 6px;
   right: 0;
   bottom: 0;
-  height: 6px;
-  width: 100%;
   background: #c81717;
 }
 
@@ -907,10 +914,11 @@ time {
 .video-banner::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(to top, rgba(7, 16, 34, 0.8), rgba(7, 16, 34, 0.5), rgba(7, 16, 34, 0));
   z-index: 1;
   pointer-events: none;
@@ -946,7 +954,7 @@ time {
 .video-banner figcaption {
   position: absolute;
   width: 100%;
-  bottom: 2.2em;
+  bottom: 4em;
   z-index: 100;
 }
 .video-banner figcaption button {
@@ -1090,7 +1098,6 @@ button {
 }
 
 .card-fb {
-  margin: 0 20px;
   padding: 20px 25px 10px 25px;
   background: #ececec;
   border-radius: 7px;
@@ -1119,7 +1126,7 @@ button {
 .card-address figure {
   position: relative;
   width: 100%;
-  height: 420px;
+  height: 415px;
 }
 .card-address figure::before {
   content: "";
@@ -1522,7 +1529,7 @@ button {
   }
 }
 .legal-act-detailed-texts {
-  max-width: 74ch;
+  max-width: 80ch;
   margin: 0 auto;
 }
 .legal-act-detailed-texts h2 {
@@ -1541,7 +1548,7 @@ button {
 
 .useful-link {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 .useful-link .icon {
@@ -2231,7 +2238,7 @@ button {
 .hero-slider .slick-dots {
   position: absolute;
   top: 50%;
-  right: 24px;
+  right: 45px;
   flex-direction: column;
   z-index: 100;
 }
@@ -2245,10 +2252,13 @@ button {
 .hero-slider .slick-arrow {
   padding: 0;
   position: absolute;
-  bottom: 10px;
+  bottom: 1.5em;
   z-index: 1000;
 }
 .hero-slider .slick-arrow svg {
+  display: block;
+  width: 45px;
+  height: 12.905px;
   fill: #fff;
 }
 .hero-slider .slick-prev {
@@ -2529,10 +2539,10 @@ button {
     grid-column: span 4;
   }
   .news-section-grid .card-featured {
-    grid-column: span 7;
+    grid-column: span 8;
   }
   .news-section-grid .fb-cards-slider {
-    grid-column: span 5;
+    grid-column: span 4;
   }
 }
 

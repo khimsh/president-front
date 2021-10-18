@@ -1,16 +1,14 @@
 @use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .aside-heading {
   position: relative;
   margin-bottom: 32px;
 
   &::before {
-    content: '';
-    position: absolute;
+    @include m.pseudo($width: 100%, $height: 6px);
     right: 0;
     bottom: 0;
-    height: 6px;
-    width: 100%;
     background: v.$color-red-700;
   }
 }

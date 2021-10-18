@@ -12,7 +12,7 @@
   align-items: $align;
 }
 
-@mixin pseudo($pos, $display, $width, $height) {
+@mixin pseudo($pos: absolute, $display: block, $width, $height) {
   content: '';
   position: $pos;
   display: $display;
@@ -25,4 +25,15 @@
   width: $width;
   height: $height;
   fill: $fill;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin image() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

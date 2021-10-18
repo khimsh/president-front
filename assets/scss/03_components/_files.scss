@@ -139,7 +139,7 @@
     }
 
     &-texts {
-      max-width: 74ch;
+      max-width: 80ch;
       margin: 0 auto;
 
       h2 {
@@ -164,7 +164,7 @@
 
 .useful-link {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 
   .icon {
