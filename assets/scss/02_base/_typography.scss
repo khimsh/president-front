@@ -28,6 +28,14 @@ textarea {
   @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
 }
 
+input[type='search'] {
+  @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-white);
+
+  @include m.placeholder {
+    @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-white);
+  }
+}
+
 time {
   @include m.font(v.$font-notosansgeo, 0.875rem, 300, v.$color-gray-900);
 
