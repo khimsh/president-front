@@ -50,7 +50,6 @@
 
   .slick-arrow {
     padding: 0;
-    position: absolute;
     bottom: 1.5em;
     z-index: 1000;
 
@@ -108,24 +107,6 @@
       padding: 0 160px 0 0 !important;
     }
   }
-
-  .slick-arrow {
-    position: absolute;
-    bottom: -30px;
-
-    svg {
-      display: block;
-      fill: v.$color-gray-900;
-    }
-  }
-
-  .slick-prev {
-    right: 60px;
-  }
-
-  .slick-next {
-    right: -10px;
-  }
 }
 
 .foreign-press-slider {
@@ -146,5 +127,57 @@
     button {
       border: 1px solid #e9a2a2;
     }
+  }
+}
+
+.associated-media-slider {
+  .slick-slide {
+    margin: 0 20px;
+  }
+
+  .slick-list {
+    margin: 0 -20px;
+  }
+}
+
+.black-arrows {
+  .slick-arrow {
+    position: absolute;
+    bottom: -30px;
+
+    svg {
+      @include m.svg(45px, 12.905px, v.$color-gray-900);
+    }
+  }
+
+  .slick-prev {
+    right: 60px;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+}
+
+.red-arrows {
+  .slick-arrow {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    @include m.size(30px, 30px);
+    @include m.flex(row, center, center);
+    background: v.$color-red-700;
+
+    svg {
+      @include m.svg(10px, 10px, v.$color-white);
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    left: 32px;
   }
 }

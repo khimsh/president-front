@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="საქართველოს პრეზიდენტი" />
 
-    <title>საქართველოს პრეზიდენტი | მთავარი</title>
+    <title>საქართველოს პრეზიდენტი | უმაღლესი მთავარსარდალი</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -15,9 +15,53 @@
     <script defer src="assets/js/jquery.min.js"></script>
     <script defer src="assets/js/slick.min.js"></script>
     <script defer src="assets/js/sliders.js"></script>
-    <script defer src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
   </head>
   <body>
+    <div class="video-banner">
+      <figure>
+        <video>
+          <source src="assets/video/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <figcaption>
+          <div class="container">
+            <h2>
+              პრეზიდენტის სიტყვა ქუთაისის საერთაშორისო უნივერსიტეტის გახსნის
+              ცერემონიაზე
+            </h2>
+
+            <div class="video-banner-controls">
+              <button id="playpPause">
+                <svg class="play">
+                  <use href="assets/images/icons/play.svg#play" />
+                </svg>
+              </button>
+
+              <div class="video-banner-timeline">
+                <span class="video-banner-currenttime">00:00:00</span>
+                <span>/</span>
+                <span class="video-banner-duration"> 00:45:12</span>
+              </div>
+            </div>
+          </div>
+        </figcaption>
+
+        <button class="video-banner-mute">
+          <svg class="mute">
+            <use href="assets/images/icons/mute.svg#mute" />
+          </svg>
+        </button>
+
+        <button class="video-banner-expand imagebtn">
+          <svg>
+            <use href="assets/images/icons/expand.svg#expand" />
+          </svg>
+        </button>
+      </figure>
+    </div>
+
     <div class="content-wrapper">
       <div class="container grid-2 mb-lg">
         <main>
@@ -142,7 +186,71 @@
           </div>
 
           <div class="gallery-slider">
-            <!-- გალერეის სლაიდერი -->
+            <div class="associated-media-slider red-arrows">
+              <div class="gallery-item">
+                <figure>
+                  <img src="assets/images/kakheti.png" alt="" />
+
+                  <button class="imagebtn">
+                    <svg>
+                      <use href="assets/images/icons/expand.svg#expand" />
+                    </svg>
+                  </button>
+                </figure>
+
+                <h3 class="gallery-item-title">
+                  გალერეის დასათაურება თუკი აქვს
+                </h3>
+              </div>
+
+              <div class="gallery-item">
+                <figure>
+                  <img src="assets/images/kakheti.png" alt="" />
+
+                  <button class="imagebtn">
+                    <svg>
+                      <use href="assets/images/icons/expand.svg#expand" />
+                    </svg>
+                  </button>
+                </figure>
+
+                <h3 class="gallery-item-title">
+                  გალერეის დასათაურება თუკი აქვს
+                </h3>
+              </div>
+
+              <div class="gallery-item">
+                <figure>
+                  <img src="assets/images/kakheti.png" alt="" />
+
+                  <button class="imagebtn">
+                    <svg>
+                      <use href="assets/images/icons/expand.svg#expand" />
+                    </svg>
+                  </button>
+                </figure>
+
+                <h3 class="gallery-item-title">
+                  გალერეის დასათაურება თუკი აქვს
+                </h3>
+              </div>
+
+              <div class="gallery-item">
+                <figure>
+                  <img src="assets/images/kakheti.png" alt="" />
+
+                  <button class="imagebtn">
+                    <svg>
+                      <use href="assets/images/icons/expand.svg#expand" />
+                    </svg>
+                  </button>
+                </figure>
+
+                <h3 class="gallery-item-title">
+                  გალერეის დასათაურება თუკი აქვს
+                </h3>
+              </div>
+            </div>
           </div>
         </section>
       </div>

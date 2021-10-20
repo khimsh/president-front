@@ -69,9 +69,13 @@
   row-gap: 2em;
 
   @media only screen and (min-width: v.$sm) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
     row-gap: 50px;
+  }
+
+  @media only screen and (min-width: v.$md) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
