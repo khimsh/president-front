@@ -80,10 +80,14 @@
   grid-template-columns: 1fr;
   row-gap: 2em;
 
-  @media only screen and (min-width: v.$lg) {
-    grid-template-columns: repeat(3, 1fr);
+  @media only screen and (min-width: v.$sm) {
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
     row-gap: 50px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media only screen and (min-width: v.$xl) {

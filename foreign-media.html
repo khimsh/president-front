@@ -15,12 +15,70 @@
     <script defer src="assets/js/jquery.min.js"></script>
     <script defer src="assets/js/slick.min.js"></script>
     <script defer src="assets/js/sliders.js"></script>
-    <script defer src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
   </head>
   <body>
     <div class="banner">
       <div class="container">
         <h1>უცხოური მედია</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page-actions">
+        <div class="page-actions-left flex">
+          <button href="#" class="btn btn-blue active">
+            <span>გალერეა</span>
+          </button>
+
+          <button href="#" class="btn btn-blue">
+            <span>ფოტო</span>
+          </button>
+
+          <button href="#" class="btn btn-blue">
+            <span>ვიდეო</span>
+          </button>
+        </div>
+
+        <div class="page-actions-right">
+          <form action="#" class="flex">
+            <div class="custom-select">
+              <select name="year" id="year" data-custom>
+                <option value="" disabled selected hidden>წელი</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+              </select>
+            </div>
+
+            <div class="custom-select">
+              <select name="month" id="month" data-custom>
+                <option value="" disabled selected hidden>თვე</option>
+                <option value="იანვარი">იანვარი</option>
+                <option value="თებერვალი">თებერვალი</option>
+                <option value="მარტი">მარტი</option>
+                <option value="აპრილი">აპრილი</option>
+                <option value="მაისი">მაისი</option>
+                <option value="ივნისი">ივნისი</option>
+                <option value="ივლისი">ივლისი</option>
+                <option value="აგვისტო">აგვისტო</option>
+                <option value="სექტემბერი">სექტემბერი</option>
+                <option value="ოქტომბერი">ოქტომბერი</option>
+                <option value="ნოემბერი">ნოემბერი</option>
+                <option value="დეკემბერი">დეკემბერი</option>
+              </select>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 

@@ -376,3 +376,13 @@ time {
     text-align: center;
   }
 }
+
+.dropdown-content li {
+  @include m.font(v.$font-notosansgeo, 0.875rem, 500, v.$color-blue-700);
+
+  &:hover,
+  &:active,
+  &.active {
+    color: v.$color-red-700;
+  }
+}
