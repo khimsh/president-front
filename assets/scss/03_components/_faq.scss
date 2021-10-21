@@ -1,0 +1,51 @@
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
+
+.faq {
+  padding-bottom: 2em;
+
+  &.active {
+    .faq-trigger {
+      padding-bottom: 2em;
+    }
+  }
+
+  &-trigger {
+    display: block;
+    width: 100%;
+    padding: 2em 0;
+    padding-bottom: 0;
+    @include m.flex(row, space-between, center);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &-heading {
+    @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-blue-700);
+  }
+
+  .file-icon {
+    border-bottom: none;
+    margin-right: 1em;
+
+    svg {
+      @include m.svg(26px, 26px, v.$color-blue-700);
+    }
+  }
+
+  .icon {
+    @include m.size(32px, 32px);
+    @include m.flex(row, center, center);
+    border: 1px solid v.$color-blue-700;
+    transition: all 0.2s ease-in-out;
+
+    svg {
+      @include m.svg(10px, 10px, v.$color-blue-700);
+    }
+  }
+}

@@ -114,4 +114,11 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
   });
+
+  $('.publications-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: previousArrowSmall,
+    nextArrow: nextArrowSmall,
+  });
 });

@@ -181,3 +181,17 @@
     left: 32px;
   }
 }
+
+.publications-slider {
+  padding-top: 2em;
+  .slick-arrow {
+    top: 0;
+    bottom: unset;
+    right: 0;
+    left: unset;
+  }
+
+  .slick-prev {
+    right: 32px;
+  }
+}

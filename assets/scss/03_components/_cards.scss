@@ -3,6 +3,12 @@
 
 .card {
   &:hover {
+    figure {
+      &::after {
+        background-color: hsla(0, 0%, 100%, 0.5);
+      }
+    }
+
     .timestamp::before {
       width: calc(100% + 5px);
     }
@@ -31,22 +37,20 @@
 
   figure {
     height: 250px;
+
+    &::after {
+      @include m.pseudo($width: 100%, $height: 100%);
+      top: 0;
+      left: 0;
+      background-color: hsla(0, 0%, 100%, 0);
+      transition: all 0.2s linear;
+      pointer-events: none;
+    }
   }
 
   img,
   video {
     @include m.image();
-  }
-
-  .videobtn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    svg {
-      @include m.svg(110px, 110px, v.$color-white);
-    }
   }
 
   &-texts {
@@ -115,14 +119,14 @@
 }
 
 .publication {
+  padding: 0 1em;
+
   &-cover {
-    margin-bottom: 16px;
-    width: 100%;
-    max-width: 364px;
-    height: 590px;
+    margin-bottom: 1em;
 
     img {
       @include m.image();
+      @include m.size(100%, auto);
     }
   }
 
