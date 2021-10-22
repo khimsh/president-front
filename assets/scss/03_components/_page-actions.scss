@@ -3,13 +3,29 @@
 
 .page-actions {
   width: 100%;
-  @include m.flex(row, space-between, center);
+  @include m.flex(column, flex-start, stretch);
+
+  @media only screen and (min-width: v.$sm) {
+    @include m.flex(row, space-between, center);
+  }
 
   &-left {
-    justify-self: flex-start;
+    @media only screen and (min-width: v.$sm) {
+      justify-self: flex-start;
+    }
   }
   &-right {
-    margin-left: auto;
+    @media only screen and (min-width: v.$sm) {
+      margin-left: auto;
+    }
+  }
+
+  .btn {
+    width: 100%;
+
+    @media only screen and (min-width: v.$sm) {
+      width: auto;
+    }
   }
 
   button.btn-blue,
