@@ -27,6 +27,14 @@ blockquote {
   }
 }
 
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
 .icon-arrow-box {
   @include m.size(32px, 32px);
   @include m.flex(row, center, center);

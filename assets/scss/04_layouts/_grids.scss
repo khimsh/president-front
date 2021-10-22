@@ -157,7 +157,8 @@
       grid-column: span 7;
     }
 
-    .fb-cards-slider {
+    .fb-cards-slider,
+    > div {
       grid-column: span 5;
     }
   }
@@ -171,7 +172,8 @@
       grid-column: span 8;
     }
 
-    .fb-cards-slider {
+    .fb-cards-slider,
+    > div {
       grid-column: span 4;
     }
   }
