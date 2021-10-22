@@ -15,7 +15,7 @@
     <script defer src="assets/js/jquery.min.js"></script>
     <script defer src="assets/js/slick.min.js"></script>
     <script defer src="assets/js/sliders.js"></script>
-    <script defer src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
   </head>
   <body>
     <div class="banner">
@@ -27,73 +27,93 @@
 
     <div class="content-wrapper">
       <div class="container-narrow">
-        <div class="mb-lg">
-          <div class="search-result">
-            <h2>სალომე ზურაბიშვილი</h2>
-            <p>
-              დაიბადა 1952 წლის 18 მარტს პარიზში (საფრანგეთი). იცის ქართული,
-              ფრანგული, ინგლისური (თავისუფლად) და იტალიური (სასაუბრო დონეზე)
-              ენები. 1969 - 1972 პოლიტიკურ მეცნიერებათა ინსტიტუტი, პარიზი,
-              საფრანგეთი. 1972 - 1973 კოლუმბიის უნივერსიტეტი, საერთაშორისო და
-              საზოგადოებრივ საქმეთა სკოლა, ნიუ-იორკი, ამერიკის შეერთებული
-              შტატები…
-            </p>
+        <ul class="file-list mb-lg">
+          <li>
+            <div class="search-result">
+              <h2 class="search-result-title">
+                <a href="#">სალომე ზურაბიშვილი</a>
+              </h2>
+              <p>
+                დაიბადა 1952 წლის 18 მარტს პარიზში (საფრანგეთი). იცის ქართული,
+                ფრანგული, ინგლისური (თავისუფლად) და იტალიური (სასაუბრო დონეზე)
+                ენები. 1969 - 1972 პოლიტიკურ მეცნიერებათა ინსტიტუტი, პარიზი,
+                საფრანგეთი. 1972 - 1973 კოლუმბიის უნივერსიტეტი, საერთაშორისო და
+                საზოგადოებრივ საქმეთა სკოლა, ნიუ-იორკი, ამერიკის შეერთებული
+                შტატები…
+              </p>
 
-            <a href="#">პრეზიდენტი / ბიოგრაფია</a>
-          </div>
+              <a href="#" class="search-result-action"
+                >პრეზიდენტი / ბიოგრაფია</a
+              >
+            </div>
+          </li>
 
-          <div class="search-result">
-            <div class="legal-act">
-              <div class="legal-act-icon">
-                <svg width="18" height="24.968">
-                  <use href="../assets/images/icons/legal-act.svg#legal-act" />
-                </svg>
-              </div>
-
-              <div class="legal-act-content">
-                <div class="legal-act-texts">
-                  <h3 class="legal-act-title">
-                    საქართველოს პრეზიდენტის განკარგულება N13/04/02
-                  </h3>
-                  <time>15 დეკმბერი 2020</time>
-                  <p>
-                    ეკა ბუცხრიკიძის, გვანცა გოგავასი და ანა ნაცარაშვილის
-                    ღირსების მედლით დაჯილდოების შესახებ
-                  </p>
-                </div>
-
-                <button class="legal-act-download">
-                  <span>ჩამოტვირთვა</span>
-                  <span class="icon">
-                    <svg width="11.845" height="11.845">
+          <li>
+            <div class="search-result">
+              <div class="file">
+                <div class="file-content">
+                  <div class="file-icon">
+                    <svg width="18" height="24.968">
                       <use
-                        href="../assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                        href="../assets/images/icons/legal-act.svg#legal-act"
                       />
                     </svg>
-                  </span>
-                </button>
+                  </div>
+
+                  <div class="">
+                    <h3 class="file-title">
+                      <a href="#">
+                        საქართველოს პრეზიდენტის განკარგულება N13/04/02
+                      </a>
+                    </h3>
+                    <time>15 დეკმბერი 2020</time>
+                    <p>
+                      ეკა ბუცხრიკიძის, გვანცა გოგავასი და ანა ნაცარაშვილის
+                      ღირსების მედლით დაჯილდოების შესახებ
+                    </p>
+                  </div>
+                </div>
+
+                <div class="file-action">
+                  <a href="#" class="file-link">
+                    <span>ჩამოტვირთვა</span>
+                    <span>
+                      <svg width="11.845" height="11.845">
+                        <use
+                          href="../assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
               </div>
+
+              <a href="#" class="search-result-action">სამართლებრივი აქტები</a>
             </div>
+          </li>
 
-            <a href="#">სამართლებრივი აქტები</a>
-          </div>
+          <li>
+            <div class="search-result">
+              <h2 class="search-result-title">
+                <a href="#">
+                  საქართველოს პრეზიდენტის სალომე ზურაბიშვილის წარმოთქმული სიტყვა
+                  ინაუგურაციის ცერემონიაზე
+                </a>
+              </h2>
+              <p>
+                მოგესალმებით, ბატონო პრემიერ-მინისტრო, ბატონო პარლამენტის
+                თავმჯდომარევ, მოგესალმებით, უწმინდესო და უნეტარესო, ჩვენი ერის
+                სულიერო წინამძღოლო, მივესალმები პატივცემულ სტუმრებს, მივესალმები
+                მთელ საქართველოს, ჩვენს აფხაზ და ოს ძმებს! მოგესალმებით,
+                საზღვარგარეთ მცხოვრებო თანამემამულეებო, მეტადრე თქვენ…
+              </p>
 
-          <div class="search-result">
-            <h2>
-              საქართველოს პრეზიდენტის სალომე ზურაბიშვილის წარმოთქმული სიტყვა
-              ინაუგურაციის ცერემონიაზე
-            </h2>
-            <p>
-              მოგესალმებით, ბატონო პრემიერ-მინისტრო, ბატონო პარლამენტის
-              თავმჯდომარევ, მოგესალმებით, უწმინდესო და უნეტარესო, ჩვენი ერის
-              სულიერო წინამძღოლო, მივესალმები პატივცემულ სტუმრებს, მივესალმები
-              მთელ საქართველოს, ჩვენს აფხაზ და ოს ძმებს! მოგესალმებით,
-              საზღვარგარეთ მცხოვრებო თანამემამულეებო, მეტადრე თქვენ…
-            </p>
-
-            <a href="#">პრეზიდენტი / ბიოგრაფია</a>
-          </div>
-        </div>
+              <a href="#" class="search-result-action"
+                >პრეზიდენტი / ბიოგრაფია</a
+              >
+            </div>
+          </li>
+        </ul>
 
         <div class="pagination">
           <ul>

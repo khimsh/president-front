@@ -186,3 +186,21 @@
     text-decoration: none;
   }
 }
+
+.search-result {
+  padding: 3em 0;
+
+  .file {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &-title {
+    margin-bottom: 16px;
+  }
+
+  &-action {
+    display: block;
+    text-align: right;
+  }
+}

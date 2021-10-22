@@ -170,6 +170,15 @@ time {
   }
 }
 
+.search-result-title a {
+  @include m.font(v.$font-notosansgeo, 1.25rem, 700, v.$color-gray-900);
+  text-decoration: none;
+}
+
+.search-result-action {
+  @include m.font(v.$font-notosansgeo, 0.875rem, 500, v.$color-blue-700);
+}
+
 .title-underlined {
   display: inline-block;
   margin: 32px 0 16px 0;
