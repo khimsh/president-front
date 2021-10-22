@@ -11,6 +11,19 @@ p {
   }
 }
 
+blockquote {
+  position: relative;
+  max-width: 555px;
+  margin: 4em auto 3em;
+
+  &::before {
+    content: '“';
+    position: absolute;
+    top: -52px;
+    left: -14px;
+  }
+}
+
 .official {
   display: flex;
   flex-direction: column;

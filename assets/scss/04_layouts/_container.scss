@@ -3,7 +3,7 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
 
   @media only screen and (min-width: v.$sm) {
     padding: 0 54px;
@@ -22,7 +22,7 @@
 .container-narrow {
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 15px;
 
   @media only screen and (min-width: v.$sm) {
     padding: 0 54px;

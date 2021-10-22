@@ -27,6 +27,10 @@ button {
   &-outline {
     background: transparent;
     border: 1px solid #fff;
+
+    &-dark {
+      border-color: v.$color-blue-700;
+    }
   }
 
   &-inline-flex {

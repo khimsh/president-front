@@ -1,7 +1,7 @@
 @use './variables' as v;
 @use './mixins' as m;
 
-:is(p, li, blockquote, cite, figcaption, pre) {
+:is(p, li, cite, figcaption, pre) {
   @include m.font(v.$font-notosansgeo, 0.875rem, 300, v.$color-gray-900);
 
   @media only screen and (min-width: v.$lg) {
@@ -9,12 +9,27 @@
   }
 }
 
+.article h1 {
+  @include m.font(v.$font-bpgnino, 1.625rem, 700, v.$color-gray-900);
+}
+
 h2 {
   @include m.font(v.$font-bpgnino, 1.375rem, 700, v.$color-gray-900);
 }
 
-h3 {
+h3,
+h4 {
   @include m.font(v.$font-bpgnino, 1.25rem, 700, v.$color-gray-900);
+}
+
+blockquote {
+  &::before {
+    @include m.font(v.$font-notosansgeo, 5rem, 700, v.$color-red-700);
+  }
+
+  p {
+    @include m.font(v.$font-notosansgeo, 1rem, 700, v.$color-red-700);
+  }
 }
 
 label {
@@ -59,6 +74,10 @@ time {
   &-blue,
   &-outline {
     color: v.$color-white;
+
+    &-dark {
+      color: v.$color-blue-700;
+    }
 
     span {
       color: v.$color-white;
@@ -236,6 +255,10 @@ time {
     @media only screen and (min-width: v.$xxl) {
       font-size: 3.125rem;
     }
+  }
+
+  p {
+    @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-white);
   }
 }
 

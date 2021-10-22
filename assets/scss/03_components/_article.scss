@@ -1,0 +1,50 @@
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
+
+.article {
+  &-heading {
+    margin-bottom: 2em;
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  figure {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  hr {
+    margin: 2em 0;
+    border-top: 1px solid #cccccc;
+  }
+
+  ul {
+    margin-left: 2em;
+    list-style-type: disc;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0.75em;
+      }
+    }
+  }
+
+  &-youtube {
+    margin: 2em 0;
+    display: flex;
+    place-content: center;
+
+    iframe {
+      @include m.size(100%, 220px);
+
+      @media only screen and (min-width: v.$sm) {
+        @include m.size(560px, 315px);
+      }
+    }
+  }
+}

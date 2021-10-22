@@ -3,11 +3,11 @@
 .grid-12 {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 24px;
 
   @media only screen and (min-width: v.$lg) {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 24px;
-    row-gap: 24px;
 
     .span-3 {
       grid-column: span 3;
@@ -19,6 +19,10 @@
 
     .span-5 {
       grid-column: span 5;
+    }
+
+    .span-6 {
+      grid-column: span 6;
     }
 
     .span-7 {

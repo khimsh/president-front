@@ -13,13 +13,15 @@
     }
 
     &-left {
-      @media only screen and (min-width: v.$xs) {
+      @media only screen and (min-width: v.$sm) {
         flex-direction: row-reverse;
         justify-content: center;
         align-items: flex-end;
+
         figcaption {
           margin-top: 0;
           margin-right: 40px;
+          text-align: right;
 
           &::before {
             right: 0 !important;
@@ -30,10 +32,11 @@
     }
 
     &-right {
-      @media only screen and (min-width: v.$xs) {
+      @media only screen and (min-width: v.$sm) {
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
+
         figcaption {
           margin-left: 40px;
           margin-top: 0;
