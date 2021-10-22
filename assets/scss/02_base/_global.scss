@@ -1,3 +1,6 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
 ul,
 ol {
   margin: 0;
@@ -21,6 +24,17 @@ blockquote {
     position: absolute;
     top: -52px;
     left: -14px;
+  }
+}
+
+.icon-arrow-box {
+  @include m.size(32px, 32px);
+  @include m.flex(row, center, center);
+  border: 1px solid v.$color-blue-700;
+  transition: all 0.2s ease-in-out;
+
+  svg {
+    @include m.svg(10px, 10px, v.$color-blue-700);
   }
 }
 
