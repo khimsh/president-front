@@ -47,4 +47,19 @@
       }
     }
   }
+
+  &-footer {
+    position: relative;
+    margin-top: 6em;
+
+    &::before {
+      @include m.pseudo($width: 40px, $height: 2px);
+      top: -2em;
+      left: 50%;
+      transform: translateX(-50%);
+      background: v.$color-blue-700;
+    }
+
+    text-align: center;
+  }
 }

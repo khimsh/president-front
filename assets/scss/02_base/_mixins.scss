@@ -38,6 +38,12 @@
   object-fit: cover;
 }
 
+@mixin center-transform {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // Placeholder
 @mixin optional-at-root($sel) {
   @at-root #{if(not &, $sel, selector-append(&, $sel))} {
