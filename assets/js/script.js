@@ -13,10 +13,59 @@ import Select from './select.js';
 //   });
 // });
 
-// Figure out backdrop height
-// const navBackdrop = document.querySelector('.nav-backdrop');
+// ნავიგაცია
+const navBackdrop = document.querySelector('.nav-backdrop');
+const logoBorder = document.querySelector('.bottom-border');
+const navButtons = document.querySelectorAll('.site-nav-item');
+const navLists = document.querySelectorAll('.site-nav-dropdown-content');
 
-// console.log(navBackdrop.offsetHeight);
+navButtons.forEach((navButton) => {
+  navButton.addEventListener('click', () => {
+    let nextSibling = navButton.nextElementSibling;
+    logoBorder.classList.add('hidden');
+
+    if (nextSibling.classList.contains('active')) {
+      nextSibling.classList.remove('active');
+
+      logoBorder.classList.remove('hidden');
+
+      navBackdrop.style.height = '0px';
+    } else {
+      navLists.forEach((navList) => {
+        navList.classList.remove('active');
+      });
+
+      nextSibling.classList.add('active');
+      navBackdrop.style.height = nextSibling.offsetHeight + 24 + 'px';
+    }
+  });
+});
+
+// ნავიგაციის დახურვა ლინკზე დაკლიკებისას
+navLists.forEach((navList) => {
+  navList.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('active');
+
+      navBackdrop.style.height = '0px';
+
+      logoBorder.classList.remove('hidden');
+    });
+  });
+});
+
+// ნავიგაციის დახურვა გარეთ დაკლიკებისას
+document.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('site-nav-item')) {
+    navLists.forEach((navList) => {
+      navList.classList.remove('active');
+
+      navBackdrop.style.height = '0px';
+
+      logoBorder.classList.remove('hidden');
+    });
+  }
+});
 
 // Custom Select
 const selectElements = document.querySelectorAll('[data-custom]');

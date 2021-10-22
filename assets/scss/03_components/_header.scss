@@ -37,17 +37,22 @@
     margin-top: 8px;
   }
 
-  &::before {
-    content: '';
+  .bottom-border {
     position: absolute;
     bottom: 6px;
-    left: -6px;
+    left: -7px;
     width: 82px;
     height: 22px;
     background: hsla(219, 65%, 8%, 0.4);
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
     z-index: -1;
+
+    visibility: initial;
+
+    &.hidden {
+      visibility: hidden;
+    }
 
     @media only screen and (min-width: v.$sm) {
       bottom: -2px;
@@ -57,7 +62,7 @@
     }
 
     @media only screen and (min-width: v.$lg) {
-      bottom: -16px;
+      bottom: -20px;
       left: -6px;
     }
   }
@@ -111,6 +116,11 @@
 
 .icon-search {
   margin: 0 10px;
+  height: 78px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media only screen and (min-width: v.$xxs) {
     margin: 0 20px;
