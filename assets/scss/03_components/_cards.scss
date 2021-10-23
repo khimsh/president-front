@@ -14,6 +14,12 @@
     }
   }
 
+  &-featured {
+    .card-image {
+      height: 460px !important;
+    }
+  }
+
   &-wrapper-link {
     text-decoration: none;
   }

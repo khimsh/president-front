@@ -10,7 +10,7 @@
   justify-content: flex-end;
   align-items: flex-start;
   background: hsla(219, 65%, 8%, 0.4);
-  z-index: 100;
+  z-index: 100000;
 
   @media only screen and (min-width: v.$sm) {
     height: 64px;
@@ -116,11 +116,19 @@
 
 .icon-search {
   margin: 0 10px;
-  height: 78px;
+  height: 50px;
   width: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: v.$sm) {
+    height: 64px;
+  }
+
+  @media only screen and (min-width: v.$md) {
+    height: 82px;
+  }
 
   @media only screen and (min-width: v.$xxs) {
     margin: 0 20px;

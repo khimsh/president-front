@@ -15,9 +15,265 @@
     <script defer src="assets/js/jquery.min.js"></script>
     <script defer src="assets/js/slick.min.js"></script>
     <script defer src="assets/js/sliders.js"></script>
-    <script defer src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
   </head>
   <body>
+    <header class="site-header">
+      <div class="nav-backdrop"></div>
+      <div class="site-logo">
+        <a href="/">
+          <svg>
+            <use href="../assets/images/icons/logo.svg#logo" />
+          </svg>
+        </a>
+        <span class="bottom-border"></span>
+      </div>
+
+      <nav class="site-nav">
+        <ul class="site-nav-list">
+          <li>
+            <div class="site-nav-dropdown">
+              <button class="site-nav-item">პრეზიდენტი</button>
+
+              <ul class="site-nav-dropdown-content">
+                <li><a href="#">ბიოგრაფია</a></li>
+                <li><a href="#">ინაუგურაცია</a></li>
+                <li><a href="#">უფლებამოსილებები</a></li>
+                <li><a href="#">შტანდარტი</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="site-nav-dropdown">
+              <button class="site-nav-item">საქმიანობა</button>
+
+              <ul class="site-nav-dropdown-content">
+                <li><a href="#">უმაღლესი მთავარსარდალი</a></li>
+                <li><a href="#">საგარეო ურთიერთობები</a></li>
+                <li><a href="#">პრეზიდენტის პრიორიტეტები</a></li>
+                <li><a href="#">შეწყალება</a></li>
+                <li><a href="#">მოქალაქეობის მინიჭება</a></li>
+                <li><a href="#">სახელმწიფო ჯილდოები</a></li>
+                <li><a href="#">მიმართვები</a></li>
+                <li><a href="#">პატრონაჟი და მემორანდუმი</a></li>
+                <li><a href="#">სამუშაო კალენდარი</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="site-nav-dropdown">
+              <button class="site-nav-item">მედია</button>
+
+              <ul class="site-nav-dropdown-content">
+                <li><a href="#">პრესრელიზები</a></li>
+                <li><a href="#">განცხადებები</a></li>
+                <li><a href="#">ინტერვიუები და სტატიები</a></li>
+                <li><a href="#">უცხოური მედია</a></li>
+                <li><a href="#">გალერეა</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="site-nav-dropdown">
+              <button class="site-nav-item">ადმინისტრაცია</button>
+
+              <ul class="site-nav-dropdown-content">
+                <li><a href="#">უფროსი</a></li>
+                <li><a href="#">სტრუქტურა</a></li>
+                <li><a href="#">პრეზიდენტის მრჩეველები</a></li>
+                <li><a href="#">თანამდებობის პირები</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="site-nav-dropdown">
+              <button class="site-nav-item">საქართველო</button>
+
+              <ul class="site-nav-dropdown-content">
+                <li><a href="#">ოკუპირებული ტერიტორიები</a></li>
+                <li><a href="#">დამოუკიდებლობის აქტი</a></li>
+                <li><a href="#">საქართველოს კონსტიტუცია</a></li>
+                <li><a href="#">სახელმწიფო სიმბოლოები</a></li>
+                <li><a href="#">საქართველოს შესახებ</a></li>
+                <li><a href="#">საქართველოს პრეზიდენტები</a></li>
+                <li><a href="#">ფოტოგალერეა</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="site-languages">
+        <li><a href="#" class="geo active">ქარ</a></li>
+        <li><a href="#" class="abkh">Аҧс</a></li>
+        <li><a href="#" class="eng">Eng</a></li>
+      </ul>
+
+      <button class="icon-search" data-open-search>
+        <svg width="22" height="22">
+          <use href="../assets/images/icons/search.svg#search" />
+        </svg>
+      </button>
+
+      <button class="icon-menu" data-open-nav>
+        <svg width="30" height="22">
+          <use href="../assets/images/icons/menu.svg#menu" />
+        </svg>
+      </button>
+    </header>
+
+    <div class="mobile-nav-wrapper">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li>
+            <div class="mobile-nav-dropdown">
+              <button class="mobile-nav-item">
+                პრეზიდენტი
+                <span class="icon">
+                  <svg>
+                    <use
+                      href="../assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                    />
+                  </svg>
+                </span>
+              </button>
+
+              <ul class="mobile-nav-dropdown-content">
+                <li><a href="#">ბიოგრაფია</a></li>
+                <li><a href="#">ინაუგურაცია</a></li>
+                <li><a href="#">უფლებამოსილებები</a></li>
+                <li><a href="#">შტანდარტი</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="mobile-nav-dropdown">
+              <button class="mobile-nav-item">
+                საქმიანობა
+                <span class="icon">
+                  <svg>
+                    <use
+                      href="../assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                    />
+                  </svg>
+                </span>
+              </button>
+
+              <ul class="mobile-nav-dropdown-content">
+                <li><a href="#">უმაღლესი მთავარსარდალი</a></li>
+                <li><a href="#">საგარეო ურთიერთობები</a></li>
+                <li><a href="#">პრეზიდენტის პრიორიტეტები</a></li>
+                <li><a href="#">შეწყალება</a></li>
+                <li><a href="#">მოქალაქეობის მინიჭება</a></li>
+                <li><a href="#">სახელმწიფო ჯილდოები</a></li>
+                <li><a href="#">მიმართვები</a></li>
+                <li><a href="#">პატრონაჟი და მემორანდუმი</a></li>
+                <li><a href="#">სამუშაო კალენდარი</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="mobile-nav-dropdown">
+              <button class="mobile-nav-item">
+                მედია
+                <span class="icon">
+                  <svg>
+                    <use
+                      href="../assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                    />
+                  </svg>
+                </span>
+              </button>
+
+              <ul class="mobile-nav-dropdown-content">
+                <li><a href="#">პრესრელიზები</a></li>
+                <li><a href="#">განცხადებები</a></li>
+                <li><a href="#">ინტერვიუები და სტატიები</a></li>
+                <li><a href="#">უცხოური მედია</a></li>
+                <li><a href="#">გალერეა</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="mobile-nav-dropdown">
+              <button class="mobile-nav-item">
+                ადმინისტრაცია
+                <span class="icon">
+                  <svg>
+                    <use
+                      href="../assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                    />
+                  </svg>
+                </span>
+              </button>
+
+              <ul class="mobile-nav-dropdown-content">
+                <li><a href="#">უფროსი</a></li>
+                <li><a href="#">სტრუქტურა</a></li>
+                <li><a href="#">პრეზიდენტის მრჩეველები</a></li>
+                <li><a href="#">თანამდებობის პირები</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="mobile-nav-dropdown">
+              <button class="mobile-nav-item">
+                საქართველო
+                <span class="icon">
+                  <svg>
+                    <use
+                      href="../assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                    />
+                  </svg>
+                </span>
+              </button>
+
+              <ul class="mobile-nav-dropdown-content">
+                <li><a href="#">ოკუპირებული ტერიტორიები</a></li>
+                <li><a href="#">დამოუკიდებლობის აქტი</a></li>
+                <li><a href="#">საქართველოს კონსტიტუცია</a></li>
+                <li><a href="#">სახელმწიფო სიმბოლოები</a></li>
+                <li><a href="#">საქართველოს შესახებ</a></li>
+                <li><a href="#">საქართველოს პრეზიდენტები</a></li>
+                <li><a href="#">ფოტოგალერეა</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="social-media">
+        <li>
+          <a href="#">
+            <svg width="16.534" height="16.479">
+              <use href="../assets/images/icons/facebook.svg#facebook" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="16.534" height="13.455">
+              <use href="../assets/images/icons/twitter.svg#twitter" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="16.535" height="16.534">
+              <use href="../assets/images/icons/instagram.svg#instagram" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="20.583" height="15.44">
+              <use href="../assets/images/icons/youtube.svg#youtube" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <div class="banner">
       <div class="container">
         <h1>რეგიონები</h1>
@@ -173,8 +429,10 @@
                 />
               </g>
               <g
-                id="Group_946"
-                data-name="Group 946"
+                id="shida-kartli"
+                class="region-btn"
+                data-region
+                data-name="შიდა ქართლი"
                 transform="translate(1061.772 1167.654)"
               >
                 <circle
@@ -207,8 +465,10 @@
                 />
               </g>
               <g
-                id="Group_947"
-                data-name="Group 947"
+                id="imereti"
+                class="region-btn"
+                data-region
+                data-name="იმერეთი"
                 transform="translate(846.544 1167.654)"
               >
                 <circle
@@ -241,8 +501,10 @@
                 />
               </g>
               <g
-                id="Group_948"
-                data-name="Group 948"
+                id="racha_lechkhumi_kvemo-svaneti"
+                class="region-btn"
+                data-region
+                data-name="რაჭა-ლეჩხუმი & ქვემო სვანეთი"
                 transform="translate(898.42 1031.895)"
               >
                 <circle
@@ -275,8 +537,10 @@
                 />
               </g>
               <g
-                id="Group_950"
-                data-name="Group 950"
+                id="guria"
+                class="region-btn"
+                data-region
+                data-name="გურია"
                 transform="translate(692.021 1215.113)"
               >
                 <circle
@@ -309,8 +573,10 @@
                 />
               </g>
               <g
-                id="Group_951"
-                data-name="Group 951"
+                id="adjara"
+                class="region-btn"
+                data-region
+                data-name="აჭარა"
                 transform="translate(692.021 1301.205)"
               >
                 <circle
@@ -343,8 +609,10 @@
                 />
               </g>
               <g
-                id="Group_952"
-                data-name="Group 952"
+                id="samtskhe_javakheti"
+                class="region-btn"
+                data-region
+                data-name="სამცხე-ჯავახეთი"
                 transform="translate(929.449 1332.234)"
               >
                 <circle
@@ -377,8 +645,10 @@
                 />
               </g>
               <g
-                id="Group_953"
-                data-name="Group 953"
+                id="kvemo-kartli"
+                class="region-btn"
+                data-region
+                data-name="ქვემო ქართლი"
                 transform="translate(1123.706 1354.309)"
               >
                 <circle
@@ -411,8 +681,10 @@
                 />
               </g>
               <g
-                id="Group_954"
-                data-name="Group 954"
+                id="mtskheta_mtianeti"
+                class="region-btn"
+                data-region
+                data-name="მცხეთა-მთიანეთი"
                 transform="translate(1220.835 1128.656)"
               >
                 <circle
@@ -445,8 +717,10 @@
                 />
               </g>
               <g
-                id="Group_955"
-                data-name="Group 955"
+                id="kakheti"
+                class="region-btn"
+                data-region
+                data-name="კახეთი"
                 transform="translate(1416.195 1275.453)"
               >
                 <circle
@@ -479,8 +753,10 @@
                 />
               </g>
               <g
-                id="Group_949"
-                data-name="Group 949"
+                id="samegrelo_zemo-svaneti"
+                class="region-btn"
+                data-region
+                data-name="სამეგრელო & ზემო სვანეთი"
                 transform="translate(692.021 1047.41)"
               >
                 <circle

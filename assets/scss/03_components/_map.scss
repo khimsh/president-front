@@ -1,3 +1,5 @@
+@use '../02_base/variables' as v;
+
 .map-of-georgia {
   display: flex;
   justify-content: center;
@@ -5,5 +7,19 @@
   svg {
     width: 600px;
     height: 300px;
+  }
+}
+
+.region-btn {
+  circle {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    circle {
+      fill: v.$color-blue-700;
+    }
   }
 }

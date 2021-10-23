@@ -8,6 +8,10 @@ ol {
   list-style: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 p {
   &:not(:last-child) {
     margin-bottom: 16px;

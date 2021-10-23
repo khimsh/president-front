@@ -18,6 +18,7 @@
     border-radius: 20px;
     color: transparent;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
   }
 
   .slick-active {
@@ -49,6 +50,7 @@
   }
 
   .slick-arrow {
+    position: absolute;
     padding: 0;
     bottom: 1.5em;
     z-index: 1000;
@@ -93,7 +95,7 @@
 
 .address-slider {
   @media only screen and (min-width: v.$lg) {
-    width: calc(100% - 20px);
+    width: calc(100% - 60px);
   }
 
   .slick-slide {
@@ -105,6 +107,24 @@
 
     @media only screen and (min-width: v.$lg) {
       padding: 0 160px 0 0 !important;
+    }
+  }
+
+  .slick-arrow {
+    svg {
+      @include m.svg(45px, 12.905px, v.$color-gray-900);
+    }
+  }
+
+  .slick-prev {
+    @media only screen and (min-width: v.$lg) {
+      right: 6px !important;
+    }
+  }
+
+  .slick-next {
+    @media only screen and (min-width: v.$lg) {
+      right: -72px !important;
     }
   }
 }

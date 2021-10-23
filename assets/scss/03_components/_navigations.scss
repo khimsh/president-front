@@ -1,4 +1,5 @@
 @use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .nav-backdrop {
   position: absolute;
@@ -12,23 +13,10 @@
 
 .site-nav {
   display: none;
-  margin-right: 40px;
-
-  :is(a, button) {
-    display: block;
-  }
-
-  li {
-    white-space: nowrap;
-  }
-
-  button {
-    padding: 0;
-    height: 78px;
-  }
 
   @media only screen and (min-width: v.$lg) {
     display: block;
+    margin-right: 40px;
 
     &-list {
       height: 100%;
@@ -41,17 +29,37 @@
     }
   }
 
+  &.active {
+    display: block;
+  }
+
+  :is(a, button) {
+    display: block;
+  }
+
+  li {
+    white-space: nowrap;
+  }
+
+  button {
+    padding: 0;
+
+    @media only screen and (min-width: v.$lg) {
+      height: 78px;
+    }
+  }
+
   &-dropdown {
     position: relative;
     &-content {
-      position: absolute;
-      top: 82px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start !important;
-      gap: 0.75em;
-
-      display: none;
+      @media only screen and (min-width: v.$lg) {
+        position: absolute;
+        top: 82px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.75em;
+      }
 
       &.active {
         display: flex;
@@ -81,9 +89,97 @@
   }
 
   a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 62px;
+    @include m.flex(row, center, center);
+    height: 50px;
+
+    @media only screen and (min-width: v.$sm) {
+      height: 64px;
+    }
+  }
+}
+
+.mobile-nav-wrapper {
+  display: none;
+  @media only screen and (max-width: v.$lg) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 6em 2em;
+    @include m.flex(row, stretch, flex-start);
+    display: none;
+    background: hsla(219, 65%, 8%, 0.92);
+    background-image: url(../images/footer-lines.svg);
+    background-repeat: no-repeat;
+    background-position: 120% 100%;
+    z-index: 10000;
+
+    &.active {
+      display: flex;
+    }
+
+    .mobile-nav {
+      display: block;
+      width: 100%;
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+      }
+
+      &-item {
+        width: 100%;
+        @include m.flex(row, flex-start, center);
+        gap: 0.75em;
+      }
+
+      &-dropdown {
+        &-content {
+          max-height: 0;
+          overflow: hidden;
+          padding-left: 2em;
+          transition: all 0.2s ease-in;
+
+          &.active {
+          }
+
+          a {
+            display: block;
+            padding: 0.25em 0;
+            transition: all 0.2s ease-in-out;
+
+            &:hover,
+            &:active {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      .icon {
+        display: block;
+        svg {
+          @include m.svg(12px, 12px, v.$color-white);
+        }
+      }
+    }
+
+    .social-media {
+      position: absolute;
+      bottom: 3em;
+      right: 3em;
+      display: flex;
+      gap: 1.25em;
+
+      svg {
+        fill: #acb9bb;
+      }
+    }
+  }
+
+  .icon {
+    display: none;
   }
 }

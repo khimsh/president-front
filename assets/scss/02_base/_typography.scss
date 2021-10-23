@@ -108,6 +108,18 @@ time {
   }
 }
 
+.mobile-nav {
+  button,
+  button span {
+    @include m.font(v.$font-tatishvili, 1.875rem, 700, v.$color-white);
+  }
+
+  a {
+    @include m.font(v.$font-tatishvili, 1.375rem, 700, v.$color-white);
+    text-decoration: none;
+  }
+}
+
 .site-languages {
   a {
     @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-white);

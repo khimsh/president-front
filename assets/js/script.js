@@ -1,18 +1,6 @@
 'use strict';
 import Select from './select.js';
 
-// Dropdown
-// const dropdownButtons = document.querySelectorAll('[data-toggle-target]');
-// const dropdownContents = document.querySelectorAll('[data-dropdown]');
-
-// dropdownButtons.forEach((dropdownButton) => {
-//   dropdownButton.addEventListener('click', () => {
-//     const target = document.querySelector(dropdownButton.dataset.toggleTarget);
-
-//     target.classList.toggle('dropdown-active');
-//   });
-// });
-
 // ნავიგაცია
 const navBackdrop = document.querySelector('.nav-backdrop');
 const logoBorder = document.querySelector('.bottom-border');
@@ -67,6 +55,56 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// მობილური ნავიგაცია
+const toggleNavBtn = document.querySelector('[data-open-nav]');
+const mobileNav = document.querySelector('.mobile-nav-wrapper');
+
+toggleNavBtn.addEventListener('click', () => {
+  mobileNav.classList.toggle('active');
+
+  if (mobileNav.classList.contains('active')) {
+    toggleNavBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="23.334" height="23.335" viewBox="0 0 23.334 23.335">
+      <g id="Group_1596" data-name="Group 1596" transform="translate(-1151.439 -27.439)">
+        <line id="Line_8" data-name="Line 8" x2="30" transform="translate(1152.5 49.713) rotate(-45)" fill="none" stroke="#c81717" stroke-miterlimit="10" stroke-width="3"/>
+        <line id="Line_9" data-name="Line 9" x2="30" transform="translate(1152.5 28.5) rotate(45)" fill="none" stroke="#c81717" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+    </svg>
+    `;
+  } else {
+    toggleNavBtn.innerHTML = `
+   <svg id="menu" xmlns="http://www.w3.org/2000/svg" width="30" height="21.375" viewBox="0 0 30 21.375">
+      <g id="Group_414" data-name="Group 414" transform="translate(227.839 -15.317)">
+        <line id="Line_8" data-name="Line 8" x2="30" transform="translate(-227.839 16.817)" fill="none" stroke="#c81717" stroke-miterlimit="10" stroke-width="3"/>
+        <line id="Line_9" data-name="Line 9" x2="30" transform="translate(-227.839 26.005)" fill="none" stroke="#c81717" stroke-miterlimit="10" stroke-width="3"/>
+        <line id="Line_10" data-name="Line 10" x2="18" transform="translate(-227.839 35.192)" fill="none" stroke="#c81717" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+    </svg>
+   `;
+  }
+});
+
+const mobileNavItems = document.querySelectorAll('.mobile-nav-dropdown');
+
+mobileNavItems.forEach((mobileNavItem) => {
+  mobileNavItem.querySelector('button').addEventListener('click', () => {
+    const mobileNavContent = mobileNavItem.querySelector(
+      '.mobile-nav-dropdown-content'
+    );
+    const arrowIcon = mobileNavItem.querySelector('.icon svg');
+
+    mobileNavContent.classList.toggle('active');
+
+    if (mobileNavContent.classList.contains('active')) {
+      mobileNavContent.style.maxHeight = mobileNavContent.scrollHeight + 'px';
+      arrowIcon.style.transform = 'rotate(180deg)';
+    } else {
+      mobileNavContent.style.maxHeight = 0;
+      arrowIcon.style.transform = 'rotate(0deg)';
+    }
+  });
+});
+
 // Custom Select
 const selectElements = document.querySelectorAll('[data-custom]');
 
@@ -84,8 +122,6 @@ if (document.querySelectorAll('.faq')) {
 
       const faqContent = faq.querySelector('.faq-content');
       const arrowIcon = faq.querySelector('.icon svg');
-
-      console.log(arrowIcon);
 
       if (faq.classList.contains('active')) {
         faqContent.style.maxHeight = faqContent.scrollHeight + 'px';
@@ -114,4 +150,20 @@ tabs.forEach((tab) => {
     tab.classList.add('active');
     target.classList.add('active');
   });
+});
+
+// რეგიონების რუკა
+const regions = document.querySelectorAll('[data-region]');
+const regionModal = document.querySelector('.modal-regions');
+
+regions.forEach((region) => {
+  region.addEventListener('click', () => {
+    regionModal.classList.add('active');
+  });
+});
+
+regionModal.addEventListener('click', (e) => {
+  if (e.target.classList.contains('modal-backdrop')) {
+    regionModal.classList.remove('active');
+  }
 });
