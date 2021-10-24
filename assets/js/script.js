@@ -153,17 +153,24 @@ tabs.forEach((tab) => {
 });
 
 // რეგიონების რუკა
-const regions = document.querySelectorAll('[data-region]');
-const regionModal = document.querySelector('.modal-regions');
+if (document.querySelector('.modal-regions')) {
+  const regions = document.querySelectorAll('[data-region]');
+  const regionModal = document.querySelector('.modal-regions');
+  const closeModalButton = document.querySelector('[data-close-modal]');
 
-regions.forEach((region) => {
-  region.addEventListener('click', () => {
-    regionModal.classList.add('active');
+  regions.forEach((region) => {
+    region.addEventListener('click', () => {
+      regionModal.classList.add('active');
+    });
   });
-});
 
-regionModal.addEventListener('click', (e) => {
-  if (e.target.classList.contains('modal-backdrop')) {
+  regionModal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-backdrop')) {
+      regionModal.classList.remove('active');
+    }
+  });
+
+  closeModalButton.addEventListener('click', () => {
     regionModal.classList.remove('active');
-  }
-});
+  });
+}

@@ -1,4 +1,5 @@
 @use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .modal {
   position: fixed;
@@ -20,6 +21,17 @@
     width: 100%;
     height: 100vh;
     background: hsla(219, 65%, 8%, 0.6);
+  }
+
+  &-close {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    z-index: 100;
+    svg {
+      @include m.svg(18px, 18px, none);
+      stroke: v.$color-gray-900;
+    }
   }
 
   .region-news {
