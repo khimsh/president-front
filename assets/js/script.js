@@ -188,44 +188,58 @@ players.forEach((player) => {
   const toggle = player.querySelector('[data-video-togglePlay]');
   const video = player.querySelector('[data-video]');
   const currentTime = player.querySelector('[data-video-current]');
-  const mute = player.querySelector('[data-video-toggleMute]');
+  const muteBtn = player.querySelector('[data-video-toggleMute]');
 
-  function formatTime(seconds) {
-    let minutes = Math.floor(seconds / 60);
-    minutes = minutes >= 10 ? minutes : '0' + minutes;
-    seconds = Math.floor(seconds % 60);
-    seconds = seconds >= 10 ? seconds : '0' + seconds;
-    return minutes + ':' + seconds;
-  }
+  toggle.addEventListener('click', () => {
+    togglePlay(video);
+  });
 
-  function togglePlay() {
-    const method = video.paused ? 'play' : 'pause';
-    video[method]();
-  }
+  video.addEventListener('click', () => {
+    togglePlay(video);
+  });
+  video.addEventListener('play', () => {
+    updateButton(video, toggle);
+  });
+  video.addEventListener('pause', () => {
+    updateButton(video, toggle);
+  });
+  video.addEventListener('timeupdate', () => {
+    handleProgress(video, currentTime);
+  });
 
-  function updateButton() {
-    const icon = this.paused ? '►' : '❚ ❚';
-    toggle.textContent = icon;
-  }
-
-  function handleProgress() {
-    // const percent = (video.currentTime / video.duration) * 100;
-    // progressBar.style.flexBasis = `${percent}%`;
-    currentTime.textContent = formatTime(video.currentTime);
-  }
-
-  toggle.addEventListener('click', togglePlay);
-
-  video.addEventListener('click', togglePlay);
-  video.addEventListener('play', updateButton);
-  video.addEventListener('pause', updateButton);
-  video.addEventListener('timeupdate', handleProgress);
-
-  mute.addEventListener('click', () => {
-    if (video.muted) {
-      video.muted = false;
-    } else {
-      video.muted = true;
-    }
+  muteBtn.addEventListener('click', () => {
+    mute(video);
   });
 });
+
+function formatTime(seconds) {
+  let minutes = Math.floor(seconds / 60);
+  minutes = minutes >= 10 ? minutes : '0' + minutes;
+  seconds = Math.floor(seconds % 60);
+  seconds = seconds >= 10 ? seconds : '0' + seconds;
+  return minutes + ':' + seconds;
+}
+
+function togglePlay(video) {
+  const method = video.paused ? 'play' : 'pause';
+  video[method]();
+}
+
+function updateButton(video, toggle) {
+  const icon = video.paused ? '►' : '❚ ❚';
+  toggle.textContent = icon;
+}
+
+function handleProgress(video, currentTime) {
+  // const percent = (video.currentTime / video.duration) * 100;
+  // progressBar.style.flexBasis = `${percent}%`;
+  currentTime.textContent = formatTime(video.currentTime);
+}
+
+function mute(video) {
+  if (video.muted) {
+    video.muted = false;
+  } else {
+    video.muted = true;
+  }
+}
