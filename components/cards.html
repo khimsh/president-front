@@ -8,17 +8,21 @@
 
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
-  <body class="geo">
+  <body>
     <div class="content-wrapper">
       <div class="container">
         <h2 class="mb-md">მთავარი ახალი ამბის ქარდი</h2>
         <div class="grid-12 mb-lg">
           <!-- მთავარი ახალი ამბების ქარდი -->
-          <article class="card card-featured span-7">
-            <a href="#" class="card-wrapper-link">
-              <div class="card-meta">
-                <figure class="card-image">
-                  <img src="../assets/images/article-01.png" alt="" />
+          <article class="card card--featured span-7">
+            <a href="#" class="card__wrapper">
+              <div class="card__meta">
+                <figure class="card__figure">
+                  <img
+                    src="../assets/images/article-01.png"
+                    alt=""
+                    class="card__image"
+                  />
                 </figure>
 
                 <div class="timestamp">
@@ -28,12 +32,12 @@
                 </div>
               </div>
 
-              <div class="card-texts">
-                <h3 class="card-title">
+              <div class="card__texts">
+                <h3 class="card__title">
                   პრეზიდენტის ადმინისტრაციამ კონსტიტუციის ქართულ-აფხაზური ვერსია
                   გამოსცა
                 </h3>
-                <p class="card-body">
+                <p class="card__body">
                   საქართველოს პრეზიდენტმა სალომე ზურაბიშვილმა მოსახლეობას
                   აფხაზური ენის დღე მიულოცა და აღნიშნა.
                 </p>
@@ -47,10 +51,14 @@
         <div class="grid-12 mb-lg">
           <!-- ახალი ამბების ქარდი: ფოტო -->
           <article class="card span-4">
-            <a href="#" class="card-wrapper-link">
-              <div class="card-meta">
-                <figure>
-                  <img src="../assets/images/article-01.png" alt="" />
+            <a href="#" class="card__wrapper">
+              <div class="card__meta">
+                <figure class="card__figure">
+                  <img
+                    src="../assets/images/article-01.png"
+                    alt=""
+                    class="card__image"
+                  />
                 </figure>
 
                 <div class="timestamp">
@@ -60,8 +68,8 @@
                 </div>
               </div>
 
-              <div class="card-texts">
-                <h3 class="card-title">
+              <div class="card__texts">
+                <h3 class="card__title">
                   პრეზიდენტის ადმინისტრაციამ კონსტიტუციის ქართულ-აფხაზური ვერსია
                   გამოსცა
                 </h3>
@@ -71,13 +79,13 @@
 
           <!-- ახალი ამბების ქარდი: ვიდეო -->
           <article class="card span-4">
-            <a href="#" class="card-wrapper-link">
-              <div class="card-meta">
-                <figure>
-                  <video>
-                    <source src="../assets/video/video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+            <a href="#" class="card__wrapper">
+              <div class="card__meta">
+                <figure class="card__figure">
+                  <video
+                    class="card__video"
+                    src="../assets/video/video.mp4"
+                  ></video>
 
                   <button class="videobtn">
                     <svg>
@@ -93,8 +101,8 @@
                 </div>
               </div>
 
-              <div class="card-texts">
-                <h3 class="card-title">
+              <div class="card__texts">
+                <h3 class="card__title">
                   პრეზიდენტის ადმინისტრაციამ კონსტიტუციის ქართულ-აფხაზური ვერსია
                   გამოსცა
                 </h3>
@@ -128,11 +136,15 @@
         <h2 class="mb-md">მიმართვების ქარდი</h2>
         <div class="grid-12 mb-lg">
           <!-- მიმართვების ქარდი -->
-          <article class="card card-address span-4">
-            <a href="#">
-              <div class="card-meta">
-                <figure>
-                  <img src="../assets/images/address.jpg" alt="" />
+          <div class="span-4">
+            <article class="address-card">
+              <a href="#" class="address-card__wrapper">
+                <figure class="address-card__figure">
+                  <img
+                    src="../assets/images/address.jpg"
+                    alt=""
+                    class="address-card__image"
+                  />
                 </figure>
 
                 <div class="timestamp">
@@ -140,15 +152,16 @@
                     >16 დეკმბერი 2020</time
                   >
                 </div>
-              </div>
 
-              <h3 class="address-title">
-                საქართველოს პრეზიდენტის სიტყვა საქართველოს კათოლიკოს-პატრიარქის
-                უწმიდესი და უნეტარესი ილია II-სათვის, საპატიო დოქტორის (honoris
-                causa) ხარისხის მინიჭების ცერემონიალზე
-              </h3>
-            </a>
-          </article>
+                <h3 class="address-card__title">
+                  საქართველოს პრეზიდენტის სიტყვა საქართველოს
+                  კათოლიკოს-პატრიარქის უწმიდესი და უნეტარესი ილია II-სათვის,
+                  საპატიო დოქტორის (honoris causa) ხარისხის მინიჭების
+                  ცერემონიალზე
+                </h3>
+              </a>
+            </article>
+          </div>
         </div>
 
         <h2 class="mb-md">პუბლიკაციების ქარდი</h2>

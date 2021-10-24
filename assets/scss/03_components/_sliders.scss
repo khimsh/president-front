@@ -99,11 +99,17 @@
   }
 
   .slick-slide {
-    margin: 0 20px;
+    margin: 0 10px;
+    @media only screen and (min-width: v.$md) {
+      margin: 0 20px;
+    }
   }
 
   .slick-list {
-    margin: 0 -20px;
+    margin: 0 -10px;
+    @media only screen and (min-width: v.$md) {
+      margin: 0 -20px;
+    }
 
     @media only screen and (min-width: v.$lg) {
       padding: 0 160px 0 0 !important;
