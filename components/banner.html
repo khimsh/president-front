@@ -4,14 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ქარდები</title>
+    <title>ბანერები</title>
 
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
-    <div class="banner">
+    <!--  ბანერი: default
+          ბექგრაუნდ სურათის შეცვლა: background-image 
+    -->
+    <div class="banner" role="banner">
       <div class="container">
-        <h1>პრეზიდენტის მრჩევლები</h1>
+        <h1 class="banner__title">პრეზიდენტის მრჩევლები</h1>
+      </div>
+    </div>
+
+    <!-- ბანერი: ძიების გვერდებზე -->
+    <div class="banner" role="banner">
+      <div class="container">
+        <h1 class="banner__title">ძიების შედეგები</h1>
+        <!-- ემატება მხოლოდ p -->
+        <p class="banner__subtitle">
+          საძიებო სიტყვა: <strong>“სალომე ზურაბიშვილი”</strong>
+        </p>
+      </div>
+    </div>
+
+    <!--  ბანერი: გვერდებზე სადაც მთავარი სათაური მითითებულია
+          ბანერის გარეთ
+    -->
+    <div class="banner" role="banner">
+      <div class="container">
+        <p class="banner__title">სტატიის სტილები</p>
       </div>
     </div>
   </body>

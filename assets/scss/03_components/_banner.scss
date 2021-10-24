@@ -22,7 +22,7 @@
     height: 560px;
   }
 
-  &-overlay {
+  &--overlay {
     &::before {
       content: '';
       position: absolute;
@@ -39,7 +39,7 @@
     }
   }
 
-  h1 {
+  &__title {
     max-width: 30ch;
   }
 }
