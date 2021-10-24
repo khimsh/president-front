@@ -246,42 +246,53 @@ time {
   }
 }
 
-.footer-navigation {
-  a {
-    @include m.font(v.$font-tatishvili, 14px, 700, v.$color-blue-100);
-    text-decoration: none;
-  }
-}
-
 .site-footer {
   address {
     font-style: normal;
 
     h3 {
-      @include m.font(v.$font-tatishvili, 14px, 700, v.$color-blue-100);
+      @include m.font(v.$font-tatishvili, 0.875rem, 700, v.$color-blue-100);
       text-transform: uppercase;
     }
 
     :is(li, a) {
-      @include m.font(v.$font-notosansgeo, 12px, 300, v.$color-blue-100);
+      @include m.font(v.$font-notosansgeo, 0.75rem, 300, v.$color-blue-100);
       text-decoration: none;
+    }
+
+    a {
+      transition: all 0.2s ease-in-out;
+
+      &:hover,
+      &:active {
+        color: v.$color-red-700;
+      }
     }
   }
 
-  &-copy {
-    @include m.font(v.$font-notosansgeo, 12px, 300, v.$color-gray-300);
-  }
-}
+  &__navigation {
+    a {
+      @include m.font(v.$font-tatishvili, 0.875rem, 700, v.$color-blue-100);
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
 
-// TODO: ეს ცალკეა გასატანი
-.site-footer-cta {
-  a {
-    font-family: v.$font-tatishvili;
-    font-size: 14px;
-    font-weight: 700;
-    color: v.$color-white;
-    text-decoration: none;
-    text-transform: uppercase;
+      &:hover,
+      &:active {
+        color: v.$color-red-700;
+      }
+    }
+  }
+
+  &__copy {
+    @include m.font(v.$font-notosansgeo, 0.75rem, 300, v.$color-gray-300);
+  }
+
+  &__cta {
+    a {
+      @include m.font(v.$font-tatishvili, 0.875rem, 700, v.$color-white);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
   }
 }
 

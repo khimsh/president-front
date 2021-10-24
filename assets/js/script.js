@@ -174,3 +174,9 @@ if (document.querySelector('.modal-regions')) {
     regionModal.classList.remove('active');
   });
 }
+
+// scroll to top
+const scrollToTopButton = document.querySelector('[data-scroll-top]');
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
