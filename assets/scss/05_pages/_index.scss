@@ -22,11 +22,8 @@
   }
 
   &-slider {
-    height: 300px;
+    height: 420px;
 
-    @media only screen and (min-width: v.$sm) {
-      height: 400px;
-    }
     @media only screen and (min-width: v.$md) {
       height: 516px;
     }
@@ -37,129 +34,6 @@
     @media only screen and (min-width: v.$xxl) {
       height: 100vh;
       max-height: 1000px;
-    }
-  }
-
-  &-item {
-    position: relative;
-    height: 300px;
-
-    @media only screen and (min-width: v.$sm) {
-      height: 400px;
-    }
-    @media only screen and (min-width: v.$md) {
-      height: 516px;
-    }
-    @media only screen and (min-width: v.$lg) {
-      height: 100vh;
-      max-height: 710px;
-    }
-    @media only screen and (min-width: v.$xxl) {
-      height: 100vh;
-      max-height: 1000px;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        to top,
-        hsl(219, 65%, 8%, 80%),
-        hsl(219, 65%, 8%, 50%),
-        hsl(219, 65%, 8%, 0%)
-      );
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    video {
-      display: block;
-      width: 100%;
-      height: 300px;
-      object-fit: fill;
-
-      @media only screen and (min-width: v.$sm) {
-        height: 400px;
-      }
-      @media only screen and (min-width: v.$md) {
-        height: 516px;
-      }
-      @media only screen and (min-width: v.$lg) {
-        height: 100vh;
-        max-height: 710px;
-      }
-      @media only screen and (min-width: v.$xxl) {
-        height: 100vh;
-        max-height: 1000px;
-      }
-    }
-
-    figcaption {
-      position: absolute;
-      width: 100%;
-      bottom: 70px;
-      z-index: 100;
-
-      button {
-        border: none;
-        padding: 0;
-      }
-
-      svg {
-        width: 19px;
-        height: 20px;
-        display: block;
-      }
-    }
-
-    h2 {
-      max-width: 30ch;
-    }
-
-    #muteVideo {
-      padding: 0;
-      position: absolute;
-      top: 100px;
-      right: 17px;
-      z-index: 100;
-      border: none;
-    }
-
-    .mute {
-      display: none;
-
-      @media only screen and (min-width: v.$lg) {
-        display: block;
-        width: 29.41px;
-        height: 29.412px;
-      }
-    }
-  }
-
-  .video {
-    &-controls {
-      display: none;
-
-      @media only screen and (min-width: v.$lg) {
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-      }
-
-      span {
-        font-family: v.$font-notosansgeo;
-        font-size: 12px;
-        font-weight: 500;
-        color: v.$color-white;
-      }
-    }
-
-    &-timeline {
-      margin-left: 24px;
     }
   }
 }

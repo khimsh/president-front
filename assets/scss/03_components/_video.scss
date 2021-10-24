@@ -1,0 +1,125 @@
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
+
+.video-banner {
+  position: relative;
+  height: 420px;
+
+  @media only screen and (min-width: v.$md) {
+    height: 516px;
+  }
+  @media only screen and (min-width: v.$lg) {
+    height: 100vh;
+    max-height: 710px;
+  }
+  @media only screen and (min-width: v.$xxl) {
+    max-height: 1000px;
+  }
+
+  &::before {
+    @include m.pseudo($width: 100%, $height: 100%);
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      to top,
+      hsl(219, 65%, 8%, 80%),
+      hsl(219, 65%, 8%, 50%),
+      hsl(219, 65%, 8%, 0%)
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  video {
+    display: block;
+    @include m.image();
+
+    @media only screen and (min-width: v.$md) {
+      height: 516px;
+    }
+    @media only screen and (min-width: v.$lg) {
+      height: 100vh;
+      max-height: 710px;
+    }
+    @media only screen and (min-width: v.$xxl) {
+      max-height: 1000px;
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    width: 100%;
+    bottom: 4em;
+    z-index: 100;
+
+    button {
+      border: none;
+      padding: 0;
+    }
+
+    svg {
+      @include m.svg(19px, 20px, v.$color-white);
+    }
+  }
+
+  &__toggle {
+    color: v.$color-white;
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    max-width: 30ch;
+  }
+
+  &-controls {
+    display: none;
+
+    margin-top: 20px;
+    @include m.flex(row, flex-start, center);
+    gap: 1.5em;
+    @media only screen and (min-width: v.$lg) {
+    }
+  }
+
+  &-expand {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    cursor: pointer;
+    z-index: 100;
+
+    svg {
+      @include m.svg(28px, 28px, v.$color-white);
+    }
+  }
+
+  &__mute {
+    position: absolute;
+    top: 72px;
+    right: 4px;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    @media only screen and (min-width: v.$sm) {
+      right: 10px;
+      top: 82px;
+    }
+
+    @media only screen and (min-width: v.$lg) {
+      right: 22px;
+      top: 100px;
+    }
+
+    svg {
+      @include m.svg(24px, 24px, v.$color-white);
+      opacity: 0.7;
+      transition: opacity 0.2s ease-in-out;
+    }
+  }
+}

@@ -180,3 +180,52 @@ const scrollToTopButton = document.querySelector('[data-scroll-top]');
 scrollToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Custom Video players
+const players = document.querySelectorAll('.video-banner');
+
+players.forEach((player) => {
+  const toggle = player.querySelector('[data-video-togglePlay]');
+  const video = player.querySelector('[data-video]');
+  const currentTime = player.querySelector('[data-video-current]');
+  const mute = player.querySelector('[data-video-toggleMute]');
+
+  function formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    minutes = minutes >= 10 ? minutes : '0' + minutes;
+    seconds = Math.floor(seconds % 60);
+    seconds = seconds >= 10 ? seconds : '0' + seconds;
+    return minutes + ':' + seconds;
+  }
+
+  function togglePlay() {
+    const method = video.paused ? 'play' : 'pause';
+    video[method]();
+  }
+
+  function updateButton() {
+    const icon = this.paused ? '►' : '❚ ❚';
+    toggle.textContent = icon;
+  }
+
+  function handleProgress() {
+    // const percent = (video.currentTime / video.duration) * 100;
+    // progressBar.style.flexBasis = `${percent}%`;
+    currentTime.textContent = formatTime(video.currentTime);
+  }
+
+  toggle.addEventListener('click', togglePlay);
+
+  video.addEventListener('click', togglePlay);
+  video.addEventListener('play', updateButton);
+  video.addEventListener('pause', updateButton);
+  video.addEventListener('timeupdate', handleProgress);
+
+  mute.addEventListener('click', () => {
+    if (video.muted) {
+      video.muted = false;
+    } else {
+      video.muted = true;
+    }
+  });
+});

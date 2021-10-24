@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ვიდეოები</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script type="module" src="../assets/js/script.js"></script>
+  </head>
+  <body>
+    <figure class="video-banner">
+      <video src="../assets/video/video.mp4" muted data-video></video>
+
+      <figcaption>
+        <div class="container">
+          <h2>
+            პრეზიდენტის სიტყვა ქუთაისის საერთაშორისო უნივერსიტეტის გახსნის
+            ცერემონიაზე
+          </h2>
+
+          <div class="video-banner-controls">
+            <button class="video-banner__toggle" data-video-togglePlay>
+              ►
+            </button>
+
+            <div class="video-banner-timeline">
+              <span class="video-banner-currenttime" data-video-current
+                >00:00:00</span
+              >
+              <span>/</span>
+              <span class="video-banner-duration" data-video-duration>
+                00:45:12</span
+              >
+            </div>
+          </div>
+        </div>
+      </figcaption>
+
+      <button class="video-banner__mute" data-video-toggleMute>
+        <svg class="mute">
+          <use href="../assets/images/icons/mute.svg#mute" />
+        </svg>
+      </button>
+    </figure>
+  </body>
+</html>
