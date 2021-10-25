@@ -152,7 +152,7 @@ tabs.forEach((tab) => {
   });
 });
 
-// რეგიონების რუკა
+// რეგიონების რუკა და მოდალი
 if (document.querySelector('.modal-regions')) {
   const regions = document.querySelectorAll('[data-region]');
   const regionModal = document.querySelector('.modal-regions');
@@ -243,3 +243,5 @@ function mute(video) {
     video.muted = true;
   }
 }
+
+// Custom Audio Player

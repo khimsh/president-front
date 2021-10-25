@@ -1,0 +1,47 @@
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
+
+.event {
+  &__container {
+    width: 100%;
+
+    padding: 25px 50px;
+    border-left: 2px solid v.$color-red-700;
+
+    @media only screen and (min-width: v.$md) {
+      width: 50%;
+      border-left: 0;
+      border-right: 2px solid v.$color-red-700;
+    }
+
+    img,
+    video {
+      @include m.image();
+      max-height: 340px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__figure {
+    position: relative;
+  }
+
+  &__title {
+    padding: 10px 20px;
+  }
+
+  &:nth-child(even) {
+    .event__card {
+      flex-direction: row-reverse;
+    }
+
+    .event__container {
+      border-right: 0;
+      border-left: 2px solid v.$color-red-700;
+    }
+  }
+}
