@@ -1,0 +1,79 @@
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
+
+.structure {
+  padding: 6em 0;
+  background: v.$color-blue-700;
+
+  &__president {
+    position: relative;
+    margin-bottom: 2em;
+    @include m.font(v.$font-bpgnino, 26px, 700, v.$color-red-700);
+
+    &::before {
+      @include m.pseudo($width: 2px, $height: 313px);
+      top: 40px;
+      left: 4px;
+      background-color: v.$color-white;
+      opacity: 0.5;
+    }
+  }
+
+  .group {
+    padding-left: 2em;
+    margin-bottom: 2em;
+    @include m.font(v.$font-notosansgeo, 16px, 300, v.$color-white);
+
+    &--3 {
+      > div:not(:first-child) {
+        padding-left: 4em;
+
+        &.group__with-lines {
+          &::before {
+            left: 25px;
+          }
+
+          &::after {
+            left: 25px;
+          }
+        }
+      }
+    }
+
+    > div {
+      margin-bottom: 1.5em;
+    }
+
+    &__line-left {
+      position: relative;
+      &::after {
+        @include m.pseudo($width: 20px, $height: 2px);
+        top: 12px;
+        left: -27px;
+        background-color: v.$color-white;
+        opacity: 0.5;
+      }
+    }
+
+    &__with-lines {
+      position: relative;
+      padding-left: 2em;
+
+      &::before {
+        @include m.pseudo($width: 2px, $height: 35px);
+        top: -22px;
+        left: 5px;
+        background-color: v.$color-white;
+        opacity: 0.5;
+      }
+
+      &::after {
+        @include m.pseudo($width: 20px, $height: 2px);
+        top: 12px;
+        left: 5px;
+        background-color: v.$color-white;
+        opacity: 0.5;
+      }
+    }
+  }
+}
