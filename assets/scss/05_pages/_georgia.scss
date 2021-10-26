@@ -14,8 +14,6 @@ p.lead {
 }
 
 .occupied {
-  display: flex;
-
   p {
     line-height: 1.6;
     max-width: 80ch;
@@ -52,8 +50,6 @@ p.lead {
 }
 
 .constitution {
-  display: flex;
-
   .image {
     margin: 3em 0 2em;
 
@@ -73,31 +69,26 @@ p.lead {
   }
 }
 
-.independence {
-  position: relative;
+.independence-act-photos {
   display: flex;
+  flex-direction: column;
+  gap: 3em;
 
-  &-act-photos {
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
+  @media only screen and (min-width: v.$sm) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
-    @media only screen and (min-width: v.$sm) {
-      flex-direction: row;
-      align-items: flex-start;
-    }
+  figure {
+    flex-basis: 50%;
+  }
 
-    figure {
-      flex-basis: 50%;
-    }
+  img {
+    margin: 0 auto;
+  }
 
-    img {
-      margin: 0 auto;
-    }
-
-    figcaption {
-      margin-top: 1em;
-      text-align: center;
-    }
+  figcaption {
+    margin-top: 1em;
+    text-align: center;
   }
 }
