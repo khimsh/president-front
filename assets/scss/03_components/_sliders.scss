@@ -4,18 +4,15 @@
 .slick-dotted {
   .slick-dots {
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
+    @include m.flex(row, center, center);
+    gap: 12px;
     list-style: none;
   }
 
   button[role='tab'] {
     display: block;
-    width: 10px;
-    height: 12px;
-    border-radius: 20px;
+    @include m.size(14px, 14px);
+    border-radius: 14px;
     color: transparent;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -23,8 +20,6 @@
 
   .slick-active {
     button[role='tab'] {
-      width: 18px;
-      height: 18px;
       background: transparent;
     }
   }
@@ -34,13 +29,18 @@
   .slick-dots {
     position: absolute;
     top: 50%;
-    right: 45px;
+    right: 20px;
     flex-direction: column;
     z-index: 100;
+
+    @media only screen and (min-width: v.$lg) {
+      right: 38px;
+    }
 
     button {
       background: v.$color-white;
     }
+
     .slick-active {
       button {
         background: transparent;
@@ -55,8 +55,16 @@
     bottom: 1.5em;
     z-index: 1000;
 
+    &:hover,
+    &:active {
+      svg {
+        fill: v.$color-red-700;
+      }
+    }
+
     svg {
       @include m.svg(45px, 12.905px, v.$color-white);
+      transition: all 0.2s ease-in-out;
     }
   }
 
