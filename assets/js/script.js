@@ -105,6 +105,35 @@ mobileNavItems.forEach((mobileNavItem) => {
   });
 });
 
+// Header Search კომპონენტი
+const toggleSearch = document.querySelector('[data-toggle-search]');
+const searchComponent = document.querySelector('[data-search-component]');
+
+toggleSearch.addEventListener('click', () => {
+  searchComponent.classList.toggle('active');
+
+  if (searchComponent.classList.contains('active')) {
+    toggleSearch.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="23.334" height="23.335" viewBox="0 0 23.334 23.335">
+      <g id="Group_1596" data-name="Group 1596" transform="translate(-1151.439 -27.439)">
+        <line id="Line_8" data-name="Line 8" x2="30" transform="translate(1152.5 49.713) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
+        <line id="Line_9" data-name="Line 9" x2="30" transform="translate(1152.5 28.5) rotate(45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+    </svg>
+    `;
+  } else {
+    toggleSearch.innerHTML = `
+    <svg id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22.001">
+      <g id="Group_392" data-name="Group 392" transform="translate(-1383.092 -45.604)">
+        <g id="Group_159" data-name="Group 159">
+          <path id="Path_583" data-name="Path 583" d="M1392.725,45.6a9.634,9.634,0,1,0,6.117,17.062l4.656,4.666a.934.934,0,0,0,1.321-1.32l-4.666-4.656a9.623,9.623,0,0,0-7.428-15.752Zm0,1.865a7.768,7.768,0,1,1-7.769,7.769A7.755,7.755,0,0,1,1392.725,47.469Z"/>
+        </g>
+      </g>
+    </svg>
+   `;
+  }
+});
+
 // Custom Select
 const selectElements = document.querySelectorAll('[data-custom]');
 
@@ -194,9 +223,6 @@ players.forEach((player) => {
     togglePlay(video);
   });
 
-  video.addEventListener('click', () => {
-    togglePlay(video);
-  });
   video.addEventListener('play', () => {
     updateButton(video, toggle);
   });

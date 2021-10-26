@@ -109,8 +109,8 @@
         <li><a href="#" class="eng">Eng</a></li>
       </ul>
 
-      <button class="icon-search" data-open-search>
-        <svg width="22" height="22">
+      <button class="icon-search" data-toggle-search>
+        <svg>
           <use href="../assets/images/icons/search.svg#search" />
         </svg>
       </button>
@@ -272,6 +272,30 @@
           </a>
         </li>
       </ul>
+    </div>
+
+    <div class="search-component" data-search-component>
+      <div class="container">
+        <form action="#" class="search">
+          <div class="search__control">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="საძიებო სიტყვა"
+            />
+            <small>გთხოვთ ჩაწეროთ მინიმუმ 3 სიმბოლო</small>
+          </div>
+
+          <button type="submit">
+            <div class="sr-only">ძებნა</div>
+
+            <svg>
+              <use href="../assets/images/icons/search.svg#search" />
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
 
     <section class="hero">

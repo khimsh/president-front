@@ -1,4 +1,5 @@
 @use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .form {
   max-width: 740px;
@@ -61,5 +62,91 @@
   &-msg {
     display: none;
     margin-top: 8px;
+  }
+}
+
+.search-component {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background: v.$color-blue-900;
+  z-index: 1000000;
+
+  @media only screen and (min-width: v.$sm) {
+    top: 64px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    top: 78px;
+  }
+
+  &.active {
+    .search {
+      height: 280px;
+    }
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+
+  &__control {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type='search'] {
+    padding: 0.5em;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid v.$color-gray-600;
+    outline-style: none;
+    transition: border-color 0.2s ease-in-out;
+
+    &:focus {
+      border-bottom-color: v.$color-white;
+    }
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 50px v.$color-blue-900 inset;
+      box-shadow: 0 0 0 50px v.$color-blue-900 inset;
+      -webkit-text-fill-color: v.$color-white;
+    }
+
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 50px v.$color-blue-900 inset;
+      box-shadow: 0 0 0 50px v.$color-blue-900 inset;
+      -webkit-text-fill-color: v.$color-white;
+    }
+  }
+
+  button[type='submit'] {
+    display: block;
+    @include m.size(40px, 40px);
+    border: 1px solid v.$color-gray-600;
+    transform: translateY(-12px);
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:active {
+      background: v.$color-red-700;
+      border-color: v.$color-white;
+    }
+
+    svg {
+      @include m.svg(24px, 22.001px, v.$color-white);
+    }
+  }
+
+  small {
+    display: block;
+    margin-top: 0.25em;
+    @include m.font(v.$font-notosansgeo, 14px, 300, v.$color-gray-500);
   }
 }
