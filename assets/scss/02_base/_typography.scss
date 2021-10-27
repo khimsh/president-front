@@ -359,6 +359,7 @@ time {
 
   &-link {
     @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-blue-900);
+    text-decoration: none;
   }
 }
 
