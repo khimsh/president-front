@@ -29,6 +29,12 @@
     }
   }
 
+  @media only screen and (min-width: v.$xl) {
+    &-list {
+      gap: 70px;
+    }
+  }
+
   &.active {
     display: block;
   }

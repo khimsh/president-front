@@ -10,10 +10,10 @@
   }
   @media only screen and (min-width: v.$lg) {
     height: 100vh;
-    max-height: 710px;
+    max-height: 520px;
   }
   @media only screen and (min-width: v.$xxl) {
-    max-height: 1000px;
+    max-height: 900px;
   }
 
   &::before {
@@ -39,10 +39,10 @@
     }
     @media only screen and (min-width: v.$lg) {
       height: 100vh;
-      max-height: 710px;
+      max-height: 520px;
     }
     @media only screen and (min-width: v.$xxl) {
-      max-height: 1000px;
+      max-height: 900px;
     }
   }
 

@@ -12,6 +12,7 @@
   button[role='tab'] {
     display: block;
     @include m.size(14px, 14px);
+    transform: scale(0.7);
     border-radius: 14px;
     color: transparent;
     cursor: pointer;
@@ -64,6 +65,7 @@
 
     svg {
       @include m.svg(45px, 12.905px, v.$color-white);
+      transform: scale(0.9);
       transition: all 0.2s ease-in-out;
     }
   }
@@ -103,7 +105,7 @@
 
 .address-slider {
   @media only screen and (min-width: v.$lg) {
-    width: calc(100% - 60px);
+    width: calc(100% - 20px);
   }
 
   .slick-slide {
@@ -120,7 +122,7 @@
     }
 
     @media only screen and (min-width: v.$lg) {
-      padding: 0 160px 0 0 !important;
+      padding: 0 100px 0 0 !important;
     }
   }
 

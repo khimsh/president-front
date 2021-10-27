@@ -390,6 +390,7 @@ time {
 .orbeliani-palace {
   h2 {
     @include m.font(v.$font-bpgnino, 2rem, 700, v.$color-white);
+    text-align: center;
   }
 
   a {
