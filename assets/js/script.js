@@ -2,31 +2,32 @@
 import Select from './select.js';
 
 // ნავიგაცია
+const siteHeader = document.querySelector('.site-header');
 const navBackdrop = document.querySelector('.nav-backdrop');
 const logoBorder = document.querySelector('.bottom-border');
-const navButtons = document.querySelectorAll('.site-nav-item');
+const navBar = document.querySelector('.site-nav-list');
 const navLists = document.querySelectorAll('.site-nav-dropdown-content');
 
-navButtons.forEach((navButton) => {
-  navButton.addEventListener('click', () => {
-    let nextSibling = navButton.nextElementSibling;
-    logoBorder.classList.add('hidden');
+navBar.addEventListener('click', (e) => {
+  if (e.target.tagName.toLowerCase() != 'button') return;
 
-    if (nextSibling.classList.contains('active')) {
-      nextSibling.classList.remove('active');
+  let navItem = e.target.nextElementSibling;
 
-      logoBorder.classList.remove('hidden');
+  if (navItem.classList.contains('active')) {
+    // if the nav is expanded
+    siteHeader.classList.remove('active');
+    navItem.classList.remove('active');
+    navBackdrop.style.height = '0px';
+  } else {
+    // if the nav is collapsed
+    navLists.forEach((navList) => {
+      navList.classList.remove('active');
+    });
 
-      navBackdrop.style.height = '0px';
-    } else {
-      navLists.forEach((navList) => {
-        navList.classList.remove('active');
-      });
-
-      nextSibling.classList.add('active');
-      navBackdrop.style.height = nextSibling.offsetHeight + 24 + 'px';
-    }
-  });
+    siteHeader.classList.add('active');
+    navItem.classList.add('active');
+    navBackdrop.style.height = navItem.offsetHeight + 24 + 'px';
+  }
 });
 
 // ნავიგაციის დახურვა ლინკზე დაკლიკებისას
@@ -46,11 +47,9 @@ navLists.forEach((navList) => {
 document.addEventListener('click', (e) => {
   if (!e.target.classList.contains('site-nav-item')) {
     navLists.forEach((navList) => {
+      siteHeader.classList.remove('active');
       navList.classList.remove('active');
-
       navBackdrop.style.height = '0px';
-
-      logoBorder.classList.remove('hidden');
     });
   }
 });

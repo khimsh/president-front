@@ -12,6 +12,11 @@
   align-items: flex-start;
   background: hsla(219, 65%, 8%, 0.4);
   z-index: 100000;
+  transition: background 0.2s ease-in-out;
+
+  &.active {
+    background: hsla(219, 65%, 8%, 0.6);
+  }
 
   @media only screen and (min-width: v.$sm) {
     height: 64px;
@@ -36,6 +41,10 @@
 
   @media only screen and (min-width: v.$sm) {
     margin-top: 8px;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    margin-left: 40px;
   }
 
   .bottom-border {
@@ -65,6 +74,17 @@
     @media only screen and (min-width: v.$lg) {
       bottom: -20px;
       left: -6px;
+    }
+
+    @media only screen and (min-width: v.$xl) {
+      width: 130px;
+      height: 30px;
+      bottom: -30px;
+      left: -17px;
+    }
+
+    @media only screen and (min-width: v.$xxl) {
+      left: -10px;
     }
   }
 
