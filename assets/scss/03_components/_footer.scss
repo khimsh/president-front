@@ -9,6 +9,16 @@
   background-repeat: no-repeat;
   background-position: 120% 100%;
 
+  .container {
+    @media only screen and (min-width: v.$lg) {
+      padding-left: 60px;
+    }
+
+    @media only screen and (min-width: v.$xl) {
+      padding-left: 150px;
+    }
+  }
+
   ul {
     margin: 0;
     padding: 0;
