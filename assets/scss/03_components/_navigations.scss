@@ -50,11 +50,13 @@
   button {
     padding: 0;
     transition: all 0.2s ease-in-out;
+    outline: transparent;
 
     @media only screen and (min-width: v.$lg) {
       height: 78px;
     }
 
+    &:focus,
     &:hover,
     &:active {
       opacity: 0.8;

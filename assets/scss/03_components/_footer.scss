@@ -137,6 +137,10 @@
     height: 100%;
   }
 
+  @media only screen and (min-width: v.$xl) {
+    width: 88px;
+  }
+
   &:hover,
   &:active {
     background: v.$color-blue-900;

@@ -14,8 +14,11 @@
   }
 
   @media only screen and (min-width: v.$xl) {
-    padding: 0;
-    width: 1366px;
+    padding: 0 100px;
+  }
+
+  @media only screen and (min-width: v.$xxl) {
+    padding: 0 162px;
   }
 }
 
