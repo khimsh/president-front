@@ -270,3 +270,8 @@ function mute(video) {
 }
 
 // Custom Audio Player
+
+// Remove covid alert from dom
+document.querySelector('.covid-close').addEventListener('click', () => {
+  document.querySelector('.covid').remove();
+});
