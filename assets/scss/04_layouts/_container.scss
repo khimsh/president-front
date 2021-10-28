@@ -5,6 +5,10 @@
   margin: 0 auto;
   padding: 0 15px;
 
+  @media only screen and (min-width: v.$xs) {
+    padding: 0 28px;
+  }
+
   @media only screen and (min-width: v.$sm) {
     padding: 0 54px;
   }
