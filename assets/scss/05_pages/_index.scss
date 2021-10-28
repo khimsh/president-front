@@ -116,7 +116,7 @@
   padding: 48px;
 
   &-slider {
-    max-width: 74vw;
+    max-width: 72vw;
 
     @media only screen and (min-width: v.$sm) {
       max-width: calc(50vw - 150px);
