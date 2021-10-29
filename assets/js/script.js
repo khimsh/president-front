@@ -8,6 +8,10 @@ const logoBorder = document.querySelector('.bottom-border');
 const navBar = document.querySelector('.site-nav-list');
 const navLists = document.querySelectorAll('.site-nav-dropdown-content');
 
+const timelineIN = gsap.timeline();
+const timelineOut = gsap.timeline();
+const timelineOut2 = gsap.timeline();
+
 navBar.addEventListener('click', (e) => {
   if (e.target.tagName.toLowerCase() != 'button') return;
 
@@ -15,41 +19,99 @@ navBar.addEventListener('click', (e) => {
 
   if (navItem.classList.contains('active')) {
     // if the nav is expanded
-    siteHeader.classList.remove('active');
+
     navItem.classList.remove('active');
-    navBackdrop.style.height = '0px';
+
+    timelineOut
+      .to(navItem, {
+        duration: 0.2,
+        opacity: 0,
+      })
+      .to(navBackdrop, {
+        duration: 0.3,
+        height: 0,
+      })
+      .to(siteHeader, {
+        duration: 0.2,
+        background: 'hsla(219, 65%, 8%, 0.4)',
+      })
+      .to(
+        logoBorder,
+        {
+          duration: 0.2,
+          background: 'hsla(219, 65%, 8%, .4)',
+        },
+        '<'
+      );
   } else {
     // if the nav is collapsed
     navLists.forEach((navList) => {
       navList.classList.remove('active');
+      gsap.to(navList, {
+        duration: 0.2,
+        opacity: 0,
+      });
     });
 
-    siteHeader.classList.add('active');
     navItem.classList.add('active');
-    navBackdrop.style.height = navItem.offsetHeight + 24 + 'px';
+
+    timelineIN
+      .to(navBackdrop, {
+        duration: 0.3,
+        height: navItem.offsetHeight + 24 + 'px',
+      })
+      .to(
+        logoBorder,
+        {
+          duration: 0.3,
+          background: 'hsla(219, 65%, 8%, 1)',
+        },
+        '<'
+      )
+      .to(
+        siteHeader,
+        {
+          duration: 0.3,
+          background: 'hsla(219, 65%, 8%, 1)',
+        },
+        '<'
+      )
+      .to(navItem, {
+        duration: 0.3,
+        opacity: 1,
+      });
   }
-});
-
-// ნავიგაციის დახურვა ლინკზე დაკლიკებისას
-navLists.forEach((navList) => {
-  navList.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      navList.classList.remove('active');
-
-      navBackdrop.style.height = '0px';
-
-      logoBorder.classList.remove('hidden');
-    });
-  });
 });
 
 // ნავიგაციის დახურვა გარეთ დაკლიკებისას
 document.addEventListener('click', (e) => {
   if (!e.target.classList.contains('site-nav-item')) {
-    navLists.forEach((navList) => {
-      siteHeader.classList.remove('active');
-      navList.classList.remove('active');
-      navBackdrop.style.height = '0px';
+    navLists.forEach((item) => {
+      if (!item.classList.contains('active')) return;
+
+      item.classList.remove('active');
+
+      timelineOut2
+        .to(item, {
+          duration: 0.2,
+          opacity: 0,
+        })
+        .to(navBackdrop, {
+          duration: 0.3,
+          height: 0,
+        })
+        .to(siteHeader, {
+          duration: 0.2,
+          background: 'hsla(219, 65%, 8%, 0.4)',
+        })
+        .to(
+          logoBorder,
+          {
+            duration: 0.2,
+            background: 'hsla(219, 65%, 8%, .4)',
+          },
+          '<'
+        );
     });
   }
 });

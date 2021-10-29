@@ -7,8 +7,8 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: hsla(219, 65%, 8%, 0.4);
-  transition: all 0.2s ease-in;
+  background: hsla(219, 65%, 8%, 0.6);
+  transition: all 0.1s ease-in;
 }
 
 .site-nav {
@@ -17,20 +17,18 @@
   @media only screen and (min-width: v.$lg) {
     display: block;
     margin-right: 40px;
-
-    &-list {
-      height: 100%;
-      display: flex;
-      align-items: flex-start;
-      gap: 40px;
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-    }
   }
 
-  @media only screen and (min-width: v.$xl) {
-    &-list {
+  &-list {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @media only screen and (min-width: v.$xl) {
       gap: 70px;
     }
   }
@@ -67,20 +65,15 @@
     position: relative;
 
     &-content {
-      @media only screen and (min-width: v.$lg) {
-        position: absolute;
-        top: 82px;
-        @include m.flex(column, stretch, flex-start !important);
-        gap: 0.75em;
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.4s ease-in-out;
-      }
+      position: absolute;
+      top: 82px;
+      @include m.flex(column, stretch, flex-start !important);
+      gap: 0.75em;
+
+      opacity: 0;
+      pointer-events: none;
 
       &.active {
-        visibility: initial;
-        opacity: 1;
         pointer-events: unset;
       }
     }
