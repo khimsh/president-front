@@ -6,8 +6,17 @@
 
   &-heading {
     margin-bottom: 44px;
+    margin-left: -12px;
     display: flex;
     align-items: flex-end;
+
+    @media only screen and (min-width: v.$sm) {
+      margin-left: -20px;
+    }
+
+    @media only screen and (min-width: v.$xxl) {
+      margin-left: -40px;
+    }
 
     h2 {
       margin-right: 16px;

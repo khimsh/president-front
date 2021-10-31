@@ -314,8 +314,8 @@ time {
   }
 }
 
-.video-banner {
-  h2 {
+.hero {
+  &__title {
     @include m.font(v.$font-tatishvili, 1.625rem, 700, v.$color-white);
     line-height: 1.2;
 
@@ -339,11 +339,11 @@ time {
       font-size: 3.125rem;
     }
   }
-}
 
-.video-banner-controls {
-  span {
-    @include m.font(v.$font-notosansgeo, 0.75rem, 500, v.$color-white);
+  &__timeline {
+    span {
+      @include m.font(v.$font-notosansgeo, 0.75rem, 500, v.$color-white);
+    }
   }
 }
 

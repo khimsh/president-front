@@ -82,7 +82,7 @@ $(document).ready(function () {
     ],
   });
 
-  $('.hero-slider').slick({
+  $('.hero__slider').slick({
     arrows: true,
     dots: true,
     prevArrow: previousArrow,

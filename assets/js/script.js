@@ -272,24 +272,31 @@ scrollToTopButton.addEventListener('click', () => {
 });
 
 // Custom Video players
-const players = document.querySelectorAll('.video-banner');
+const players = document.querySelectorAll('[data-video-container]');
 
 players.forEach((player) => {
   const toggle = player.querySelector('[data-video-togglePlay]');
   const video = player.querySelector('[data-video]');
   const currentTime = player.querySelector('[data-video-current]');
+  const videoDuration = player.querySelector('[data-video-duration]');
   const muteBtn = player.querySelector('[data-video-toggleMute]');
 
   toggle.addEventListener('click', () => {
     togglePlay(video);
   });
 
+  video.onloadedmetadata = function () {
+    videoDuration.textContent = formatTime(this.duration);
+  };
+
   video.addEventListener('play', () => {
     updateButton(video, toggle);
   });
+
   video.addEventListener('pause', () => {
     updateButton(video, toggle);
   });
+
   video.addEventListener('timeupdate', () => {
     handleProgress(video, currentTime);
   });
@@ -297,6 +304,21 @@ players.forEach((player) => {
   muteBtn.addEventListener('click', () => {
     mute(video);
   });
+
+  if (player.querySelector('[data-video-fullscreen]')) {
+    player
+      .querySelector('[data-video-fullscreen]')
+      .addEventListener('click', () => {
+        video
+          .requestFullscreen()
+          .then(function () {
+            // element has entered fullscreen mode successfully
+          })
+          .catch(function (error) {
+            // element could not enter fullscreen mode
+          });
+      });
+  }
 });
 
 function formatTime(seconds) {
@@ -336,6 +358,9 @@ function mute(video) {
 //TODO: Custom Audio Player
 
 // Remove covid alert from dom
-document.querySelector('.covid-close').addEventListener('click', () => {
-  document.querySelector('.covid').remove();
-});
+
+if (document.querySelector('.covid-close')) {
+  document.querySelector('.covid-close').addEventListener('click', () => {
+    document.querySelector('.covid').remove();
+  });
+}
