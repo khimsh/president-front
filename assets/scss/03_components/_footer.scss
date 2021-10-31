@@ -111,13 +111,17 @@
     }
 
     a {
-      height: 42px;
+      height: 48px;
       padding: 0 12px 0 22px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 28px;
       background: hsla(0, 79%, 44%, 0.4);
       transition: all 0.2s ease-in-out;
+
+      @media only screen and (min-width: v.$lg) {
+        padding: 0 20px 0 28px;
+      }
 
       &:hover,
       &:active {

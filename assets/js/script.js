@@ -331,7 +331,9 @@ function mute(video) {
   }
 }
 
-// Custom Audio Player
+//TODO: Autoplay active hero slider video
+
+//TODO: Custom Audio Player
 
 // Remove covid alert from dom
 document.querySelector('.covid-close').addEventListener('click', () => {
