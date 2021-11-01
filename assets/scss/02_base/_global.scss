@@ -39,6 +39,10 @@ blockquote {
     padding-left: 4em;
     margin-top: -120px;
 
+    &--smaller {
+      margin-top: -82px;
+    }
+
     @media only screen and (min-width: v.$lg) {
       padding-left: 126px;
     }
