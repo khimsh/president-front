@@ -21,285 +21,288 @@
     <script type="module" src="assets/js/script.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="nav-backdrop"></div>
-      <div class="site-logo">
-        <a href="/">
-          <svg>
-            <use href="assets/images/icons/logo.svg#logo" />
-          </svg>
-        </a>
-        <span class="bottom-border"></span>
-      </div>
-
-      <nav class="site-nav">
-        <ul class="site-nav-list">
-          <li>
-            <div class="site-nav-dropdown">
-              <button class="site-nav-item">პრეზიდენტი</button>
-
-              <ul class="site-nav-dropdown-content">
-                <li><a href="#">ბიოგრაფია</a></li>
-                <li><a href="#">ინაუგურაცია</a></li>
-                <li><a href="#">უფლებამოსილებები</a></li>
-                <li><a href="#">შტანდარტი</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="site-nav-dropdown">
-              <button class="site-nav-item">საქმიანობა</button>
-
-              <ul class="site-nav-dropdown-content">
-                <li><a href="#">უმაღლესი მთავარსარდალი</a></li>
-                <li><a href="#">საგარეო ურთიერთობები</a></li>
-                <li><a href="#">პრეზიდენტის პრიორიტეტები</a></li>
-                <li><a href="#">შეწყალება</a></li>
-                <li><a href="#">მოქალაქეობის მინიჭება</a></li>
-                <li><a href="#">სახელმწიფო ჯილდოები</a></li>
-                <li><a href="#">მიმართვები</a></li>
-                <li><a href="#">პატრონაჟი და მემორანდუმი</a></li>
-                <li><a href="#">სამუშაო კალენდარი</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="site-nav-dropdown">
-              <button class="site-nav-item">მედია</button>
-
-              <ul class="site-nav-dropdown-content">
-                <li><a href="#">პრესრელიზები</a></li>
-                <li><a href="#">განცხადებები</a></li>
-                <li><a href="#">ინტერვიუები და სტატიები</a></li>
-                <li><a href="#">უცხოური მედია</a></li>
-                <li><a href="#">გალერეა</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="site-nav-dropdown">
-              <button class="site-nav-item">ადმინისტრაცია</button>
-
-              <ul class="site-nav-dropdown-content">
-                <li><a href="#">უფროსი</a></li>
-                <li><a href="#">სტრუქტურა</a></li>
-                <li><a href="#">პრეზიდენტის მრჩეველები</a></li>
-                <li><a href="#">თანამდებობის პირები</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="site-nav-dropdown">
-              <button class="site-nav-item">საქართველო</button>
-
-              <ul class="site-nav-dropdown-content">
-                <li><a href="#">ოკუპირებული ტერიტორიები</a></li>
-                <li><a href="#">დამოუკიდებლობის აქტი</a></li>
-                <li><a href="#">საქართველოს კონსტიტუცია</a></li>
-                <li><a href="#">სახელმწიფო სიმბოლოები</a></li>
-                <li><a href="#">საქართველოს შესახებ</a></li>
-                <li><a href="#">საქართველოს პრეზიდენტები</a></li>
-                <li><a href="#">ფოტოგალერეა</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-
-      <ul class="site-languages">
-        <li><a href="#" class="geo active">ქარ</a></li>
-        <li><a href="#" class="abkh">Аҧс</a></li>
-        <li><a href="#" class="eng">Eng</a></li>
-      </ul>
-
-      <button class="icon-search" data-toggle-search>
-        <svg>
-          <use href="assets/images/icons/search.svg#search" />
-        </svg>
-      </button>
-
-      <button class="icon-menu" data-open-nav>
-        <svg width="30" height="22">
-          <use href="assets/images/icons/menu.svg#menu" />
-        </svg>
-      </button>
-    </header>
-
-    <div class="mobile-nav-wrapper">
-      <nav class="mobile-nav">
-        <ul class="mobile-nav-list">
-          <li>
-            <div class="mobile-nav-dropdown">
-              <button class="mobile-nav-item">
-                პრეზიდენტი
-                <span class="icon">
-                  <svg>
-                    <use
-                      href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul class="mobile-nav-dropdown-content">
-                <li><a href="#">ბიოგრაფია</a></li>
-                <li><a href="#">ინაუგურაცია</a></li>
-                <li><a href="#">უფლებამოსილებები</a></li>
-                <li><a href="#">შტანდარტი</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="mobile-nav-dropdown">
-              <button class="mobile-nav-item">
-                საქმიანობა
-                <span class="icon">
-                  <svg>
-                    <use
-                      href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul class="mobile-nav-dropdown-content">
-                <li><a href="#">უმაღლესი მთავარსარდალი</a></li>
-                <li><a href="#">საგარეო ურთიერთობები</a></li>
-                <li><a href="#">პრეზიდენტის პრიორიტეტები</a></li>
-                <li><a href="#">შეწყალება</a></li>
-                <li><a href="#">მოქალაქეობის მინიჭება</a></li>
-                <li><a href="#">სახელმწიფო ჯილდოები</a></li>
-                <li><a href="#">მიმართვები</a></li>
-                <li><a href="#">პატრონაჟი და მემორანდუმი</a></li>
-                <li><a href="#">სამუშაო კალენდარი</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="mobile-nav-dropdown">
-              <button class="mobile-nav-item">
-                მედია
-                <span class="icon">
-                  <svg>
-                    <use
-                      href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul class="mobile-nav-dropdown-content">
-                <li><a href="#">პრესრელიზები</a></li>
-                <li><a href="#">განცხადებები</a></li>
-                <li><a href="#">ინტერვიუები და სტატიები</a></li>
-                <li><a href="#">უცხოური მედია</a></li>
-                <li><a href="#">გალერეა</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="mobile-nav-dropdown">
-              <button class="mobile-nav-item">
-                ადმინისტრაცია
-                <span class="icon">
-                  <svg>
-                    <use
-                      href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul class="mobile-nav-dropdown-content">
-                <li><a href="#">უფროსი</a></li>
-                <li><a href="#">სტრუქტურა</a></li>
-                <li><a href="#">პრეზიდენტის მრჩეველები</a></li>
-                <li><a href="#">თანამდებობის პირები</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="mobile-nav-dropdown">
-              <button class="mobile-nav-item">
-                საქართველო
-                <span class="icon">
-                  <svg>
-                    <use
-                      href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul class="mobile-nav-dropdown-content">
-                <li><a href="#">ოკუპირებული ტერიტორიები</a></li>
-                <li><a href="#">დამოუკიდებლობის აქტი</a></li>
-                <li><a href="#">საქართველოს კონსტიტუცია</a></li>
-                <li><a href="#">სახელმწიფო სიმბოლოები</a></li>
-                <li><a href="#">საქართველოს შესახებ</a></li>
-                <li><a href="#">საქართველოს პრეზიდენტები</a></li>
-                <li><a href="#">ფოტოგალერეა</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-
-      <ul class="social-media">
-        <li>
-          <a href="#">
-            <svg width="16.534" height="16.479">
-              <use href="assets/images/icons/facebook.svg#facebook" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <svg width="16.534" height="13.455">
-              <use href="assets/images/icons/twitter.svg#twitter" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <svg width="16.535" height="16.534">
-              <use href="assets/images/icons/instagram.svg#instagram" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <svg width="20.583" height="15.44">
-              <use href="assets/images/icons/youtube.svg#youtube" />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="search-component" data-search-component>
-      <div class="container">
-        <form action="#" class="search">
-          <div class="search__control">
-            <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="საძიებო სიტყვა"
-            />
-            <small>გთხოვთ ჩაწეროთ მინიმუმ 3 სიმბოლო</small>
-          </div>
-
-          <button type="submit">
-            <div class="sr-only">ძებნა</div>
-
+    <div class="header-wrapper">
+      <header class="site-header">
+        <div class="nav-backdrop"></div>
+        <div class="site-logo">
+          <a href="/">
             <svg>
-              <use href="assets/images/icons/search.svg#search" />
+              <use href="assets/images/icons/logo.svg#logo" />
             </svg>
-          </button>
-        </form>
+          </a>
+          <span class="bottom-border"></span>
+        </div>
+
+        <nav class="site-nav">
+          <ul class="site-nav-list">
+            <li>
+              <div class="site-nav-dropdown">
+                <button class="site-nav-item">პრეზიდენტი</button>
+
+                <ul class="site-nav-dropdown-content">
+                  <li><a href="#">ბიოგრაფია</a></li>
+                  <li><a href="#">ინაუგურაცია</a></li>
+                  <li><a href="#">უფლებამოსილებები</a></li>
+                  <li><a href="#">შტანდარტი</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="site-nav-dropdown">
+                <button class="site-nav-item">საქმიანობა</button>
+
+                <ul class="site-nav-dropdown-content">
+                  <li><a href="#">უმაღლესი მთავარსარდალი</a></li>
+                  <li><a href="#">საგარეო ურთიერთობები</a></li>
+                  <li><a href="#">პრეზიდენტის პრიორიტეტები</a></li>
+                  <li><a href="#">შეწყალება</a></li>
+                  <li><a href="#">მოქალაქეობის მინიჭება</a></li>
+                  <li><a href="#">სახელმწიფო ჯილდოები</a></li>
+                  <li><a href="#">მიმართვები</a></li>
+                  <li><a href="#">პატრონაჟი და მემორანდუმი</a></li>
+                  <li><a href="#">სამუშაო კალენდარი</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="site-nav-dropdown">
+                <button class="site-nav-item">მედია</button>
+
+                <ul class="site-nav-dropdown-content">
+                  <li><a href="#">პრესრელიზები</a></li>
+                  <li><a href="#">განცხადებები</a></li>
+                  <li><a href="#">ინტერვიუები და სტატიები</a></li>
+                  <li><a href="#">უცხოური მედია</a></li>
+                  <li><a href="#">გალერეა</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="site-nav-dropdown">
+                <button class="site-nav-item">ადმინისტრაცია</button>
+
+                <ul class="site-nav-dropdown-content">
+                  <li><a href="#">უფროსი</a></li>
+                  <li><a href="#">სტრუქტურა</a></li>
+                  <li><a href="#">პრეზიდენტის მრჩეველები</a></li>
+                  <li><a href="#">თანამდებობის პირები</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="site-nav-dropdown">
+                <button class="site-nav-item">საქართველო</button>
+
+                <ul class="site-nav-dropdown-content">
+                  <li><a href="#">ოკუპირებული ტერიტორიები</a></li>
+                  <li><a href="#">დამოუკიდებლობის აქტი</a></li>
+                  <li><a href="#">საქართველოს კონსტიტუცია</a></li>
+                  <li><a href="#">სახელმწიფო სიმბოლოები</a></li>
+                  <li><a href="#">საქართველოს შესახებ</a></li>
+                  <li><a href="#">საქართველოს პრეზიდენტები</a></li>
+                  <li><a href="#">ფოტოგალერეა</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="site-languages">
+          <li><a href="#" class="geo active">ქარ</a></li>
+          <li><a href="#" class="abkh">Аҧс</a></li>
+          <li><a href="#" class="eng">Eng</a></li>
+        </ul>
+
+        <button class="icon-search" data-toggle-search>
+          <svg>
+            <use href="assets/images/icons/search.svg#search" />
+          </svg>
+        </button>
+
+        <button class="icon-menu" data-open-nav>
+          <svg width="30" height="22">
+            <use href="assets/images/icons/menu.svg#menu" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="mobile-nav-wrapper">
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-list">
+            <li>
+              <div class="mobile-nav-dropdown">
+                <button class="mobile-nav-item">
+                  პრეზიდენტი
+                  <span class="icon">
+                    <svg>
+                      <use
+                        href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <ul class="mobile-nav-dropdown-content">
+                  <li><a href="#">ბიოგრაფია</a></li>
+                  <li><a href="#">ინაუგურაცია</a></li>
+                  <li><a href="#">უფლებამოსილებები</a></li>
+                  <li><a href="#">შტანდარტი</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="mobile-nav-dropdown">
+                <button class="mobile-nav-item">
+                  საქმიანობა
+                  <span class="icon">
+                    <svg>
+                      <use
+                        href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <ul class="mobile-nav-dropdown-content">
+                  <li><a href="#">უმაღლესი მთავარსარდალი</a></li>
+                  <li><a href="#">საგარეო ურთიერთობები</a></li>
+                  <li><a href="#">პრეზიდენტის პრიორიტეტები</a></li>
+                  <li><a href="#">შეწყალება</a></li>
+                  <li><a href="#">მოქალაქეობის მინიჭება</a></li>
+                  <li><a href="#">სახელმწიფო ჯილდოები</a></li>
+                  <li><a href="#">მიმართვები</a></li>
+                  <li><a href="#">პატრონაჟი და მემორანდუმი</a></li>
+                  <li><a href="#">სამუშაო კალენდარი</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="mobile-nav-dropdown">
+                <button class="mobile-nav-item">
+                  მედია
+                  <span class="icon">
+                    <svg>
+                      <use
+                        href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <ul class="mobile-nav-dropdown-content">
+                  <li><a href="#">პრესრელიზები</a></li>
+                  <li><a href="#">განცხადებები</a></li>
+                  <li><a href="#">ინტერვიუები და სტატიები</a></li>
+                  <li><a href="#">უცხოური მედია</a></li>
+                  <li><a href="#">გალერეა</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="mobile-nav-dropdown">
+                <button class="mobile-nav-item">
+                  ადმინისტრაცია
+                  <span class="icon">
+                    <svg>
+                      <use
+                        href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <ul class="mobile-nav-dropdown-content">
+                  <li><a href="#">უფროსი</a></li>
+                  <li><a href="#">სტრუქტურა</a></li>
+                  <li><a href="#">პრეზიდენტის მრჩეველები</a></li>
+                  <li><a href="#">თანამდებობის პირები</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="mobile-nav-dropdown">
+                <button class="mobile-nav-item">
+                  საქართველო
+                  <span class="icon">
+                    <svg>
+                      <use
+                        href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <ul class="mobile-nav-dropdown-content">
+                  <li><a href="#">ოკუპირებული ტერიტორიები</a></li>
+                  <li><a href="#">დამოუკიდებლობის აქტი</a></li>
+                  <li><a href="#">საქართველოს კონსტიტუცია</a></li>
+                  <li><a href="#">სახელმწიფო სიმბოლოები</a></li>
+                  <li><a href="#">საქართველოს შესახებ</a></li>
+                  <li><a href="#">საქართველოს პრეზიდენტები</a></li>
+                  <li><a href="#">ფოტოგალერეა</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="social-media">
+          <li>
+            <a href="#">
+              <svg width="16.534" height="16.479">
+                <use href="assets/images/icons/facebook.svg#facebook" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="16.534" height="13.455">
+                <use href="assets/images/icons/twitter.svg#twitter" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="16.535" height="16.534">
+                <use href="assets/images/icons/instagram.svg#instagram" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="20.583" height="15.44">
+                <use href="assets/images/icons/youtube.svg#youtube" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="search-component" data-search-component>
+        <div class="container">
+          <form action="#" class="search">
+            <div class="search__control">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="საძიებო სიტყვა"
+              />
+              <small>გთხოვთ ჩაწეროთ მინიმუმ 3 სიმბოლო</small>
+            </div>
+
+            <button type="submit">
+              <div class="sr-only">ძებნა</div>
+
+              <svg>
+                <use href="assets/images/icons/search.svg#search" />
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
+    <!-- end header component -->
 
     <section class="hero">
       <div class="hero__slider">
