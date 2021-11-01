@@ -14,3 +14,33 @@
     @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
   }
 }
+
+.virtual-tour {
+  &__heading {
+    bottom: 40px !important;
+  }
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+  }
+
+  &__toggle {
+    @include m.size(100px, 100px);
+    @include m.flex(row, center, center);
+    border: 1px solid v.$color-white;
+    border-radius: 50px;
+    color: v.$color-white;
+    font-size: 2rem;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 200;
+  }
+}
