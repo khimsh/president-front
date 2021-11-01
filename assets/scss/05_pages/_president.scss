@@ -1,12 +1,19 @@
+@use '../02_base/variables' as v;
+
 .president-authority {
   margin-bottom: 4em;
 
   ol {
     list-style-type: numbers;
 
+    margin-left: 1em;
+
     ol {
       list-style-type: georgian;
-      margin-left: 120px;
+
+      @media only screen and (min-width: v.$lg) {
+        margin-left: 60px;
+      }
     }
 
     li {
