@@ -2,8 +2,19 @@
 @use '../02_base/mixins' as m;
 
 .structure {
+  position: relative;
   padding: 6em 0;
   background: v.$color-blue-700;
+  min-height: calc(900px);
+
+  & .container {
+    @media only screen and (min-width: v.$lg) {
+      position: relative;
+      width: 1225px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
 
   &__president {
     position: relative;
@@ -16,15 +27,56 @@
       left: 4px;
       background-color: v.$color-white;
       opacity: 0.5;
+
+      @media only screen and (min-width: v.$lg) {
+        background-color: v.$color-white;
+        opacity: 0.5;
+        height: 132px;
+        left: 65px;
+      }
+    }
+
+    &::after {
+      @media only screen and (min-width: v.$lg) {
+        @include m.pseudo($width: 180px, $height: 2px);
+        top: 16px;
+        left: 380px;
+        background-color: v.$color-white;
+        opacity: 0.5;
+      }
     }
   }
 
   .group {
+    max-width: 380px;
     padding-left: 2em;
     margin-bottom: 2em;
     @include m.font(v.$font-notosansgeo, 16px, 300, v.$color-white);
 
+    @media only screen and (min-width: v.$lg) {
+      position: absolute;
+    }
+
     &--3 {
+      @media only screen and (min-width: v.$lg) {
+        top: 180px;
+        left: 65%;
+
+        & > div:first-child {
+          &::after {
+            @include m.pseudo($width: 2px, $height: 48px);
+            top: -63px;
+            left: 68px;
+            background-color: v.$color-white;
+            opacity: 0.5;
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
       > div:not(:first-child) {
         padding-left: 4em;
 
@@ -40,6 +92,19 @@
       }
     }
 
+    &--1 {
+      @media only screen and (min-width: v.$lg) {
+        top: 180px;
+      }
+    }
+
+    &--2 {
+      @media only screen and (min-width: v.$lg) {
+        top: 104px;
+        left: 423px;
+      }
+    }
+
     > div {
       margin-bottom: 1.5em;
     }
@@ -52,6 +117,10 @@
         left: -27px;
         background-color: v.$color-white;
         opacity: 0.5;
+
+        @media only screen and (min-width: v.$lg) {
+          display: none;
+        }
       }
     }
 
@@ -73,6 +142,26 @@
         left: 5px;
         background-color: v.$color-white;
         opacity: 0.5;
+      }
+    }
+
+    .line-up {
+      @media only screen and (min-width: v.$lg) {
+        &::after {
+          @include m.pseudo($width: 2px, $height: 76px);
+          top: -88px;
+          left: 105px;
+          background-color: v.$color-white;
+          opacity: 0.5;
+        }
+
+        &::before {
+          @include m.pseudo($width: 222px, $height: 2px);
+          top: 11px;
+          left: 221px;
+          background-color: v.$color-white;
+          opacity: 0.5;
+        }
       }
     }
   }
