@@ -1,0 +1,16 @@
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
+
+.anthem {
+  margin-top: 60px;
+
+  &__heading {
+    margin-bottom: 26px;
+    @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
+  }
+
+  &__text {
+    margin-bottom: 26px;
+    @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
+  }
+}

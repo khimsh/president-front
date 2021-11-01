@@ -1,28 +1,33 @@
 @use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .audio {
-  position: relative;
-  width: 228px;
+  margin: 0 auto;
+  width: 270px;
 
-  &__file {
-    position: absolute;
-    top: 0;
-    left: 0;
+  &__controls {
+    display: flex;
 
-    svg {
-      stroke: #d4d4d4;
+    button {
+      width: 50px;
+      font-size: 32px;
+      color: v.$color-red-700;
     }
 
-    rect {
-      fill: white;
-      mask: url(#mask);
+    #waveformAnthem {
+      height: 128px;
+      width: 226px;
     }
   }
 
-  &__progression {
-    width: 100%;
-    height: 43px;
+  &__timeline {
+    margin-top: 8px;
+    text-align: right;
+    @include m.font(v.$font-notosansgeo, 0.875rem, 300, v.$color-gray-900);
+  }
 
-    background-color: v.$color-red-700;
+  &__title {
+    margin-top: 14px;
+    @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
   }
 }

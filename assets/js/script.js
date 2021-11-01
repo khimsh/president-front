@@ -355,10 +355,41 @@ function mute(video) {
 
 //TODO: Autoplay active hero slider video
 
-//TODO: Custom Audio Player
+// Custom Audio Player
+if (document.querySelector('[data-audio]')) {
+  const anthem = WaveSurfer.create({
+    container: '#waveformAnthem',
+    waveColor: '#D4D4D4',
+    progressColor: '#c81717',
+  });
+
+  anthem.load('assets/video/audio.mp3');
+
+  const audioCurrentTime = document.querySelector('[data-audio-current]');
+  const audioDuration = document.querySelector('[data-audio-duration]');
+  const audioTogglePlay = document.querySelector('[data-audio-togglePlay]');
+
+  anthem.on('audioprocess', () => {
+    // update current time
+    audioCurrentTime.textContent = formatTime(anthem.getCurrentTime());
+  });
+  anthem.on('ready', () => {
+    // set duration
+    audioDuration.textContent = formatTime(anthem.getDuration());
+  });
+
+  audioTogglePlay.addEventListener('click', () => {
+    if (anthem.isPlaying()) {
+      anthem.pause();
+      audioTogglePlay.textContent = '►';
+    } else {
+      anthem.play();
+      audioTogglePlay.textContent = '❚ ❚';
+    }
+  });
+}
 
 // Remove covid alert from dom
-
 if (document.querySelector('.covid-close')) {
   document.querySelector('.covid-close').addEventListener('click', () => {
     document.querySelector('.covid').remove();
