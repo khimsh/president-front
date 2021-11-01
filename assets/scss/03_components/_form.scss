@@ -63,6 +63,34 @@
     display: none;
     margin-top: 8px;
   }
+
+  .file-upload-button {
+    position: relative;
+    @include m.size(100%, 50px);
+
+    input[type='file'] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include m.flex(row, center, center);
+      @include m.size(100%, 50px);
+      @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
+      padding-left: 46px;
+      padding-top: 11px;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include m.size(150px, 50px);
+      @include m.flex(row, center, center);
+      @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-white);
+      background: v.$color-blue-700;
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
 }
 
 .search-component {
