@@ -27,12 +27,21 @@ blockquote {
   }
 }
 
+.sticky {
+  position: sticky;
+  top: 20px;
+}
+
 .sticky-container {
   position: relative;
 
   .sticky-content {
     padding-left: 4em;
     margin-top: -120px;
+
+    @media only screen and (min-width: v.$lg) {
+      padding-left: 126px;
+    }
   }
 }
 
@@ -66,11 +75,6 @@ blockquote {
       display: block;
     }
   }
-}
-
-.sticky {
-  position: sticky;
-  top: 20px;
 }
 
 [data-tab-content] {
