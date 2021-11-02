@@ -65,6 +65,11 @@
     grid-template-columns: 2fr 386px;
     column-gap: 56px;
   }
+
+  @media only screen and (min-width: v.$xxl) {
+    grid-template-columns: 1fr 512px;
+    column-gap: 128px;
+  }
 }
 
 .grid-3 {

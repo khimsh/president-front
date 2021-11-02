@@ -1,6 +1,13 @@
 @use '../02_base/variables' as v;
 @use '../02_base/mixins' as m;
 
+.aside {
+  .publications-slider {
+    padding: 0 5px;
+    padding-top: 2em;
+  }
+}
+
 .aside-heading {
   position: relative;
   margin-bottom: 32px;
