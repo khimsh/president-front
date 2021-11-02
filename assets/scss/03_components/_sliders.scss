@@ -236,6 +236,23 @@
 
 .publications-slider {
   padding-top: 2em;
+
+  @media only screen and (min-width: v.$xxs) {
+    width: 300px;
+  }
+
+  @media only screen and (min-width: v.$xs) {
+    width: 516px;
+  }
+
+  @media only screen and (min-width: v.$md) {
+    width: 516px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    width: 100%;
+  }
+
   .slick-arrow {
     top: 0;
     bottom: unset;
