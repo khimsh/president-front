@@ -16,6 +16,18 @@
 }
 
 .virtual-tour {
+  position: relative;
+
+  // წითელი ხაზი
+  &::after {
+    @include m.pseudo($width: 200px, $height: 5px);
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: v.$color-red-700;
+    z-index: 10;
+  }
+
   &__heading {
     bottom: 40px !important;
   }

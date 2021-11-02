@@ -280,6 +280,7 @@ players.forEach((player) => {
   const currentTime = player.querySelector('[data-video-current]');
   const videoDuration = player.querySelector('[data-video-duration]');
   const muteBtn = player.querySelector('[data-video-toggleMute]');
+  const progressBar = player.querySelector('[data-video-progressbar]');
 
   toggle.addEventListener('click', () => {
     togglePlay(video);
@@ -298,7 +299,7 @@ players.forEach((player) => {
   });
 
   video.addEventListener('timeupdate', () => {
-    handleProgress(video, currentTime);
+    handleProgress(video, currentTime, progressBar);
   });
 
   muteBtn.addEventListener('click', () => {
@@ -339,9 +340,9 @@ function updateButton(video, toggle) {
   toggle.textContent = icon;
 }
 
-function handleProgress(video, currentTime) {
-  // const percent = (video.currentTime / video.duration) * 100;
-  // progressBar.style.flexBasis = `${percent}%`;
+function handleProgress(video, currentTime, progress = '') {
+  const percent = (video.currentTime / video.duration) * 100;
+  progress.style.flexBasis = `${percent}%`;
   currentTime.textContent = formatTime(video.currentTime);
 }
 
