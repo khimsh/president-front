@@ -13,7 +13,7 @@
 
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script type="module" src="assets/js/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
   </head>
   <body>
     <div class="header-wrapper">
@@ -326,30 +326,106 @@
         </div>
 
         <div class="page-actions-right">
-          <form action="#" class="flex">
-            <div class="custom-select">
-              <select name="country" id="country" data-custom>
-                <option value="აშშ">
-                  <span class="flag">
-                    <img src="assets/images/flags/usa.png" alt="" />
-                  </span>
-                  <span>აშშ</span>
-                </option>
-                <option value="შვეიცარია">
-                  <span class="flag">
-                    <img src="assets/images/flags/italy.png" alt="" />
-                  </span>
-                  <span>შვეიცარია</span>
-                </option>
-                <option value="ავსტრია">
-                  <span class="flag">
-                    <img src="assets/images/flags/italy.png" alt="" />
-                  </span>
-                  <span>ავსტრია</span>
-                </option>
-              </select>
+          <div class="filter filter--country" data-filter>
+            <div class="filter__title" data-filter="toggle">
+              <div class="filter__default">
+                <div data-filter-display>
+                  <span class="filter__default__text">ყველა ქვეყანა</span>
+                </div>
+                <svg class="filter__icon">
+                  <use
+                    href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                  />
+                </svg>
+              </div>
             </div>
-          </form>
+
+            <ul class="filter__content" data-filter-content>
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/usa.png" alt="" />
+                </div>
+                <span data-filter-country="usa">აშშ</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/germany.png" alt="" />
+                </div>
+                <span data-filter-country="germany">გერმანია</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/italy.png" alt="" />
+                </div>
+                <span data-filter-country="italy">იტალია</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/france.png" alt="" />
+                </div>
+                <span data-filter-country="france">საფრანგეთი</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/usa.png" alt="" />
+                </div>
+                <span data-filter-country="usa">აშშ</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/germany.png" alt="" />
+                </div>
+                <span data-filter-country="germany">გერმანია</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/italy.png" alt="" />
+                </div>
+                <span data-filter-country="italy">იტალია</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/france.png" alt="" />
+                </div>
+                <span data-filter-country="france">საფრანგეთი</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/usa.png" alt="" />
+                </div>
+                <span data-filter-country="usa">აშშ</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/germany.png" alt="" />
+                </div>
+                <span data-filter-country="germany">გერმანია</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/italy.png" alt="" />
+                </div>
+                <span data-filter-country="italy">იტალია</span>
+              </li>
+
+              <li class="filter__item" data-filter-item>
+                <div class="filter__flag">
+                  <img src="assets/images/flags/france.png" alt="" />
+                </div>
+                <span data-filter-country="france">საფრანგეთი</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

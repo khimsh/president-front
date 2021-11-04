@@ -1,5 +1,4 @@
 'use strict';
-import Select from './select.js';
 
 // ნავიგაცია
 const siteHeader = document.querySelector('.site-header');
@@ -195,13 +194,6 @@ toggleSearch.addEventListener('click', () => {
   }
 });
 
-// Custom Select
-const selectElements = document.querySelectorAll('[data-custom]');
-
-selectElements.forEach((selectElement) => {
-  new Select(selectElement);
-});
-
 // FAQ
 if (document.querySelectorAll('.faq')) {
   const faqs = document.querySelectorAll('.faq');
@@ -394,5 +386,37 @@ if (document.querySelector('[data-audio]')) {
 if (document.querySelector('.covid-close')) {
   document.querySelector('.covid-close').addEventListener('click', () => {
     document.querySelector('.covid').remove();
+  });
+}
+
+// ფილტრები
+if (document.querySelectorAll('[data-filter]')) {
+  const filters = document.querySelectorAll('[data-filter]');
+
+  filters.forEach((filter) => {
+    const filterIcon = filter.querySelector('.filter__icon');
+    const filterItems = filter.querySelectorAll('[data-filter-item]');
+    const filterDisplay = filter.querySelector('[data-filter-display]');
+
+    filter.addEventListener('click', (e) => {
+      if (e.target.dataset.filter !== 'toggle') return;
+
+      filter.classList.toggle('open');
+
+      if (filter.classList.contains('open')) {
+        filterIcon.style.transform = 'rotate(180deg)';
+      } else {
+        filterIcon.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    filterItems.forEach((filterItem) => {
+      filterItem.addEventListener('click', () => {
+        let filterItemHtml = filterItem.innerHTML;
+        filterDisplay.innerHTML = filterItemHtml;
+        filter.classList.remove('open');
+        filterIcon.style.transform = 'rotate(0deg)';
+      });
+    });
   });
 }

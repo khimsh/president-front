@@ -13,7 +13,7 @@
 
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script type="module" src="assets/js/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
   </head>
   <body>
     <div class="header-wrapper">
@@ -321,44 +321,116 @@
           </button>
         </div>
 
-        <div class="page-actions-right">
-          <form action="#" class="flex">
-            <div class="custom-select">
-              <select name="year" id="year" data-custom>
-                <option value="" disabled selected hidden>წელი</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
-                <option value="2014">2014</option>
-                <option value="2013">2013</option>
-                <option value="2012">2012</option>
-                <option value="2011">2011</option>
-                <option value="2010">2010</option>
-              </select>
+        <div class="page-actions-right flex">
+          <div class="filter filter--year" data-filter>
+            <div class="filter__title" data-filter="toggle">
+              <div class="filter__default">
+                <div data-filter-display>
+                  <span class="filter__default__text">წელი</span>
+                </div>
+                <svg class="filter__icon">
+                  <use
+                    href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                  />
+                </svg>
+              </div>
             </div>
 
-            <div class="custom-select">
-              <select name="month" id="month" data-custom>
-                <option value="" disabled selected hidden>თვე</option>
-                <option value="იანვარი">იანვარი</option>
-                <option value="თებერვალი">თებერვალი</option>
-                <option value="მარტი">მარტი</option>
-                <option value="აპრილი">აპრილი</option>
-                <option value="მაისი">მაისი</option>
-                <option value="ივნისი">ივნისი</option>
-                <option value="ივლისი">ივლისი</option>
-                <option value="აგვისტო">აგვისტო</option>
-                <option value="სექტემბერი">სექტემბერი</option>
-                <option value="ოქტომბერი">ოქტომბერი</option>
-                <option value="ნოემბერი">ნოემბერი</option>
-                <option value="დეკემბერი">დეკემბერი</option>
-              </select>
+            <ul class="filter__content" data-filter-content>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2021"> 2021 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2020"> 2020 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2019"> 2019 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2018"> 2018 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2017"> 2017 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2016"> 2016 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2015"> 2015 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2014"> 2014 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2013"> 2013 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2012"> 2012 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2011"> 2011 </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-year="2010"> 2010 </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter filter--month" data-filter>
+            <div class="filter__title" data-filter="toggle">
+              <div class="filter__default">
+                <div data-filter-display>
+                  <span class="filter__default__text">თვე</span>
+                </div>
+                <svg class="filter__icon">
+                  <use
+                    href="assets/images/icons/arrow-down-small.svg#arrow-down-small"
+                  />
+                </svg>
+              </div>
             </div>
 
+            <ul class="filter__content" data-filter-content>
+              <li class="filter__item" data-filter-item>
+                <span data-month="იანვარი"> იანვარი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="თებერვალი"> თებერვალი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="მარტი"> მარტი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="აპრილი"> აპრილი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="მაისი"> მაისი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="ივნისი"> ივნისი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="ივლისი"> ივლისი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="აგვისტო"> აგვისტო </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="სეტემბერი"> სეტემბერი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="ოქტომბერი"> ოქტომბერი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="ნოემბერი"> ნოემბერი </span>
+              </li>
+              <li class="filter__item" data-filter-item>
+                <span data-month="დეკემბერი"> დეკემბერი </span>
+              </li>
+            </ul>
+          </div>
+
+          <form action="#">
             <div class="search-box">
               <input
                 type="search"
