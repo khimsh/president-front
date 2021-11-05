@@ -74,7 +74,7 @@
     pointer-events: none;
 
     svg {
-      @include m.svg(12.86px, 12.86px, v.$color-white);
+      @include m.svg(10px, 10px, v.$color-white);
     }
 
     &__text {

@@ -13,7 +13,7 @@
 
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script type="module" src="assets/js/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
   </head>
   <body>
     <div class="header-wrapper">
@@ -315,6 +315,29 @@
           <button href="#" class="btn btn-blue">
             <span>ვიდეო</span>
           </button>
+        </div>
+
+        <div class="page-actions-right flex">
+          <form action="#">
+            <div class="search-box">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="ძიება"
+                class="search-box__search"
+              />
+
+              <button type="submit" class="search-box__btn">
+                <span class="sr-only">search</span>
+                <svg>
+                  <use
+                    href="assets/images/icons/arrow-right-small.svg#arrow-right-small"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
