@@ -56,13 +56,13 @@ navBar.addEventListener('click', (e) => {
 
     timelineIN
       .to(navBackdrop, {
-        duration: 0.3,
+        duration: 0.15,
         height: navItem.offsetHeight + 24 + 'px',
       })
       .to(
         logoBorder,
         {
-          duration: 0.3,
+          duration: 0.15,
           background: 'hsla(219, 65%, 8%, 1)',
         },
         '<'
@@ -70,14 +70,15 @@ navBar.addEventListener('click', (e) => {
       .to(
         siteHeader,
         {
-          duration: 0.3,
+          duration: 0.15,
           background: 'hsla(219, 65%, 8%, 1)',
         },
         '<'
       )
       .to(navItem, {
-        duration: 0.3,
+        duration: 0.2,
         opacity: 1,
+        delay: 0.1,
       });
   }
 });
@@ -92,21 +93,21 @@ document.addEventListener('click', (e) => {
 
       timelineOut2
         .to(item, {
-          duration: 0.2,
+          duration: 0.15,
           opacity: 0,
         })
         .to(navBackdrop, {
-          duration: 0.3,
+          duration: 0.2,
           height: 0,
         })
         .to(siteHeader, {
-          duration: 0.2,
+          duration: 0.15,
           background: 'hsla(219, 65%, 8%, 0.4)',
         })
         .to(
           logoBorder,
           {
-            duration: 0.2,
+            duration: 0.15,
             background: 'hsla(219, 65%, 8%, .4)',
           },
           '<'
