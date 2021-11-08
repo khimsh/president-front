@@ -1,49 +1,69 @@
 @use '../02_base/variables' as v;
 @use '../02_base/mixins' as m;
 
+:root {
+  --header-height: 50px;
+
+  @media only screen and (min-width: v.$sm) {
+    --header-height: 64px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    --header-height: 78px;
+  }
+
+  @media only screen and (min-width: v.$xxl) {
+    --header-height: 100px;
+  }
+}
+
 .site-header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  background: hsla(219, 65%, 8%, 0.4);
-  z-index: 100000;
+  height: var(--header-height);
+  background: hsla(219, 65%, 8%, 0.6);
+  transition: background-color 0.2s ease-in-out;
+  z-index: 100000000;
 
   &.active {
-    background: hsla(219, 65%, 8%, 0.6);
+    background-color: hsla(219, 65%, 8%, 1);
+
+    .bottom-border {
+      background-color: hsla(219, 65%, 8%, 1);
+    }
   }
 
-  @media only screen and (min-width: v.$sm) {
-    height: 64px;
-  }
+  &__search {
+    position: absolute;
+    right: 28px;
+    top: 0;
+    height: var(--header-height);
+    width: 48px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    z-index: 100;
 
-  @media only screen and (min-width: v.$lg) {
-    height: 78px;
-    height: auto;
-  }
-
-  @media only screen and (min-width: v.$xl) {
-    height: auto;
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+      pointer-events: none;
+    }
   }
 }
 
 .site-logo {
-  position: relative;
-  margin-right: auto;
-  margin-left: 16px;
+  position: absolute;
   margin-top: 4px;
   height: 74px;
+  z-index: 1000;
 
-  @media only screen and (min-width: v.$sm) {
-    margin-top: 8px;
-  }
-
-  @media only screen and (min-width: v.$xl) {
-    margin-left: 40px;
+  svg {
+    position: relative;
+    z-index: 100;
   }
 
   .bottom-border {
@@ -52,16 +72,10 @@
     left: -7px;
     width: 82px;
     height: 22px;
-    background: hsla(219, 65%, 8%, 0.4);
+    background-color: hsla(219, 65%, 8%, 0.4);
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
-    z-index: -1;
-
-    visibility: initial;
-
-    &.hidden {
-      visibility: hidden;
-    }
+    transition: background-color 0.2s ease-in-out;
 
     @media only screen and (min-width: v.$sm) {
       bottom: -2px;
@@ -113,12 +127,159 @@
   }
 }
 
-.icon-menu {
+.site-nav {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 300px;
+  background: transparent;
+  z-index: 10;
+
+  transition: all 0.2s ease-in-out;
+
+  &__list {
+    display: flex;
+    gap: 70px;
+  }
+
+  &__btn {
+    height: var(--header-height);
+    font-family: 'GL Tatishvili Metal', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    .icon {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    opacity: 0;
+    transform-origin: top;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
+
+    &.active {
+      opacity: 1;
+      pointer-events: unset;
+      transition-delay: 0.1s;
+    }
+
+    a {
+      display: block;
+      padding: 8px 0;
+      font-family: 'BPG Nino Mtavruli', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: hsla(0, 0%, 100%, 0.8);
+      }
+    }
+  }
+}
+
+.site-languages {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  height: var(--header-height);
+  display: flex;
+  gap: 24px;
+  z-index: 100;
+
+  @media only screen and (min-width: v.$lg) {
+    border-top: 6px solid v.$color-red-700;
+  }
+
+  li {
+    height: 100%;
+
+    a {
+      display: block;
+      height: 100%;
+      display: grid;
+      place-content: center;
+      font-family: 'Noto Sans Georgian AG', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: hsla(0, 0%, 100%, 0.6);
+      text-decoration: none;
+    }
+  }
+}
+
+.main-search {
+  padding: 0 20px;
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  background: hsla(219, 65%, 8%, 0.9);
+  overflow: hidden;
+  transition: height 0.2s ease-in-out;
+
+  &.active {
+    height: 280px;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__control {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    input[type='search'] {
+      padding: 0.5em;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid gray;
+      outline-style: none;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid gray;
+    transform: translateY(-12px);
+    transition: all 0.2s ease-in-out;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+    }
+  }
+}
+
+.site-header__menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 50px;
+  height: var(--header-height);
+  width: var(--header-height);
   background: hsla(0, 0%, 100%, 0.8);
 
   svg {
@@ -131,34 +292,5 @@
 
   @media only screen and (min-width: v.$lg) {
     display: none;
-  }
-}
-
-.icon-search {
-  margin: 0 10px;
-  height: 50px;
-  width: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media only screen and (min-width: v.$sm) {
-    height: 64px;
-  }
-
-  @media only screen and (min-width: v.$lg) {
-    height: 82px;
-  }
-
-  @media only screen and (min-width: v.$xxs) {
-    margin: 0 20px;
-  }
-
-  @media only screen and (min-width: v.$xs) {
-    margin: 0 20px 0 40px;
-  }
-
-  svg {
-    @include m.svg(24px, 22.001px, v.$color-white);
   }
 }

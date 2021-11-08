@@ -1,120 +1,81 @@
 'use strict';
 
+const header = document.querySelector('[data-site-header]');
+
 // ნავიგაცია
-const siteHeader = document.querySelector('.site-header');
-const navBackdrop = document.querySelector('.nav-backdrop');
-const logoBorder = document.querySelector('.bottom-border');
-const navBar = document.querySelector('.site-nav-list');
-const navLists = document.querySelectorAll('.site-nav-dropdown-content');
+const nav = document.querySelector('[data-navigation]');
+const navContents = nav.querySelectorAll('[data-navigation-content');
+const navBtns = nav.querySelectorAll('[data-navigation-toggle');
 
-const timelineIN = gsap.timeline();
-const timelineOut = gsap.timeline();
-const timelineOut2 = gsap.timeline();
+// ძიება
+const toggleSearch = document.querySelector('[data-toggle-search]');
+const searchBox = document.querySelector('[data-search]');
 
-navBar.addEventListener('click', (e) => {
-  if (e.target.tagName.toLowerCase() != 'button') return;
+navBtns.forEach((navBtn) => {
+  navBtn.addEventListener('click', () => {
+    const target = navBtn.nextElementSibling;
 
-  let navItem = e.target.nextElementSibling;
+    if (target.classList.contains('active')) {
+      closeNav(nav, target);
+      header.classList.remove('active');
+    } else {
+      navContents.forEach((navContent) => {
+        closeNav(nav, navContent);
+        header.classList.remove('active');
+      });
 
-  if (navItem.classList.contains('active')) {
-    // if the nav is expanded
+      header.classList.add('active');
+      target.classList.add('active');
+      nav.style.height = target.offsetHeight + 122 + 'px';
+      nav.style.backgroundColor = 'hsla(219, 65%, 8%, 0.9)';
+    }
+  });
+});
 
-    navItem.classList.remove('active');
+toggleSearch.addEventListener('click', () => {
+  searchBox.classList.toggle('active');
 
-    timelineOut
-      .to(navItem, {
-        duration: 0.2,
-        opacity: 0,
-      })
-      .to(navBackdrop, {
-        duration: 0.3,
-        height: 0,
-      })
-      .to(siteHeader, {
-        duration: 0.2,
-        background: 'hsla(219, 65%, 8%, 0.4)',
-      })
-      .to(
-        logoBorder,
-        {
-          duration: 0.2,
-          background: 'hsla(219, 65%, 8%, .4)',
-        },
-        '<'
-      );
+  if (searchBox.classList.contains('active')) {
+    header.classList.add('active');
   } else {
-    // if the nav is collapsed
-    navLists.forEach((navList) => {
-      navList.classList.remove('active');
-      gsap.to(navList, {
-        duration: 0.2,
-        opacity: 0,
-      });
-    });
-
-    navItem.classList.add('active');
-
-    timelineIN
-      .to(navBackdrop, {
-        duration: 0.15,
-        height: navItem.offsetHeight + 24 + 'px',
-      })
-      .to(
-        logoBorder,
-        {
-          duration: 0.15,
-          background: 'hsla(219, 65%, 8%, 1)',
-        },
-        '<'
-      )
-      .to(
-        siteHeader,
-        {
-          duration: 0.15,
-          background: 'hsla(219, 65%, 8%, 1)',
-        },
-        '<'
-      )
-      .to(navItem, {
-        duration: 0.2,
-        opacity: 1,
-        delay: 0.1,
-      });
+    header.classList.remove('active');
   }
 });
 
-// ნავიგაციის დახურვა გარეთ დაკლიკებისას
 document.addEventListener('click', (e) => {
-  if (!e.target.classList.contains('site-nav-item')) {
-    navLists.forEach((item) => {
-      if (!item.classList.contains('active')) return;
-
-      item.classList.remove('active');
-
-      timelineOut2
-        .to(item, {
-          duration: 0.15,
-          opacity: 0,
-        })
-        .to(navBackdrop, {
-          duration: 0.2,
-          height: 0,
-        })
-        .to(siteHeader, {
-          duration: 0.15,
-          background: 'hsla(219, 65%, 8%, 0.4)',
-        })
-        .to(
-          logoBorder,
-          {
-            duration: 0.15,
-            background: 'hsla(219, 65%, 8%, .4)',
-          },
-          '<'
-        );
+  // დახურე ნავიგაცია გარეთ კლიკზე
+  if (
+    !e.target.classList.contains('site-nav__content') &&
+    !e.target.classList.contains('site-nav__btn')
+  ) {
+    navContents.forEach((navContent) => {
+      closeNav(nav, navContent);
     });
   }
+
+  // დახურე ძიების ველი გარეთ დაკლიკებისას
+  if (
+    !e.target.classList.contains('site-header__search') &&
+    !e.target.classList.contains('main-search')
+  ) {
+    searchBox.classList.remove('active');
+  }
+
+  if (
+    !e.target.classList.contains('site-nav__content') &&
+    !e.target.classList.contains('site-nav__btn') &&
+    !e.target.classList.contains('site-header__search') &&
+    !e.target.classList.contains('main-search')
+  ) {
+    header.classList.remove('active');
+  }
 });
+
+function closeNav(nav, target) {
+  target.classList.remove('active');
+  nav.style.height = '100%';
+  nav.style.backgroundColor = 'transparent';
+}
 
 // მობილური ნავიგაცია
 const toggleNavBtn = document.querySelector('[data-open-nav]');
@@ -164,35 +125,6 @@ mobileNavItems.forEach((mobileNavItem) => {
       arrowIcon.style.transform = 'rotate(0deg)';
     }
   });
-});
-
-// Header Search კომპონენტი
-const toggleSearch = document.querySelector('[data-toggle-search]');
-const searchComponent = document.querySelector('[data-search-component]');
-
-toggleSearch.addEventListener('click', () => {
-  searchComponent.classList.toggle('active');
-
-  if (searchComponent.classList.contains('active')) {
-    toggleSearch.innerHTML = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="23.334" height="23.335" viewBox="0 0 23.334 23.335">
-      <g id="Group_1596" data-name="Group 1596" transform="translate(-1151.439 -27.439)">
-        <line id="Line_8" data-name="Line 8" x2="30" transform="translate(1152.5 49.713) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
-        <line id="Line_9" data-name="Line 9" x2="30" transform="translate(1152.5 28.5) rotate(45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
-      </g>
-    </svg>
-    `;
-  } else {
-    toggleSearch.innerHTML = `
-    <svg id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22.001">
-      <g id="Group_392" data-name="Group 392" transform="translate(-1383.092 -45.604)">
-        <g id="Group_159" data-name="Group 159">
-          <path id="Path_583" data-name="Path 583" d="M1392.725,45.6a9.634,9.634,0,1,0,6.117,17.062l4.656,4.666a.934.934,0,0,0,1.321-1.32l-4.666-4.656a9.623,9.623,0,0,0-7.428-15.752Zm0,1.865a7.768,7.768,0,1,1-7.769,7.769A7.755,7.755,0,0,1,1392.725,47.469Z"/>
-        </g>
-      </g>
-    </svg>
-   `;
-  }
 });
 
 // FAQ
