@@ -56,7 +56,8 @@ document.addEventListener('click', (e) => {
   // დახურე ძიების ველი გარეთ დაკლიკებისას
   if (
     !e.target.classList.contains('site-header__search') &&
-    !e.target.classList.contains('main-search')
+    !e.target.classList.contains('main-search') &&
+    !e.target.classList.contains('main-search__input')
   ) {
     searchBox.classList.remove('active');
   }
@@ -65,7 +66,8 @@ document.addEventListener('click', (e) => {
     !e.target.classList.contains('site-nav__content') &&
     !e.target.classList.contains('site-nav__btn') &&
     !e.target.classList.contains('site-header__search') &&
-    !e.target.classList.contains('main-search')
+    !e.target.classList.contains('main-search') &&
+    !e.target.classList.contains('main-search__input')
   ) {
     header.classList.remove('active');
   }

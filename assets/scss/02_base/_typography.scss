@@ -102,8 +102,12 @@ time {
 }
 
 .site-nav {
-  :is(a, button) {
+  button {
     @include m.font(v.$font-tatishvili, 1.125rem, 700, v.$color-white);
+  }
+
+  a {
+    @include m.font(v.$font-bpgnino, 1.125rem, 700, v.$color-white);
     text-decoration: none;
   }
 }
@@ -122,7 +126,7 @@ time {
 
 .site-languages {
   a {
-    @include m.font(v.$font-notosansgeo, 16px, 700, v.$color-white);
+    @include m.font(v.$font-notosansgeo, 1rem, 700, v.$color-white);
     text-decoration: none;
     text-transform: capitalize;
     opacity: 0.6;
