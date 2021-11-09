@@ -207,7 +207,26 @@ players.forEach((player) => {
   const currentTime = player.querySelector('[data-video-current]');
   const videoDuration = player.querySelector('[data-video-duration]');
   const muteBtn = player.querySelector('[data-video-toggleMute]');
-  const progressBar = player.querySelector('[data-video-progressbar]');
+
+  if (player.querySelector('[data-video-progress]')) {
+    const progress = player.querySelector('[data-video-progress]');
+    const progressBar = player.querySelector('[data-video-progressbar]');
+
+    video.addEventListener('timeupdate', () => {
+      handleTimeUpdate(video, progressBar);
+    });
+
+    function scrub(e) {
+      const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+      video.currentTime = scrubTime;
+    }
+
+    let mousedown = false;
+    progress.addEventListener('click', scrub);
+    progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+    progress.addEventListener('mousedown', () => (mousedown = true));
+    progress.addEventListener('mouseup', () => (mousedown = false));
+  }
 
   toggle.addEventListener('click', () => {
     togglePlay(video);
@@ -226,7 +245,7 @@ players.forEach((player) => {
   });
 
   video.addEventListener('timeupdate', () => {
-    handleProgress(video, currentTime, progressBar);
+    handleProgress(video, currentTime);
   });
 
   muteBtn.addEventListener('click', () => {
@@ -267,9 +286,12 @@ function updateButton(video, toggle) {
   toggle.textContent = icon;
 }
 
-function handleProgress(video, currentTime, progress = '') {
+function handleTimeUpdate(video, progress = null) {
   const percent = (video.currentTime / video.duration) * 100;
   progress.style.flexBasis = `${percent}%`;
+}
+
+function handleProgress(video, currentTime) {
   currentTime.textContent = formatTime(video.currentTime);
 }
 
@@ -280,8 +302,6 @@ function mute(video) {
     video.muted = true;
   }
 }
-
-//TODO: Autoplay active hero slider video
 
 // Custom Audio Player
 if (document.querySelector('[data-audio]')) {

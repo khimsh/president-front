@@ -121,4 +121,25 @@ $(document).ready(function () {
     prevArrow: previousArrowSmall,
     nextArrow: nextArrowSmall,
   });
+
+  // Autoplay active hero slider video
+  // On slide change, pause all videos
+  $('.hero__slider').on(
+    'beforeChange',
+    function (event, slick, currentSlide, nextSlide) {
+      $('.hero__item video').each(function () {
+        $(this).get(0).pause();
+      });
+    }
+  );
+
+  // On slide chnage, play a video inside the current slide
+  $('.hero__slider').on(
+    'afterChange',
+    function (event, slick, currentSlide, nextSlide) {
+      if ($('.hero__item.slick-current').find('video').length !== 0) {
+        $('.hero__slider .slick-current video')[0].play();
+      }
+    }
+  );
 });
