@@ -2,9 +2,6 @@
 @use '../02_base/mixins' as m;
 
 .article {
-  margin: 0 auto;
-  max-width: 1200px;
-
   &__heading {
     margin-bottom: 2em;
   }
@@ -66,9 +63,22 @@
     }
 
     &--lg {
+      justify-content: flex-start;
+      margin-bottom: 60px;
+
+      @media only screen and (min-width: v.$xl) {
+        margin-bottom: 80px;
+      }
+
       iframe {
-        @media only screen and (min-width: v.$lg) {
-          @include m.size(1150px, 640px);
+        @include m.size(100%, 320px);
+
+        @media only screen and (min-width: v.$md) {
+          height: 460px;
+        }
+
+        @media only screen and (min-width: v.$xl) {
+          height: 640px;
         }
       }
     }

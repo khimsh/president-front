@@ -62,7 +62,7 @@
   row-gap: 2em;
 
   @media only screen and (min-width: v.$lg) {
-    grid-template-columns: 2fr 386px;
+    grid-template-columns: 1fr 386px;
     column-gap: 56px;
   }
 

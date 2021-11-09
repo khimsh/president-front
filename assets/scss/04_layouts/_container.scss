@@ -49,6 +49,25 @@
   }
 }
 
+.container-article {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media only screen and (min-width: v.$sm) {
+    padding: 0 54px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    width: 992px;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    width: 1200px;
+  }
+}
+
 .container--presidents {
   @media only screen and (min-width: v.$xxl) {
     max-width: 1147px;

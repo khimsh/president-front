@@ -122,6 +122,13 @@ $(document).ready(function () {
     nextArrow: nextArrowSmall,
   });
 
+  $('.slider-images').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: previousArrowSmall,
+    nextArrow: nextArrowSmall,
+  });
+
   // Autoplay active hero slider video
   // On slide change, pause all videos
   $('.hero__slider').on(
