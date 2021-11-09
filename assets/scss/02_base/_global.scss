@@ -14,6 +14,17 @@ p {
   }
 }
 
+a {
+  color: v.$color-red-700;
+  transition: color 0.15s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: v.$color-red-500;
+  }
+}
+
 blockquote {
   position: relative;
   max-width: 555px;
@@ -25,6 +36,13 @@ blockquote {
     top: -52px;
     left: -14px;
   }
+}
+
+::-moz-selection {
+  background-color: v.$color-red-300;
+}
+::selection {
+  background-color: v.$color-red-300;
 }
 
 .sticky {

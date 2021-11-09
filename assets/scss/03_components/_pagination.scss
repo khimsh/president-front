@@ -9,19 +9,29 @@
   }
 
   li {
-    width: 40px;
-    height: 40px;
+    @include m.size(40px, 40px);
 
     a {
-      @include m.flex($justify: center, $align: center);
-      width: 100%;
-      height: 100%;
-      background: v.$color-blue-700;
+      @include m.flex(row, center, center);
+      @include m.size(100%, 100%);
       @include m.font(v.$font-notosansgeo, 20px, 700, v.$color-white);
       text-decoration: none;
+      background-color: v.$color-blue-700;
+      transition: background-color 0.15s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: v.$color-blue-500;
+      }
 
       &.active {
-        background: v.$color-red-700;
+        background-color: v.$color-red-700;
+        transition: background-color 0.15s ease-in-out;
+
+        &:hover,
+        &:focus {
+          background-color: #d22f28;
+        }
       }
     }
 
