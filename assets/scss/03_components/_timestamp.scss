@@ -1,13 +1,13 @@
-@use '../02_base/variables' as v;
+@use "../02_base/variables" as v;
 
 .timestamp {
   position: absolute;
-  bottom: 0;
+  bottom: -4px;
   left: 15px;
   width: 100%;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: -20px;

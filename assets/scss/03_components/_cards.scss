@@ -1,40 +1,7 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .card {
-  --card-image-height: 250px;
-  --card-featured-image-height: 250px;
-
-  @media only screen and (min-width: v.$xs) {
-    --card-image-height: 365px;
-    --card-featured-image-height: 330px;
-  }
-
-  @media only screen and (min-width: v.$sm) {
-    --card-image-height: 222px;
-    --card-featured-image-height: 238px;
-  }
-
-  @media only screen and (min-width: v.$md) {
-    --card-image-height: 180px;
-    --card-featured-image-height: 310px;
-  }
-
-  @media only screen and (min-width: v.$lg) {
-    --card-image-height: 228px;
-    --card-featured-image-height: 415px;
-  }
-
-  @media only screen and (min-width: v.$xl) {
-    --card-image-height: 254px;
-    --card-featured-image-height: 465px;
-  }
-
-  @media only screen and (min-width: v.$xxl) {
-    --card-image-height: 348px;
-    --card-featured-image-height: 650px;
-  }
-
   &:hover {
     figure {
       &::after {
@@ -48,11 +15,8 @@
   }
 
   &--featured {
-    .card__meta {
-      height: var(--card-featured-image-height);
-    }
     .card__figure {
-      height: calc(var(--card-featured-image-height) - 5px);
+      aspect-ratio: 3 / 2;
     }
   }
 
@@ -63,13 +27,12 @@
   &__meta {
     position: relative;
     margin-bottom: 18px;
-    height: var(--card-image-height);
   }
 
   &__figure {
     width: 100%;
     overflow: hidden;
-    height: calc(var(--card-image-height) - 5px);
+    aspect-ratio: 3 / 2;
 
     &::after {
       @include m.pseudo($width: 100%, $height: 100%);
@@ -123,9 +86,11 @@
 }
 
 .address-card {
-  height: 460px;
-  max-width: 483px;
   position: relative;
+
+  .timestamp {
+    transform: translateY(-4px);
+  }
 
   &:hover {
     figure {
@@ -147,9 +112,8 @@
   &__figure {
     position: relative;
     margin: 0 auto;
-    width: calc(100% - 10px);
-
-    height: calc(100% - 5px);
+    aspect-ratio: 4 / 5;
+    transform: translateY(-4px);
 
     &::before {
       @include m.pseudo($width: 100%, $height: 100%);
