@@ -320,7 +320,13 @@
       </figcaption>
 
       <div class="video-banner__controls">
-        <button class="video-banner__toggle" data-video-togglePlay>►</button>
+        <button
+          class="video-banner__toggle"
+          data-video-togglePlay
+          aria-label="play/pause"
+        >
+          ►
+        </button>
 
         <div class="hero__timeline">
           <span class="video-banner-currenttime" data-video-current>00:00</span>
@@ -329,13 +335,21 @@
         </div>
       </div>
 
-      <button class="video-banner__mute" data-video-toggleMute>
+      <button
+        class="video-banner__mute"
+        data-video-toggleMute
+        aria-label="mute/unmute"
+      >
         <svg class="mute">
           <use href="assets/images/icons/mute.svg#mute" />
         </svg>
       </button>
 
-      <button class="video-banner__fullscreen" data-video-fullscreen>
+      <button
+        class="video-banner__fullscreen"
+        data-video-fullscreen
+        aria-label="enter fullscreen"
+      >
         <svg>
           <use href="assets/images/icons/expand.svg#expand" />
         </svg>

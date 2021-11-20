@@ -22,7 +22,7 @@
       <header class="site-header" data-site-header>
         <!-- ლოგო -->
         <div class="site-logo">
-          <a href="/">
+          <a href="/" aria-label="return home">
             <svg>
               <use href="assets/images/icons/logo.svg#logo" />
             </svg>
@@ -114,14 +114,18 @@
         </ul>
 
         <!-- ძიების ღილაკი -->
-        <button class="site-header__search" data-toggle-search>
+        <button
+          class="site-header__search"
+          aria-label="search"
+          data-toggle-search
+        >
           <svg>
             <use href="assets/images/icons/search.svg#search" />
           </svg>
         </button>
         <!-- ძიების ღილაკის დასასრული -->
 
-        <button class="site-header__menu" data-open-nav>
+        <button class="site-header__menu" aria-label="open menu" data-open-nav>
           <svg width="30" height="22">
             <use href="assets/images/icons/menu.svg#menu" />
           </svg>
@@ -142,9 +146,7 @@
             <small>გთხოვთ ჩაწეროთ მინიმუმ 3 სიმბოლო</small>
           </div>
 
-          <button type="submit" class="main-search__btn">
-            <!-- <div class="sr-only">ძებნა</div> -->
-
+          <button type="submit" class="main-search__btn" aria-label="search">
             <svg>
               <use href="assets/images/icons/search.svg#search" />
             </svg>
@@ -320,7 +322,11 @@
               </h2>
 
               <div class="hero__controls">
-                <button class="hero__togglePlay" data-video-togglePlay>
+                <button
+                  class="hero__togglePlay"
+                  aria-label="play/pause"
+                  data-video-togglePlay
+                >
                   ►
                 </button>
 
@@ -337,7 +343,11 @@
             </div>
           </figcaption>
 
-          <button class="hero__mute" data-video-toggleMute>
+          <button
+            class="hero__mute"
+            aria-label="mute/unmute"
+            data-video-toggleMute
+          >
             <svg class="mute">
               <use href="assets/images/icons/mute.svg#mute" />
             </svg>
@@ -345,7 +355,7 @@
         </figure>
 
         <figure class="hero__item" data-video-container>
-          <video src="assets/video/video.mp4" muted data-video></video>
+          <video src="assets/video/video.mp4" muted data-video autoplay></video>
 
           <figcaption>
             <div class="container">
@@ -355,7 +365,11 @@
               </h2>
 
               <div class="hero__controls">
-                <button class="hero__togglePlay" data-video-togglePlay>
+                <button
+                  class="hero__togglePlay"
+                  aria-label="play/pause"
+                  data-video-togglePlay
+                >
                   ►
                 </button>
 
@@ -372,7 +386,11 @@
             </div>
           </figcaption>
 
-          <button class="hero__mute" data-video-toggleMute>
+          <button
+            class="hero__mute"
+            aria-label="mute/unmute"
+            data-video-toggleMute
+          >
             <svg class="mute">
               <use href="assets/images/icons/mute.svg#mute" />
             </svg>
@@ -396,11 +414,11 @@
 
     <!-- covid warning -->
     <div class="covid">
-      <a href="#">
+      <a href="#" aria-label="covid-alert">
         <img src="assets/images/covid.png" alt="" />
       </a>
 
-      <button class="covid-close">
+      <button class="covid-close" aria-label="close covid alert">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="12.281"
@@ -889,7 +907,12 @@
 
     <footer class="site-footer">
       <!-- Scroll To Top Button -->
-      <button role="button" data-scroll-top class="scroll-to-top">
+      <button
+        role="button"
+        data-scroll-top
+        class="scroll-to-top"
+        aria-label="scroll to top"
+      >
         <svg>
           <use href="assets/images/icons/arrow-up.svg#arrow-up" />
         </svg>
@@ -949,6 +972,7 @@
                 target="_blank"
                 rel="noopener"
                 class="social-media__facebook"
+                aria-label="facebook"
               >
                 <svg>
                   <use href="assets/images/icons/facebook.svg#facebook" />
@@ -961,6 +985,7 @@
                 target="_blank"
                 rel="noopener"
                 class="social-media__twitter"
+                aria-label="twitter"
               >
                 <svg>
                   <use href="assets/images/icons/twitter.svg#twitter" />
@@ -973,6 +998,7 @@
                 target="_blank"
                 rel="noopener"
                 class="social-media__instagram"
+                aria-label="instagram"
               >
                 <svg>
                   <use href="assets/images/icons/instagram.svg#instagram" />
@@ -985,6 +1011,7 @@
                 target="_blank"
                 rel="noopener"
                 class="social-media__youtube"
+                aria-label="youtube"
               >
                 <svg>
                   <use href="assets/images/icons/youtube.svg#youtube" />
