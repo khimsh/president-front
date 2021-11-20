@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .image {
   display: flex;
@@ -55,7 +55,7 @@
     margin-top: 40px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -10px;
       left: 0;
@@ -71,8 +71,8 @@
 
   figure {
     position: relative;
-    height: 260px;
     overflow: hidden;
+    aspect-ratio: 3 / 2;
 
     img {
       &:hover {

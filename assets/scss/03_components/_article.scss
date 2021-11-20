@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .article {
   &__heading {
@@ -15,6 +15,10 @@
   h4 {
     margin-top: 2em;
     margin-bottom: 0.5em;
+  }
+
+  p {
+    text-align: justify;
   }
 
   figure {
@@ -84,7 +88,7 @@
     }
   }
 
-  &-footer {
+  &__footer {
     position: relative;
     margin-top: 6em;
 
@@ -96,6 +100,16 @@
       background: v.$color-blue-700;
     }
 
-    text-align: center;
+    p {
+      text-align: center;
+    }
+  }
+
+  .sticky-container .sticky-content {
+    padding-left: 76px;
+
+    @media only screen and (min-width: v.$lg) {
+      padding-left: 106px;
+    }
   }
 }
