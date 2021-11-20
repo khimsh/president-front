@@ -1,7 +1,35 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
+
+.year {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    position: sticky;
+    top: 20px;
+    font-size: 76px;
+    font-weight: 700;
+    color: #102b4e;
+    @include m.font(v.$font-tatishvili, 76px, 700, v.$color-blue-700);
+  }
+
+  &__content {
+    margin-left: 200px;
+  }
+}
 
 .award {
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
+  &:nth-child(even) {
+    margin-left: 200px;
+  }
+
   @media only screen and (min-width: v.$sm) {
     display: flex;
     gap: 2em;
@@ -10,21 +38,24 @@
   &-image,
   &-video {
     position: relative;
-    @include m.size(100%, 180px);
-
-    @media only screen and (min-width: v.$sm) {
-      @include m.size(360px, auto);
-    }
   }
 
   img,
   video {
-    @include m.size(100%, 100%);
     object-fit: cover;
+  }
+
+  img {
+    @include m.size(260px, 328px);
+  }
+
+  video {
+    @include m.size(360px, 264px);
   }
 
   &-details {
     margin-top: 1em;
+    max-width: 40ch;
 
     @media only screen and (min-width: v.$sm) {
       margin-top: 0;
@@ -36,7 +67,7 @@
   }
 
   &-date {
-    margin-bottom: 1em;
+    margin-bottom: 42px;
     padding-left: 5em;
     height: 160px;
     position: relative;

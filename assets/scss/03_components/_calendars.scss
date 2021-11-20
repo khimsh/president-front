@@ -1,27 +1,25 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .event {
   &__container {
     width: 100%;
-
-    padding: 25px 50px;
-    border-left: 2px solid v.$color-red-700;
+    padding-top: 14px;
+    padding-bottom: 14px;
 
     @media only screen and (min-width: v.$md) {
       width: 50%;
-      border-left: 0;
-      border-right: 2px solid v.$color-red-700;
     }
 
     img,
     video {
       @include m.image();
-      max-height: 340px;
+      aspect-ratio: 7 / 5;
     }
   }
 
   &__card {
+    position: relative;
     display: flex;
     flex-direction: row;
   }
@@ -34,14 +32,48 @@
     padding: 10px 20px;
   }
 
+  &__line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: v.$color-red-300;
+
+    &__fill {
+      position: absolute;
+      left: calc(50% - 1px);
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: v.$color-red-700;
+      transform-origin: top;
+    }
+  }
+
+  &:nth-child(odd) {
+    .event__container {
+      padding-right: 52px;
+    }
+  }
+
   &:nth-child(even) {
     .event__card {
       flex-direction: row-reverse;
     }
 
     .event__container {
-      border-right: 0;
-      border-left: 2px solid v.$color-red-700;
+      padding-left: 52px;
     }
+  }
+}
+
+@keyframes fill-in {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
   }
 }
