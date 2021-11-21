@@ -420,3 +420,5 @@ if (document.querySelector(".event")) {
     observer.observe(line);
   });
 }
+
+// TODO:სურათის გაშვება fullscreen

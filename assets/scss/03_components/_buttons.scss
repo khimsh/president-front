@@ -98,3 +98,21 @@ button {
     pointer-events: none;
   }
 }
+
+.image-to-fullscreen {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+
+  &:hover,
+  &:focus {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  svg {
+    @include m.svg(14px, 14px, v.$color-white);
+    transition: transform 0.1s ease-in-out;
+  }
+}
