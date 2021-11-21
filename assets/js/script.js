@@ -249,7 +249,8 @@ players.forEach((player) => {
   });
 
   muteBtn.addEventListener("click", () => {
-    mute(video);
+    const iconLine = muteBtn.querySelector(".line");
+    mute(video, iconLine);
   });
 
   if (player.querySelector("[data-video-fullscreen]")) {
@@ -323,11 +324,13 @@ function handleProgress(video, currentTime) {
   currentTime.textContent = formatTime(video.currentTime);
 }
 
-function mute(video) {
+function mute(video, iconLine) {
   if (video.muted) {
     video.muted = false;
+    iconLine.classList.add("hide");
   } else {
     video.muted = true;
+    iconLine.classList.remove("hide");
   }
 }
 

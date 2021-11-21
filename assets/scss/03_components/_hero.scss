@@ -95,8 +95,28 @@
     cursor: pointer;
     z-index: 100;
 
+    .line {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      top: 0;
+      left: 16px;
+      transform: rotate(135deg) scaleY(1);
+      background: v.$color-white;
+      opacity: 0.7;
+      transition: all 0.2s ease-in-out;
+
+      &.hide {
+        transform: rotate(135deg) scaleY(0);
+      }
+    }
+
     &:hover {
       svg {
+        opacity: 1;
+      }
+
+      .line {
         opacity: 1;
       }
     }
@@ -117,7 +137,7 @@
     }
 
     svg {
-      @include m.svg(24px, 24px, v.$color-white);
+      @include m.svg(32px, 32px, v.$color-white);
       opacity: 0.7;
       transition: opacity 0.2s ease-in-out;
     }
