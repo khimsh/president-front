@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .modal {
   position: fixed;
@@ -127,6 +127,224 @@
         margin-top: 8px;
         font-size: 10px;
         color: #1a1818;
+      }
+    }
+  }
+}
+
+[data-open-gallery] {
+  width: 200px;
+  height: 100px;
+}
+
+.photo-gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 34px 8px;
+  background: #071021;
+  z-index: 1000000000;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+
+  &.active {
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    aspect-ratio: 7 / 5;
+  }
+
+  &__displayed-img {
+    flex-grow: 1;
+  }
+
+  [data-main-image] {
+    max-width: 600px;
+
+    @media only screen and (min-width: v.$xxl) {
+      max-width: 1200px;
+    }
+  }
+
+  [data-images] {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    column-gap: 0.5em;
+
+    @media only screen and (max-width: 532px) {
+      overflow-x: scroll;
+      max-width: 100%;
+
+      /* width */
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: rgb(255, 191, 54);
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgb(255, 205, 97);
+      }
+    }
+
+    &.hide {
+      display: none;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  button[role="button"] {
+    display: block;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  svg {
+    display: block;
+  }
+
+  &__counter {
+    position: absolute;
+    top: 0px;
+    left: 8px;
+    display: flex;
+    gap: 4px;
+    @include m.font(v.$font-tatishvili, 22px, 700, v.$color-white);
+
+    @media only screen and (min-width: v.$md) {
+      top: 30px;
+      left: 30px;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media only screen and (min-width: v.$md) {
+      padding: 0 30px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h2 {
+      @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-white);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: v.$color-white;
+      transition: all 0.15s ease-in-out;
+
+      &:hover,
+      &:focus {
+        outline: none;
+
+        color: v.$color-red-700;
+      }
+
+      span {
+        @include m.font(v.$font-notosansgeo, 1rem, 700, inherit);
+        margin-right: 18px;
+      }
+
+      svg {
+        display: block;
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid #fff;
+    display: flex;
+    gap: 2em;
+    padding: 0.5em 0.85em;
+  }
+
+  &__arrows {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    [data-prev] {
+      left: 0px;
+
+      &:hover {
+        fill: v.$color-red-700;
+      }
+    }
+
+    [data-next] {
+      right: 0px;
+
+      &:hover {
+        fill: v.$color-red-700;
+      }
+    }
+
+    @media only screen and (min-width: v.$md) {
+      [data-prev] {
+        left: 30px;
+      }
+
+      [data-next] {
+        right: 30px;
+      }
+    }
+
+    button[role="button"] {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fff;
+      color: #fff;
+      width: 35px;
+      height: 35px;
+      fill: v.$color-white;
+      transition: all 0.15s ease-in-out;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        border-color: v.$color-red-700;
       }
     }
   }
