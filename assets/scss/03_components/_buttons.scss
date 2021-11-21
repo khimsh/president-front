@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 button {
   display: block;
@@ -77,5 +77,24 @@ button {
     flex-direction: row;
     justify-content: center;
     gap: 0;
+  }
+}
+
+.videobtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: initial;
+  transition: all 0.15s ease-in-out;
+
+  svg {
+    @include m.svg(110px, 110px, v.$color-white);
+  }
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
   }
 }

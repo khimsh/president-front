@@ -268,6 +268,26 @@ players.forEach((player) => {
   }
 });
 
+// მინი ვიდეო ფლეიერი
+if (document.querySelector("[data-player-mini]")) {
+  const miniPlayers = document.querySelectorAll("[data-player-mini]");
+
+  miniPlayers.forEach((miniPlayer) => {
+    const video = miniPlayer.querySelector("[data-video]");
+    const playBtn = miniPlayer.querySelector("[data-play]");
+
+    playBtn.addEventListener("click", () => {
+      playVideo(video);
+      playBtn.classList.add("hide");
+    });
+
+    video.addEventListener("click", () => {
+      pauseVideo(video);
+      playBtn.classList.remove("hide");
+    });
+  });
+}
+
 function formatTime(seconds) {
   let minutes = Math.floor(seconds / 60);
   minutes = minutes >= 10 ? minutes : "0" + minutes;
@@ -279,6 +299,14 @@ function formatTime(seconds) {
 function togglePlay(video) {
   const method = video.paused ? "play" : "pause";
   video[method]();
+}
+
+function playVideo(video) {
+  video["play"]();
+}
+
+function pauseVideo(video) {
+  video["pause"]();
 }
 
 function updateButton(video, toggle) {
