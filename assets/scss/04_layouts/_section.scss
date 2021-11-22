@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .section {
   margin: 70px 0;
@@ -26,11 +26,20 @@
   &-link {
     position: relative;
 
+    &:hover,
+    &:focus {
+      outline: none;
+      &::after {
+        background-color: v.$color-red-700;
+      }
+    }
+
     &::after {
       @include m.pseudo($width: 100%, $height: 1px);
       bottom: 5px;
       left: 0;
-      background: v.$color-gray-900;
+      background-color: v.$color-gray-900;
+      transition: background-color 0.15s ease-in-out;
     }
   }
 }

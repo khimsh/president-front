@@ -106,13 +106,49 @@ button {
 
   &:hover,
   &:focus {
+    outline: none;
+
     svg {
-      transform: scale(1.1);
+      fill: v.$color-red-700;
     }
   }
 
   svg {
     @include m.svg(14px, 14px, v.$color-white);
-    transition: transform 0.1s ease-in-out;
+    transition: fill 0.1s ease-in-out;
+  }
+}
+
+.scroll-to-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include m.flex(row, center, center);
+  width: 40px;
+  height: 390px;
+  background: v.$color-red-700;
+  transition: all 0.2s ease-in-out;
+
+  @media only screen and (min-width: v.$xs) {
+    height: 100%;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    width: 88px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    background: v.$color-blue-900;
+    svg {
+      fill: v.$color-red-700;
+    }
+  }
+
+  svg {
+    @include m.svg(10.239px, 35.705px, v.$color-white);
+    transition: all 0.2s ease-in-out;
   }
 }

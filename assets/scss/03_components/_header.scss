@@ -45,8 +45,17 @@
     border: none;
     cursor: pointer;
     z-index: 100;
-
     display: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+
+      svg {
+        fill: v.$color-red-700;
+      }
+    }
 
     @media only screen and (min-width: v.$xs) {
       display: block;
@@ -59,6 +68,7 @@
     svg {
       @include m.svg(22px, 22px, v.$color-white);
       pointer-events: none;
+      transition: fill 0.2s ease-in-out;
     }
   }
 }
@@ -176,6 +186,7 @@
 
     &:hover,
     &:focus {
+      outline: none;
       color: hsla(0, 0%, 100%, 0.8);
     }
 
@@ -204,6 +215,7 @@
       &:hover,
       &:active,
       &:focus {
+        outline: none;
         color: hsla(0, 0%, 100%, 0.8);
       }
     }
@@ -238,6 +250,12 @@
       display: grid;
       place-content: center;
       text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

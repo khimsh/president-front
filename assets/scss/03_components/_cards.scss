@@ -2,7 +2,13 @@
 @use "../02_base/mixins" as m;
 
 .card {
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    & > * {
+      outline: none;
+    }
+
     figure {
       &::after {
         background-color: hsla(0, 0%, 100%, 0.5);
