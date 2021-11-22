@@ -408,20 +408,21 @@ if (document.querySelectorAll("[data-filter]")) {
 }
 
 // კალენდრის ანიმაციები
-if (document.querySelector(".event")) {
-  const lines = document.querySelectorAll(".event__line__fill");
+if (document.querySelector(".events")) {
+  const container = document.querySelector(".events");
+  const progressbar = document.querySelector(".progressBar__filled");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio > 0) {
-        entry.target.style.animation = `fill-in 0.8s forwards ease-in`;
-      }
-    });
+  window.addEventListener("scroll", () => {
+    animateProgressBar(container, progressbar);
   });
+}
 
-  lines.forEach((line) => {
-    observer.observe(line);
-  });
+function animateProgressBar(container, progressBar) {
+  let scrollDistance = -container.getBoundingClientRect().top;
+  let progressBarHeight =
+    (scrollDistance / container.getBoundingClientRect().height) * 100;
+  let value = Math.floor(progressBarHeight);
+  progressBar.style.height = `${value + 9}%`;
 }
 
 // TODO:სურათის გაშვება fullscreen

@@ -1,11 +1,64 @@
 @use "../02_base/variables" as v;
 @use "../02_base/mixins" as m;
 
+.events {
+  position: relative;
+
+  .progressBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: v.$color-red-300;
+    overflow: hidden;
+
+    @media only screen and (min-width: v.$md) {
+      left: 50%;
+    }
+
+    &__filled {
+      position: absolute;
+      left: calc(50% - 2px);
+      top: 75px; // პირველი თარიღის სიმაღლე
+      width: 4px;
+      height: 0%;
+      background: v.$color-red-700;
+      transform-origin: top;
+      transition: height 0.1s linear;
+    }
+  }
+}
+
 .event {
+  --padding: 24px;
+
+  @media only screen and (min-width: v.$md) {
+    --padding: 52px;
+  }
+
+  &:nth-of-type(even) {
+    .event__container {
+      @media only screen and (min-width: v.$md) {
+        padding-left: 0;
+        padding-right: var(--padding);
+      }
+    }
+  }
+
+  &:nth-of-type(odd) {
+    .event__card {
+      @media only screen and (min-width: v.$md) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
   &__container {
     width: 100%;
     padding-top: 14px;
     padding-bottom: 14px;
+    padding-left: var(--padding);
 
     @media only screen and (min-width: v.$md) {
       width: 50%;
@@ -16,6 +69,12 @@
       @include m.image();
       aspect-ratio: 7 / 5;
     }
+  }
+
+  &__date {
+    background: v.$color-white;
+    position: relative;
+    z-index: 1;
   }
 
   &__card {
@@ -31,39 +90,97 @@
   &__title {
     padding: 10px 20px;
   }
+}
 
-  &__line {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: v.$color-red-300;
+.year {
+  position: relative;
 
-    &__fill {
-      position: absolute;
-      left: calc(50% - 1px);
-      top: 0;
-      width: 2px;
-      height: 100%;
-      background: v.$color-red-700;
-      transform-origin: top;
-    }
+  &:not(:last-child) {
+    margin-bottom: 100px;
   }
 
-  &:nth-child(odd) {
-    .event__container {
-      padding-right: 52px;
-    }
+  &__title {
+    position: sticky;
+    top: 20px;
+    @include m.font(v.$font-tatishvili, 76px, 700, v.$color-blue-700);
   }
 
+  &__content {
+    margin-left: 200px;
+  }
+}
+
+.award {
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
   &:nth-child(even) {
-    .event__card {
-      flex-direction: row-reverse;
+    margin-left: 200px;
+  }
+
+  @media only screen and (min-width: v.$sm) {
+    display: flex;
+    gap: 2em;
+  }
+
+  &-image,
+  &-video {
+    position: relative;
+  }
+
+  img,
+  video {
+    object-fit: cover;
+  }
+
+  img {
+    @include m.size(260px, 328px);
+  }
+
+  video {
+    @include m.size(360px, 264px);
+  }
+
+  &-details {
+    margin-top: 1em;
+    max-width: 40ch;
+
+    @media only screen and (min-width: v.$sm) {
+      margin-top: 0;
+    }
+  }
+
+  &-heading {
+    @include m.font(v.$font-notosansgeo, 16px, 300, v.$color-blue-700);
+  }
+
+  &-date {
+    margin-bottom: 42px;
+    padding-left: 5em;
+    height: 160px;
+    position: relative;
+    @include m.flex(column, flex-end, flex-start);
+
+    @media only screen and (min-width: v.$sm) {
+      padding-left: 3em;
+      height: 140px;
     }
 
-    .event__container {
-      padding-left: 52px;
+    &::before {
+      @include m.pseudo($width: 140px, $height: 140px);
+      left: 0;
+      clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);
+      background: v.$color-red-700;
+      z-index: -1;
+    }
+
+    &-day {
+      @include m.font(v.$font-tatishvili, 76px, 700, v.$color-blue-700);
+      line-height: 1;
+    }
+
+    &-month {
+      @include m.font(v.$font-tatishvili, 24px, 700, v.$color-blue-700);
     }
   }
 }
