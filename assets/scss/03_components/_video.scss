@@ -101,56 +101,6 @@
     }
   }
 
-  &__mute {
-    position: absolute;
-    top: 72px;
-    right: 4px;
-    cursor: pointer;
-    z-index: 100;
-
-    .line {
-      position: absolute;
-      width: 2px;
-      height: 100%;
-      top: 0;
-      left: 16px;
-      transform: rotate(135deg) scaleY(1);
-      background: v.$color-white;
-      opacity: 0.7;
-      transition: all 0.2s ease-in-out;
-
-      &.hide {
-        transform: rotate(135deg) scaleY(0);
-      }
-    }
-
-    &:hover {
-      svg {
-        opacity: 1;
-      }
-
-      .line {
-        opacity: 1;
-      }
-    }
-
-    @media only screen and (min-width: v.$sm) {
-      right: 10px;
-      top: 82px;
-    }
-
-    @media only screen and (min-width: v.$lg) {
-      right: 22px;
-      top: 100px;
-    }
-
-    svg {
-      @include m.svg(32px, 32px, v.$color-white);
-      opacity: 0.7;
-      transition: opacity 0.2s ease-in-out;
-    }
-  }
-
   .progress {
     flex: 10;
     position: relative;
@@ -167,5 +117,59 @@
       flex: 0;
       flex-basis: 0%;
     }
+  }
+}
+
+.button-mute {
+  position: absolute;
+  top: 72px;
+  right: -4px;
+  cursor: pointer;
+  z-index: 100;
+
+  .line {
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    top: 2px;
+    left: 16px;
+    transform: rotate(135deg) scaleY(1);
+    background: v.$color-white;
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+
+    &.hide {
+      transform: rotate(135deg) scaleY(0);
+    }
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+
+    .line {
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (min-width: v.$sm) {
+    right: 4px;
+    top: 82px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    right: 14px;
+    top: 100px;
+  }
+
+  @media only screen and (min-width: v.$xxl) {
+    top: 120px;
+  }
+
+  svg {
+    @include m.svg(32px, 32px, v.$color-white);
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
   }
 }
