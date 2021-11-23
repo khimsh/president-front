@@ -1,11 +1,19 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .grid-priorities {
   margin: auto 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   row-gap: 40px;
+
+  &--row-gap {
+    row-gap: 80px;
+
+    @media only screen and (min-width: v.$xl) {
+      row-gap: 140px;
+    }
+  }
 
   @media only screen and (min-width: v.$xl) {
     padding: 0 100px;
@@ -35,11 +43,16 @@
       grid-row: 2/3;
     }
   }
+}
 
-  .priority {
-    .icon {
-      margin: 10px 0 10px 0;
-    }
+.priority {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    white-space: nowrap;
   }
 }
 
@@ -54,5 +67,12 @@
     @media only screen and (min-width: v.$xl) {
       margin-left: 120px;
     }
+  }
+
+  img {
+    margin: 18px 0 24px 0;
+    max-height: 70px;
+    width: auto;
+    object-fit: cover;
   }
 }
