@@ -1,33 +1,81 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
-.audio {
-  margin: 0 auto;
-  width: 270px;
+.audio-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.audio-player {
+  display: inline-flex;
+  flex-direction: column;
 
   &__controls {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+  }
 
-    button {
-      width: 50px;
-      font-size: 32px;
-      color: v.$color-red-700;
-    }
+  [data-audio-togglePlay] {
+    color: v.$color-red-700;
+    font-size: 2rem;
+    width: 50px;
 
-    #waveformAnthem {
-      height: 128px;
-      width: 226px;
+    &:focus {
+      outline: none;
     }
   }
 
-  &__timeline {
-    margin-top: 8px;
+  &__time {
     text-align: right;
-    @include m.font(v.$font-notosansgeo, 0.875rem, 300, v.$color-gray-900);
+    @include m.font(v.$font-notosansgeo, 14px, 300, v.$color-black);
   }
 
   &__title {
-    margin-top: 14px;
-    @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
+    margin-top: 12px;
+    @include m.font(v.$font-notosansgeo, 16px, 300, v.$color-black);
+  }
+
+  .svg-container {
+    position: relative;
+    width: 228px;
+    height: 43px;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .svg-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 228px;
+    height: 43px;
+    pointer-events: none;
+
+    svg {
+      stroke: #d4d4d4;
+    }
+  }
+
+  .svg-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 43px;
+    overflow: hidden;
+    pointer-events: none;
+
+    svg {
+      stroke: v.$color-red-700;
+    }
   }
 }

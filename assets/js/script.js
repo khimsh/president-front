@@ -334,37 +334,49 @@ function mute(video, iconLine) {
   }
 }
 
-// Custom Audio Player
+// აუდიო ფლეიერი
 if (document.querySelector("[data-audio]")) {
-  const anthem = WaveSurfer.create({
-    container: "#waveformAnthem",
-    waveColor: "#D4D4D4",
-    progressColor: "#c81717",
-  });
+  const players = document.querySelectorAll("[data-audio]");
 
-  anthem.load("assets/video/audio.mp3");
+  players.forEach((player) => {
+    const audio = player.querySelector("[data-audio-src]");
+    const togglePlayAudio = player.querySelector("[data-audio-togglePlay]");
+    const currentTime = player.querySelector("[data-audio-current]");
+    const audioDuration = player.querySelector("[data-audio-duration]");
+    const progressBar = player.querySelector("[data-audio-progressbar]");
+    const progressFilled = player.querySelector("[data-audio-filled]");
 
-  const audioCurrentTime = document.querySelector("[data-audio-current]");
-  const audioDuration = document.querySelector("[data-audio-duration]");
-  const audioTogglePlay = document.querySelector("[data-audio-togglePlay]");
+    audio.addEventListener("loadedmetadata", () => {
+      const duration = audio.duration;
+      audioDuration.textContent = formatTime(duration);
+    });
 
-  anthem.on("audioprocess", () => {
-    // update current time
-    audioCurrentTime.textContent = formatTime(anthem.getCurrentTime());
-  });
-  anthem.on("ready", () => {
-    // set duration
-    audioDuration.textContent = formatTime(anthem.getDuration());
-  });
+    togglePlayAudio.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        togglePlayAudio.textContent = "❚ ❚";
+      } else {
+        audio.pause();
+        togglePlayAudio.textContent = "►";
+      }
+    });
 
-  audioTogglePlay.addEventListener("click", () => {
-    if (anthem.isPlaying()) {
-      anthem.pause();
-      audioTogglePlay.textContent = "►";
-    } else {
-      anthem.play();
-      audioTogglePlay.textContent = "❚ ❚";
-    }
+    progressBar.addEventListener("click", (e) => {
+      const scrubTime = (e.offsetX / progressBar.offsetWidth) * audio.duration;
+      audio.currentTime = scrubTime;
+    });
+
+    audio.addEventListener("timeupdate", () => {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      progressFilled.style.width = `${percent}%`;
+
+      currentTime.textContent = formatTime(audio.currentTime);
+    });
+
+    audio.addEventListener("ended", function () {
+      audio.currentTime = 0;
+      togglePlayAudio.textContent = "►";
+    });
   });
 }
 

@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- Javascript -->
-
-    <script defer src="https://unpkg.com/wavesurfer.js"></script>
     <script defer src="assets/js/script.js"></script>
   </head>
   <body>
@@ -21,7 +19,7 @@
       <header class="site-header" data-site-header>
         <!-- ლოგო -->
         <div class="site-logo">
-          <a href="/">
+          <a href="/" aria-label="return home">
             <svg>
               <use href="assets/images/icons/logo.svg#logo" />
             </svg>
@@ -113,14 +111,18 @@
         </ul>
 
         <!-- ძიების ღილაკი -->
-        <button class="site-header__search" data-toggle-search>
+        <button
+          class="site-header__search"
+          aria-label="search"
+          data-toggle-search
+        >
           <svg>
             <use href="assets/images/icons/search.svg#search" />
           </svg>
         </button>
         <!-- ძიების ღილაკის დასასრული -->
 
-        <button class="site-header__menu" data-open-nav>
+        <button class="site-header__menu" aria-label="open menu" data-open-nav>
           <svg width="30" height="22">
             <use href="assets/images/icons/menu.svg#menu" />
           </svg>
@@ -141,9 +143,7 @@
             <small>გთხოვთ ჩაწეროთ მინიმუმ 3 სიმბოლო</small>
           </div>
 
-          <button type="submit" class="main-search__btn">
-            <!-- <div class="sr-only">ძებნა</div> -->
-
+          <button type="submit" class="main-search__btn" aria-label="search">
             <svg>
               <use href="assets/images/icons/search.svg#search" />
             </svg>
@@ -370,18 +370,34 @@
           </div>
 
           <!-- Audio Files -->
+          <div class="audio-wrapper">
+            <div class="audio-player" data-audio>
+              <div class="audio-player__controls">
+                <button data-audio-togglePlay>►</button>
+                <div class="svg-container" data-audio-progressbar>
+                  <div class="svg-bottom">
+                    <svg>
+                      <use href="assets/images/audio.svg#audio" />
+                    </svg>
+                  </div>
 
-          <div class="audio" data-audio>
-            <div class="audio__controls">
-              <button data-audio-togglePlay>►</button>
-              <div id="waveformAnthem"></div>
+                  <div class="svg-top" data-audio-filled>
+                    <svg>
+                      <use href="assets/images/audio.svg#audio" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="audio-player__time">
+                <span data-audio-current>00:00</span> /
+                <span data-audio-duration></span>
+              </div>
+
+              <h3 class="audio-player__title">აუდიოს სათაური</h3>
+
+              <audio data-audio-src src="assets/video/audio.mp3"></audio>
             </div>
-            <div class="audio__timeline">
-              <span data-audio-current>00:00</span>
-              <span>/</span>
-              <span data-audio-duration>00:00</span>
-            </div>
-            <h3 class="audio__title">აუდიოს სათაური</h3>
           </div>
 
           <div class="anthem">
@@ -412,7 +428,12 @@
 
     <footer class="site-footer">
       <!-- Scroll To Top Button -->
-      <button role="button" data-scroll-top class="scroll-to-top">
+      <button
+        role="button"
+        data-scroll-top
+        class="scroll-to-top"
+        aria-label="scroll to top"
+      >
         <svg>
           <use href="assets/images/icons/arrow-up.svg#arrow-up" />
         </svg>
@@ -472,6 +493,7 @@
                 target="_blank"
                 rel="noopener"
                 class="social-media__facebook"
+                aria-label="facebook"
               >
                 <svg>
                   <use href="assets/images/icons/facebook.svg#facebook" />
@@ -484,6 +506,7 @@
                 target="_blank"
                 rel="noopener"
                 class="social-media__twitter"
+                aria-label="twitter"
               >
                 <svg>
                   <use href="assets/images/icons/twitter.svg#twitter" />
@@ -496,6 +519,7 @@
                 target="_blank"
                 rel="noopener"
                 class="social-media__instagram"
+                aria-label="instagram"
               >
                 <svg>
                   <use href="assets/images/icons/instagram.svg#instagram" />
@@ -508,6 +532,7 @@
                 target="_blank"
                 rel="noopener"
                 class="social-media__youtube"
+                aria-label="youtube"
               >
                 <svg>
                   <use href="assets/images/icons/youtube.svg#youtube" />
