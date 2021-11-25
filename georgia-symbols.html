@@ -373,7 +373,14 @@
           <div class="audio-wrapper">
             <div class="audio-player" data-audio>
               <div class="audio-player__controls">
-                <button data-audio-togglePlay>►</button>
+                <button data-audio-togglePlay>
+                  <div
+                    class="PlayPause is-playing"
+                    aria-hidden="true"
+                    aria-label="play"
+                  ></div>
+                </button>
+
                 <div class="svg-container" data-audio-progressbar>
                   <div class="svg-bottom">
                     <svg>
