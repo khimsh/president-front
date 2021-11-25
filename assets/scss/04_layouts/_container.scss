@@ -1,4 +1,4 @@
-@use '../02_base/variables' as v;
+@use "../02_base/variables" as v;
 
 .container {
   width: 100%;
@@ -23,6 +23,7 @@
 
   @media only screen and (min-width: v.$xxl) {
     padding: 0 162px;
+    max-width: 1596px;
   }
 }
 
@@ -36,16 +37,16 @@
   }
 
   @media only screen and (min-width: v.$lg) {
-    width: 1080px;
-    padding: 0;
+    padding: 0 100px;
   }
 
   @media only screen and (min-width: v.$xl) {
-    width: 1200px;
+    padding: 0 218px;
   }
 
   @media only screen and (min-width: v.$xxl) {
-    width: 1480px;
+    max-width: 1480px;
+    padding: 0 280px;
   }
 }
 

@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .banner {
   position: relative;
@@ -8,7 +8,7 @@
   height: 240px;
   display: flex;
   align-items: flex-end;
-  background: url('../images/banner-occupied-territories.jpg');
+  background: url("../images/banner-occupied-territories.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -24,7 +24,7 @@
 
   &--overlay {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -50,8 +50,22 @@
   }
 
   &--biography {
+    height: 320px;
+
+    @media only screen and (min-width: v.$xs) {
+      height: 380px;
+    }
+
+    @media only screen and (min-width: v.$md) {
+      height: 435px;
+    }
+
     @media only screen and (min-width: v.$lg) {
-      height: 500px;
+      height: 530px;
+    }
+
+    @media only screen and (min-width: v.$xl) {
+      height: 605px;
     }
 
     @media only screen and (min-width: v.$xxl) {

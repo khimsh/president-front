@@ -1,6 +1,14 @@
-@use '../02_base/variables' as v;
+@use "../02_base/variables" as v;
 
 .bio {
+  @media only screen and (min-width: v.$lg) {
+    margin-left: -5px;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    margin-left: -118px;
+  }
+
   h1 {
     font-family: v.$font-tatishvili;
     font-size: 26px;
@@ -9,8 +17,11 @@
   }
 
   .offset {
-    margin-left: 122px;
     margin-bottom: 64px;
+
+    @media only screen and (min-width: v.$lg) {
+      margin-left: 122px;
+    }
 
     img {
       margin-top: 16px;
@@ -19,7 +30,7 @@
   }
 
   .section-title-bg {
-    margin-left: 118px;
+    margin-left: 5px;
     position: relative;
     display: inline-block;
     padding: 6px 12px;
@@ -31,14 +42,23 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 
+    @media only screen and (min-width: v.$lg) {
+      margin-left: 118px;
+    }
+
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
-      left: -120px;
-      width: 120px;
+      left: -5px;
+      width: 5px;
       height: 4px;
       background: v.$color-red-700;
+
+      @media only screen and (min-width: v.$lg) {
+        left: -120px;
+        width: 120px;
+      }
     }
   }
 
