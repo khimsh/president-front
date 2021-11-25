@@ -154,10 +154,9 @@
   height: 100%;
   display: none;
   justify-content: flex-end;
-  padding-right: 300px;
+  padding-right: 348px;
   background: transparent;
   z-index: 10;
-
   transition: all 0.2s ease-in-out;
 
   @media only screen and (min-width: v.$lg) {
@@ -178,6 +177,7 @@
   }
 
   &__btn {
+    padding: 0;
     height: var(--header-height);
     background: transparent;
     border: none;
@@ -226,6 +226,7 @@
   position: absolute;
   top: 0;
   right: 80px;
+  padding: 0 20px;
   height: var(--header-height);
   display: flex;
   gap: 24px;

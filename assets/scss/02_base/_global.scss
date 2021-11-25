@@ -1,5 +1,10 @@
-@use 'variables' as v;
-@use 'mixins' as m;
+@use "variables" as v;
+@use "mixins" as m;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 ul,
 ol {
@@ -31,7 +36,7 @@ blockquote {
   margin: 4em auto 3em;
 
   &::before {
-    content: '“';
+    content: "“";
     position: absolute;
     top: -52px;
     left: -14px;

@@ -103,11 +103,11 @@ time {
 
 .site-nav {
   button {
-    @include m.font(v.$font-tatishvili, 1.125rem, 700, v.$color-white);
+    @include m.font(v.$font-tatishvili, 1.375rem, 700, v.$color-white);
   }
 
   a {
-    @include m.font(v.$font-bpgnino, 1.125rem, 700, v.$color-white);
+    @include m.font(v.$font-bpgnino, 1.25rem, 700, v.$color-white);
     text-decoration: none;
   }
 }
