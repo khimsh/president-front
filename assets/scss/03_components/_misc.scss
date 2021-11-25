@@ -29,25 +29,51 @@
   }
 
   &__heading {
-    bottom: 40px !important;
+    left: 50%;
+    bottom: 24% !important;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+
+    h2 {
+      max-width: unset !important;
+      @include m.font(v.$font-tatishvili, 46px, 700, v.$color-white);
+      text-align: center;
+    }
+
+    &.fade-out {
+      opacity: 0;
+    }
   }
 
-  &__play {
+  [data-virtual-play] {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include m.size(100px, 100px);
-    @include m.flex(row, center, center);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid v.$color-white;
-    border-radius: 50px;
-    color: v.$color-white;
-    font-size: 2rem;
+    border-radius: 100px;
     z-index: 1000;
+  }
 
-    &.hide {
-      opacity: 0;
-      pointer-events: none;
+  .PlayPause {
+    // transition: all 0.5s ease-in-out;
+
+    &::before,
+    &::after {
+      background: v.$color-white;
+    }
+
+    &.is-playing {
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
     }
   }
 

@@ -9,13 +9,14 @@
   height: var(--video-height);
   min-height: var(--video-min-height);
 
+  &--fullscreen {
+    --video-height: 80vh;
+  }
+
   @media only screen and (min-width: v.$md) {
     --video-height: 675px;
-
-    &--fullscreen {
-      --video-height: 80vh;
-    }
   }
+
   @media only screen and (min-width: v.$lg) {
     --video-min-height: 550px;
     --video-height: calc(100vh - 5px);
@@ -24,9 +25,11 @@
       --video-height: 100vh;
     }
   }
+
   @media only screen and (min-width: v.$xl) {
     --video-min-height: 768px;
   }
+
   @media only screen and (min-width: v.$xxl) {
     --video-min-height: 1080px;
   }

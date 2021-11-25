@@ -308,16 +308,19 @@
       class="video-banner video-banner--fullscreen virtual-tour"
       data-virtual
     >
-      <video src="assets/video/video.mp4" muted data-virtual-video></video>
+      <video
+        src="assets/video/video.mp4"
+        muted
+        data-virtual-video
+        autoplay
+      ></video>
 
-      <figcaption class="virtual-tour__heading">
-        <div class="container">
-          <h2 class="hero__title">ორბელიანების სასახლე</h2>
-        </div>
+      <figcaption class="virtual-tour__heading fade-out" data-virtual-title>
+        <h2>ორბელიანების სასახლე</h2>
       </figcaption>
 
-      <button class="virtual-tour__play" data-virtual-play aria-label="play">
-        ►
+      <button data-virtual-play>
+        <div class="PlayPause" aria-hidden="true" aria-label="play"></div>
       </button>
 
       <button
@@ -338,7 +341,7 @@
         <span class="line"></span>
       </button>
 
-      <div class="virtual-tour__btn">
+      <!-- <div class="virtual-tour__btn">
         <a href="#" class="btn btn-outline btn-with-icon btn-inline-flex">
           <span>ვირტუალური ტური</span>
           <span>
@@ -349,7 +352,7 @@
             </svg>
           </span>
         </a>
-      </div>
+      </div> -->
     </figure>
 
     <div class="content-wrapper">

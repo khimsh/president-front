@@ -294,16 +294,26 @@ if (document.querySelector("[data-virtual]")) {
   const player = document.querySelector("[data-virtual]");
   const video = player.querySelector("[data-virtual-video]");
   const playBtn = player.querySelector("[data-virtual-play]");
+  const playBtnState = playBtn.querySelector(".PlayPause");
   const muteBtn = player.querySelector("[data-video-toggleMute]");
+  const videoTitle = player.querySelector("[data-virtual-title]");
 
   playBtn.addEventListener("click", () => {
-    playVideo(video);
-    playBtn.classList.add("hide");
+    if (video.paused) {
+      playVideo(video);
+      videoTitle.classList.add("fade-out");
+    } else {
+      pauseVideo(video);
+      videoTitle.classList.remove("fade-out");
+    }
+
+    playBtnState.classList.toggle("is-playing");
   });
 
   video.addEventListener("click", () => {
     pauseVideo(video);
-    playBtn.classList.remove("hide");
+    playBtnState.classList.add("is-playing");
+    videoTitle.classList.remove("fade-out");
   });
 
   muteBtn.addEventListener("click", () => {
@@ -364,6 +374,7 @@ if (document.querySelector("[data-audio]")) {
   players.forEach((player) => {
     const audio = player.querySelector("[data-audio-src]");
     const togglePlayAudio = player.querySelector("[data-audio-togglePlay]");
+    const togglePlayAudioState = player.querySelector(".PlayPause");
     const currentTime = player.querySelector("[data-audio-current]");
     const audioDuration = player.querySelector("[data-audio-duration]");
     const progressBar = player.querySelector("[data-audio-progressbar]");
@@ -377,10 +388,10 @@ if (document.querySelector("[data-audio]")) {
     togglePlayAudio.addEventListener("click", () => {
       if (audio.paused) {
         audio.play();
-        togglePlayAudio.textContent = "❚ ❚";
+        togglePlayAudioState.classList.remove("is-playing");
       } else {
         audio.pause();
-        togglePlayAudio.textContent = "►";
+        togglePlayAudioState.classList.add("is-playing");
       }
     });
 
@@ -398,7 +409,7 @@ if (document.querySelector("[data-audio]")) {
 
     audio.addEventListener("ended", function () {
       audio.currentTime = 0;
-      togglePlayAudio.textContent = "►";
+      togglePlayAudioState.classList.add("is-playing");
     });
   });
 }
