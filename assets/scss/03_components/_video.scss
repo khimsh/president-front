@@ -11,6 +11,10 @@
 
   @media only screen and (min-width: v.$md) {
     --video-height: 675px;
+
+    &--fullscreen {
+      --video-height: 80vh;
+    }
   }
   @media only screen and (min-width: v.$lg) {
     --video-min-height: 550px;

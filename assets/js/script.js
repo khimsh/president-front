@@ -289,6 +289,29 @@ if (document.querySelector("[data-player-mini]")) {
   });
 }
 
+// ვირტუალური ტურის ფლეიერი
+if (document.querySelector("[data-virtual]")) {
+  const player = document.querySelector("[data-virtual]");
+  const video = player.querySelector("[data-virtual-video]");
+  const playBtn = player.querySelector("[data-virtual-play]");
+  const muteBtn = player.querySelector("[data-video-toggleMute]");
+
+  playBtn.addEventListener("click", () => {
+    playVideo(video);
+    playBtn.classList.add("hide");
+  });
+
+  video.addEventListener("click", () => {
+    pauseVideo(video);
+    playBtn.classList.remove("hide");
+  });
+
+  muteBtn.addEventListener("click", () => {
+    const iconLine = muteBtn.querySelector(".line");
+    mute(video, iconLine);
+  });
+}
+
 function formatTime(seconds) {
   let minutes = Math.floor(seconds / 60);
   minutes = minutes >= 10 ? minutes : "0" + minutes;

@@ -306,9 +306,9 @@
 
     <figure
       class="video-banner video-banner--fullscreen virtual-tour"
-      data-video-container
+      data-virtual
     >
-      <video src="assets/video/video.mp4" muted data-video></video>
+      <video src="assets/video/video.mp4" muted data-virtual-video></video>
 
       <figcaption class="virtual-tour__heading">
         <div class="container">
@@ -316,15 +316,9 @@
         </div>
       </figcaption>
 
-      <div class="virtual-tour__controls">
-        <button
-          class="virtual-tour__toggle"
-          data-video-togglePlay
-          aria-label="play/pause"
-        >
-          ►
-        </button>
-      </div>
+      <button class="virtual-tour__play" data-virtual-play aria-label="play">
+        ►
+      </button>
 
       <button
         class="button-mute"

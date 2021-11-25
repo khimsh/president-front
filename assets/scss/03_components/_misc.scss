@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .anthem {
   margin-top: 60px;
@@ -32,21 +32,23 @@
     bottom: 40px !important;
   }
 
-  &__controls {
+  &__play {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 200;
-  }
-
-  &__toggle {
     @include m.size(100px, 100px);
     @include m.flex(row, center, center);
     border: 1px solid v.$color-white;
     border-radius: 50px;
     color: v.$color-white;
     font-size: 2rem;
+    z-index: 1000;
+
+    &.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   &__btn {
