@@ -263,6 +263,7 @@
 
 .main-search {
   padding: 0 20px;
+
   position: absolute;
   top: var(--header-height);
   left: 0;
@@ -281,6 +282,8 @@
 
   &__form {
     width: 100%;
+    max-width: 1578px;
+    margin-left: auto;
     display: flex;
     align-items: center;
   }
@@ -297,6 +300,7 @@
     border: none;
     border-bottom: 1px solid v.$color-gray-600;
     outline-style: none;
+    transition: border-bottom-color 0.2s ease-in-out;
 
     &:focus {
       border-bottom-color: v.$color-white;
