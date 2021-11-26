@@ -79,3 +79,54 @@
     font-weight: 700;
   }
 }
+
+.president-publications-modal {
+  position: fixed;
+  top: 0;
+  right: calc(-100% - 25px);
+  height: 100vh;
+  padding: 70px 25px;
+  background: hsla(0, 0%, 100%, 0.95);
+  z-index: 100000000;
+  transition: right 0.5s ease-in-out;
+  overflow-y: scroll;
+
+  @media only screen and (min-width: v.$lg) {
+    padding: 100px;
+    right: calc(-100% - 100px);
+  }
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #1a4680;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(167, 167, 167);
+  }
+
+  &.shown {
+    right: 0%;
+  }
+
+  .president-publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+
+    @media only screen and (min-width: v.$lg) {
+      gap: 74px;
+    }
+  }
+}

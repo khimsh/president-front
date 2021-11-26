@@ -618,3 +618,18 @@ function createImageTag(src, desc) {
 
   return image;
 }
+
+// პუბლიკაციების მოდალი
+if (document.querySelector("[data-publications-modal]")) {
+  const modal = document.querySelector("[data-publications-modal]");
+  const closeModal = modal.querySelector("[data-close-modal]");
+  const openModal = document.querySelector("[data-open-publications]");
+
+  openModal.addEventListener("click", () => {
+    modal.classList.add("shown");
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("shown");
+  });
+}
