@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .slick-dotted {
   .slick-dots {
@@ -9,7 +9,7 @@
     list-style: none;
   }
 
-  button[role='tab'] {
+  button[role="tab"] {
     display: block;
     @include m.size(14px, 14px);
     transform: scale(0.7);
@@ -20,7 +20,7 @@
   }
 
   .slick-active {
-    button[role='tab'] {
+    button[role="tab"] {
       background: transparent;
     }
   }
@@ -126,19 +126,38 @@
 
   .slick-slide {
     margin: 0 10px;
+
     @media only screen and (min-width: v.$md) {
       margin: 0 20px;
+    }
+
+    @media only screen and (min-width: v.$xl) {
+      margin: 0 35px;
+    }
+
+    @media only screen and (min-width: v.$xxl) {
+      margin: 0 43px;
     }
   }
 
   .slick-list {
     margin: 0 -10px;
+
     @media only screen and (min-width: v.$md) {
       margin: 0 -20px;
     }
 
     @media only screen and (min-width: v.$lg) {
       padding: 0 100px 0 0 !important;
+    }
+
+    @media only screen and (min-width: v.$xl) {
+      margin: 0 -35px;
+    }
+
+    @media only screen and (min-width: v.$xxl) {
+      margin: 0 -43px;
+      padding: 0 140px 0 0 !important;
     }
   }
 
@@ -156,7 +175,7 @@
 
   .slick-next {
     @media only screen and (min-width: v.$lg) {
-      right: -72px !important;
+      right: -63px !important;
     }
   }
 }
