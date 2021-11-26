@@ -194,7 +194,7 @@ button {
   width: 50%;
   transform: scaleX(0.75);
   transform-origin: left;
-  background-color: currentColor;
+  background-color: v.$color-white;
   transition: transform 300ms ease-in-out;
 }
 
@@ -211,6 +211,13 @@ button {
 .PlayPause.is-playing::before,
 .PlayPause.is-playing::after {
   transform: scaleX(1);
+}
+
+[data-supreme],
+.hero__item {
+  .PlayPause {
+    font-size: 1rem;
+  }
 }
 
 @keyframes pulse {

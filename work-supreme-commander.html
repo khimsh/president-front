@@ -307,8 +307,8 @@
     </div>
     <!-- end header component -->
 
-    <figure class="video-banner" data-video-container>
-      <video src="assets/video/video.mp4" muted data-video></video>
+    <figure class="video-banner" data-supreme>
+      <video src="assets/video/video.mp4" muted data-video autoplay></video>
 
       <figcaption>
         <div class="container">
@@ -320,7 +320,9 @@
       </figcaption>
 
       <div class="video-banner__controls">
-        <button class="video-banner__toggle" data-video-togglePlay>►</button>
+        <button data-video-togglePlay aria-label="play">
+          <div class="PlayPause" aria-hidden="true"></div>
+        </button>
 
         <div class="hero__timeline">
           <span class="video-banner-currenttime" data-video-current>00:00</span>

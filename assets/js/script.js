@@ -198,76 +198,42 @@ scrollToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Custom Video players
-const players = document.querySelectorAll("[data-video-container]");
+// Hero ვიდეო ფლეიერი
+if (document.querySelector("[data-video-container]")) {
+  const players = document.querySelectorAll("[data-video-container]");
 
-players.forEach((player) => {
-  const toggle = player.querySelector("[data-video-togglePlay]");
-  const video = player.querySelector("[data-video]");
-  const currentTime = player.querySelector("[data-video-current]");
-  const videoDuration = player.querySelector("[data-video-duration]");
-  const muteBtn = player.querySelector("[data-video-toggleMute]");
+  players.forEach((player) => {
+    const toggle = player.querySelector("[data-video-togglePlay]");
+    const playBtnState = toggle.querySelector(".PlayPause");
+    const video = player.querySelector("[data-video]");
+    const currentTime = player.querySelector("[data-video-current]");
+    const videoDuration = player.querySelector("[data-video-duration]");
+    const muteBtn = player.querySelector("[data-video-toggleMute]");
 
-  if (player.querySelector("[data-video-progress]")) {
-    const progress = player.querySelector("[data-video-progress]");
-    const progressBar = player.querySelector("[data-video-progressbar]");
-
-    video.addEventListener("timeupdate", () => {
-      handleTimeUpdate(video, progressBar);
+    toggle.addEventListener("click", () => {
+      handleVideoPlay(video, playBtnState);
     });
 
-    function scrub(e) {
-      const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
-      video.currentTime = scrubTime;
-    }
+    video.onloadedmetadata = function () {
+      videoDuration.textContent = formatTime(this.duration);
+    };
 
-    let mousedown = false;
-    progress.addEventListener("click", scrub);
-    progress.addEventListener("mousemove", (e) => mousedown && scrub(e));
-    progress.addEventListener("mousedown", () => (mousedown = true));
-    progress.addEventListener("mouseup", () => (mousedown = false));
-  }
+    video.addEventListener("timeupdate", () => {
+      handleProgress(video, currentTime);
 
-  toggle.addEventListener("click", () => {
-    togglePlay(video);
+      if (video.paused) {
+        playBtnState.classList.add("is-playing");
+      } else {
+        playBtnState.classList.remove("is-playing");
+      }
+    });
+
+    muteBtn.addEventListener("click", () => {
+      const iconLine = muteBtn.querySelector(".line");
+      mute(video, iconLine);
+    });
   });
-
-  video.onloadedmetadata = function () {
-    videoDuration.textContent = formatTime(this.duration);
-  };
-
-  video.addEventListener("play", () => {
-    updateButton(video, toggle);
-  });
-
-  video.addEventListener("pause", () => {
-    updateButton(video, toggle);
-  });
-
-  video.addEventListener("timeupdate", () => {
-    handleProgress(video, currentTime);
-  });
-
-  muteBtn.addEventListener("click", () => {
-    const iconLine = muteBtn.querySelector(".line");
-    mute(video, iconLine);
-  });
-
-  if (player.querySelector("[data-video-fullscreen]")) {
-    player
-      .querySelector("[data-video-fullscreen]")
-      .addEventListener("click", () => {
-        video
-          .requestFullscreen()
-          .then(function () {
-            // element has entered fullscreen mode successfully
-          })
-          .catch(function (error) {
-            // element could not enter fullscreen mode
-          });
-      });
-  }
-});
+}
 
 // მინი ვიდეო ფლეიერი
 if (document.querySelector("[data-player-mini]")) {
@@ -289,6 +255,60 @@ if (document.querySelector("[data-player-mini]")) {
   });
 }
 
+// უმაღლესი მთავარსარდლის ფლეიერი
+if (document.querySelector("[data-supreme]")) {
+  const player = document.querySelector("[data-supreme]");
+  const togglePlay = player.querySelector("[data-video-togglePlay]");
+  const playBtnState = togglePlay.querySelector(".PlayPause");
+  const video = player.querySelector("[data-video]");
+  const currentTime = player.querySelector("[data-video-current]");
+  const videoDuration = player.querySelector("[data-video-duration]");
+  const muteBtn = player.querySelector("[data-video-toggleMute]");
+  const progress = player.querySelector("[data-video-progress]");
+  const progressBar = player.querySelector("[data-video-progressbar]");
+  const fullscreenBtn = player.querySelector("[data-video-fullscreen]");
+
+  togglePlay.addEventListener("click", () => {
+    handleVideoPlay(video, playBtnState);
+  });
+
+  video.addEventListener("timeupdate", () => {
+    handleTimeUpdate(video, progressBar);
+  });
+
+  video.onloadedmetadata = function () {
+    videoDuration.textContent = formatTime(this.duration);
+  };
+
+  video.addEventListener("click", () => {
+    handleVideoPlay(video, playBtnState);
+  });
+
+  video.addEventListener("timeupdate", () => {
+    handleProgress(video, currentTime);
+  });
+
+  fullscreenBtn.addEventListener("click", () => {
+    video.requestFullscreen();
+  });
+
+  muteBtn.addEventListener("click", () => {
+    const iconLine = muteBtn.querySelector(".line");
+    mute(video, iconLine);
+  });
+
+  function scrub(e) {
+    const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+    video.currentTime = scrubTime;
+  }
+
+  let mousedown = false;
+  progress.addEventListener("click", scrub);
+  progress.addEventListener("mousemove", (e) => mousedown && scrub(e));
+  progress.addEventListener("mousedown", () => (mousedown = true));
+  progress.addEventListener("mouseup", () => (mousedown = false));
+}
+
 // ვირტუალური ტურის ფლეიერი
 if (document.querySelector("[data-virtual]")) {
   const player = document.querySelector("[data-virtual]");
@@ -300,14 +320,11 @@ if (document.querySelector("[data-virtual]")) {
 
   playBtn.addEventListener("click", () => {
     if (video.paused) {
-      playVideo(video);
       videoTitle.classList.add("fade-out");
     } else {
-      pauseVideo(video);
       videoTitle.classList.remove("fade-out");
     }
-
-    playBtnState.classList.toggle("is-playing");
+    handleVideoPlay(video, playBtnState);
   });
 
   video.addEventListener("click", () => {
@@ -335,17 +352,22 @@ function togglePlay(video) {
   video[method]();
 }
 
+function handleVideoPlay(video, btn) {
+  if (video.paused) {
+    playVideo(video);
+  } else {
+    pauseVideo(video);
+  }
+
+  btn.classList.toggle("is-playing");
+}
+
 function playVideo(video) {
   video["play"]();
 }
 
 function pauseVideo(video) {
   video["pause"]();
-}
-
-function updateButton(video, toggle) {
-  const icon = video.paused ? "►" : "❚ ❚";
-  toggle.textContent = icon;
 }
 
 function handleTimeUpdate(video, progress = null) {

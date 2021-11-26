@@ -77,14 +77,13 @@
     }
   }
 
-  &__togglePlay {
-    color: v.$color-white;
-    font-size: 1.4rem;
-  }
-
   &__controls {
     margin-top: 20px;
     @include m.flex(row, flex-start, center);
     gap: 1.5em;
+
+    button {
+      padding: 0;
+    }
   }
 }
