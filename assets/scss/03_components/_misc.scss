@@ -99,21 +99,18 @@
       position: relative;
       display: flex;
       background: v.$color-blue-900;
+      transition: background-color 0.2s ease-in-out;
 
       &.active {
         background: v.$color-white;
 
         h2 {
           color: v.$color-gray-900;
-          align-self: center;
+          transform: translateY(0px);
         }
 
         .tour-item__decor {
-          opacity: 0;
-        }
-
-        ~ .tour-content {
-          height: 100%;
+          color: hsla(219, 34%, 15%, 0);
         }
 
         &:hover {
@@ -162,8 +159,9 @@
       h2 {
         position: relative;
         z-index: 2;
-        align-self: flex-end;
+        transform: translateY(10px);
         @include m.font(v.$font-tatishvili, 36px, 700, v.$color-white);
+        transition: all 0.2s ease-in-out;
 
         @media only screen and (min-width: v.$xl) {
           font-size: 2.25rem;
@@ -197,27 +195,34 @@
           700,
           hsla(219, 34%, 15%, 0.6)
         );
+        transition: color 0.2s ease-in-out;
       }
 
       .icon-arrow-box {
         svg {
-          transition: fill 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
         }
       }
     }
 
     .tour-content {
-      max-width: 1042px;
+      max-width: 1000px;
       margin: 0 auto;
-      height: 0;
+      max-height: 0;
       overflow: hidden;
+      transition: max-height 0.2s ease-in-out;
+
+      &__wrapper {
+        padding-bottom: 160px;
+      }
 
       p {
         @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
+        line-height: 1.6;
       }
 
       figure {
-        margin: 105px 0 160px 0;
+        margin: 105px 0 0 0;
         display: flex;
         justify-content: center;
         align-items: center;

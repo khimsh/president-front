@@ -151,12 +151,14 @@ if (document.querySelectorAll(".faq")) {
   });
 }
 
+// ვირტუალური ტური
 if (document.querySelector("[data-tour]")) {
   const tours = document.querySelectorAll("[data-tour]");
 
   tours.forEach((tour) => {
     const trigger = tour.querySelector("[data-tour-trigger]");
     const target = tour.querySelector("[data-tour-target]");
+    const content = tour.querySelector(".tour-content");
     const arrowIcon = tour.querySelector(".icon-arrow-box svg");
 
     trigger.addEventListener("click", () => {
@@ -164,8 +166,11 @@ if (document.querySelector("[data-tour]")) {
 
       if (target.classList.contains("active")) {
         arrowIcon.style.transform = "rotate(180deg)";
+        content.style.maxHeight =
+          tour.querySelector(".tour-content__wrapper").offsetHeight + "px";
       } else {
         arrowIcon.style.transform = "rotate(0deg)";
+        content.style.maxHeight = 0;
       }
     });
   });
