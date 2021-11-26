@@ -1,5 +1,5 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .link {
   &-red {
@@ -14,4 +14,11 @@
       @include m.svg(10px, 10px, v.$color-red-700);
     }
   }
+}
+
+.constitution-download {
+  display: inline-block;
+  margin-top: 40px;
+  @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
+  text-decoration: none;
 }
