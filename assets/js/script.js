@@ -151,6 +151,26 @@ if (document.querySelectorAll(".faq")) {
   });
 }
 
+if (document.querySelector("[data-tour]")) {
+  const tours = document.querySelectorAll("[data-tour]");
+
+  tours.forEach((tour) => {
+    const trigger = tour.querySelector("[data-tour-trigger]");
+    const target = tour.querySelector("[data-tour-target]");
+    const arrowIcon = tour.querySelector(".icon-arrow-box svg");
+
+    trigger.addEventListener("click", () => {
+      target.classList.toggle("active");
+
+      if (target.classList.contains("active")) {
+        arrowIcon.style.transform = "rotate(180deg)";
+      } else {
+        arrowIcon.style.transform = "rotate(0deg)";
+      }
+    });
+  });
+}
+
 // Foreign Affairs Tabs
 const tabs = document.querySelectorAll("[data-tab-target]");
 const tabContents = document.querySelectorAll("[data-tab-content]");

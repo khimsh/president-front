@@ -177,17 +177,6 @@
   }
 }
 
-.tour-item {
-  &-padded {
-    padding-left: 4em;
-  }
-  a {
-    padding: 2em 0;
-    @include m.flex(row, space-between, center);
-    text-decoration: none;
-  }
-}
-
 .search-result {
   padding: 3em 0;
 

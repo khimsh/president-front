@@ -78,10 +78,151 @@
   }
 
   &__btn {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    z-index: 200;
+    margin-top: 60px;
+  }
+
+  &__desc {
+    max-width: 840px;
+    margin: 64px auto;
+
+    p:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__container {
+    .tour-list {
+      padding-bottom: 100px;
+    }
+
+    .tour-item {
+      position: relative;
+      display: flex;
+      background: v.$color-blue-900;
+
+      &.active {
+        background: v.$color-white;
+
+        h2 {
+          color: v.$color-gray-900;
+          align-self: center;
+        }
+
+        .tour-item__decor {
+          opacity: 0;
+        }
+
+        ~ .tour-content {
+          height: 100%;
+        }
+
+        &:hover {
+          .icon-arrow-box {
+            border-color: v.$color-blue-700;
+
+            svg {
+              fill: v.$color-blue-700;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .tour-item__count {
+          width: 162px;
+        }
+
+        .icon-arrow-box {
+          border-color: v.$color-white;
+
+          svg {
+            fill: v.$color-white;
+          }
+        }
+      }
+
+      button {
+        position: relative;
+        width: 1086px;
+        margin: 0 auto;
+        height: 136px;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      a {
+        padding: 2em 0;
+        @include m.flex(row, space-between, center);
+        text-decoration: none;
+      }
+
+      h2 {
+        position: relative;
+        z-index: 2;
+        align-self: flex-end;
+        @include m.font(v.$font-tatishvili, 36px, 700, v.$color-white);
+
+        @media only screen and (min-width: v.$xl) {
+          font-size: 2.25rem;
+        }
+      }
+
+      &__count {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include m.font(v.$font-tatishvili, 110px, 700, hsla(219, 34%, 15%));
+        line-height: 1;
+        background-color: v.$color-white;
+        overflow: hidden;
+        transition: width 0.2s linear;
+      }
+
+      &__decor {
+        position: absolute;
+        left: 8px;
+        bottom: -12px;
+        z-index: 1;
+        @include m.font(
+          v.$font-tatishvili,
+          110px,
+          700,
+          hsla(219, 34%, 15%, 0.6)
+        );
+      }
+
+      .icon-arrow-box {
+        svg {
+          transition: fill 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .tour-content {
+      max-width: 1042px;
+      margin: 0 auto;
+      height: 0;
+      overflow: hidden;
+
+      p {
+        @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
+      }
+
+      figure {
+        margin: 105px 0 160px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 }
 
