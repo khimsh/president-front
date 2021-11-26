@@ -50,6 +50,25 @@
   }
 }
 
+.container-files {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media only screen and (min-width: v.$sm) {
+    padding: 0 54px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    padding: 0 100px;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    padding: 0;
+    max-width: 1200px;
+  }
+}
+
 .container-article {
   width: 100%;
   margin: 0 auto;

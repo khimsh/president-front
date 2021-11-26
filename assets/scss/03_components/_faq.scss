@@ -1,7 +1,8 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .faq {
+  padding: 0 28px;
   padding-bottom: 2em;
 
   &.active {

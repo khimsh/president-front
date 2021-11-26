@@ -1,8 +1,8 @@
-@use '../02_base/variables' as v;
-@use '../02_base/mixins' as m;
+@use "../02_base/variables" as v;
+@use "../02_base/mixins" as m;
 
 .file {
-  padding: 2em 0;
+  padding: 2em 28px;
   @include m.flex(column, space-between, flex-start);
   gap: 1em;
 
@@ -13,6 +13,7 @@
 
   &-list {
     li {
+      padding: 0 28px;
       border-bottom: 1px solid #e3e3e3;
     }
   }
@@ -193,6 +194,9 @@
   .file {
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -36px;
   }
 
   &-title {
