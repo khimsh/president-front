@@ -1,4 +1,4 @@
-@use '../02_base/variables' as v;
+@use "../02_base/variables" as v;
 
 p.lead {
   margin-left: 0;
@@ -6,10 +6,106 @@ p.lead {
 }
 
 .about-georgia {
+  --width: 100%;
+
+  @media only screen and (min-width: v.$lg) {
+    --width: 904px;
+  }
+
+  .lead {
+    margin: 44px 0 0 0;
+    width: var(--width);
+    text-align: left;
+  }
+
   p {
     line-height: 1.6;
-    max-width: 80ch;
+    width: var(--width);
     margin: 1.5em auto;
+    text-align: justify;
+  }
+
+  &__main-img {
+    margin-block: 32px;
+    position: relative;
+    width: var(--width);
+    height: auto;
+
+    @media only screen and (min-width: v.$lg) {
+      margin-block: 62px;
+    }
+
+    &:nth-of-type(1) {
+      margin-top: 20px;
+      margin-bottom: 30px;
+
+      @media only screen and (min-width: v.$lg) {
+        margin-top: 40px;
+        margin-bottom: 62px;
+      }
+    }
+
+    &--center {
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    figcaption {
+      position: relative;
+      text-align: left;
+      margin-top: 32px;
+
+      @media only screen and (min-width: v.$lg) {
+        position: absolute;
+        right: calc(100% + 42px);
+        left: unset;
+        bottom: 0;
+        text-align: right;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -21px;
+        left: 0;
+        height: 1px;
+        width: 70px;
+        background: #666666;
+
+        @media only screen and (min-width: v.$lg) {
+          top: -21px;
+          right: 0;
+          left: unset;
+        }
+      }
+    }
+
+    &--right {
+      figcaption {
+        width: 282px;
+        text-align: left;
+
+        @media only screen and (min-width: v.$lg) {
+          left: calc(100% + 42px);
+          right: unset;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -21px;
+          left: 0;
+          height: 1px;
+          width: 70px;
+          background: #666666;
+        }
+      }
+    }
   }
 }
 
