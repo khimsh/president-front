@@ -185,9 +185,17 @@
 
   .slick-dots {
     position: absolute;
-    right: -45px;
+    right: -32px;
     top: 40%;
     flex-direction: column;
+
+    @media only screen and (min-width: v.$md) {
+      right: -78px;
+    }
+
+    @media only screen and (min-width: v.$xl) {
+      right: -45px;
+    }
   }
 
   button {

@@ -1,4 +1,4 @@
-@use '../02_base/variables' as v;
+@use "../02_base/variables" as v;
 
 .index-block {
   display: grid;
@@ -76,34 +76,54 @@
 .foreign-press {
   background: v.$color-red-700;
   padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  --slider-width: 300px;
+  --img-height: 190px;
+  --mt: 12px;
+
+  @media only screen and (min-width: v.$sm) {
+    --slider-width: 280px;
+    --img-height: 180px;
+  }
+
+  @media only screen and (min-width: v.$md) {
+    --slider-width: 365px;
+    --img-height: 180px;
+    --mt: 16px;
+  }
+
+  @media only screen and (min-width: v.$lg) {
+    --slider-width: 418px;
+    --img-height: 240px;
+    --mt: 18px;
+  }
+
+  @media only screen and (min-width: v.$xl) {
+    --slider-width: 464px;
+    --img-height: 426px;
+    --mt: 24px;
+  }
+
+  @media only screen and (min-width: v.$xxl) {
+    height: 806px;
+    --slider-width: 636px;
+    --mt: 48px;
+  }
 
   &-slider {
-    max-width: 72vw;
-
-    @media only screen and (min-width: v.$sm) {
-      max-width: calc(50vw - 150px);
-    }
+    margin: 0 auto;
+    width: var(--slider-width);
   }
 
   &-article {
     figure {
       position: relative;
-      margin-bottom: 10px;
-
-      @media only screen and (min-width: v.$sm) {
-        height: 180px;
-        overflow: hidden;
-      }
-
-      @media only screen and (min-width: v.$lg) {
-        height: 240px;
-        overflow: hidden;
-      }
-
-      @media only screen and (min-width: v.$xl) {
-        height: 420px;
-        overflow: hidden;
-      }
+      overflow: hidden;
+      height: var(--img-height);
 
       img {
         width: 100%;
@@ -116,6 +136,30 @@
         bottom: 0;
         left: 0;
       }
+    }
+
+    h3 {
+      margin-top: var(--mt);
+      width: var(--slider-width);
+    }
+  }
+
+  &__btn {
+    align-self: flex-end;
+    @media only screen and (min-width: v.$xl) {
+      margin-right: calc(150px - 52px);
+    }
+  }
+
+  .btn-outline {
+    border: 1px solid #fab5b5;
+
+    span {
+      color: #fab5b5;
+    }
+
+    svg {
+      fill: #fab5b5;
     }
   }
 }
