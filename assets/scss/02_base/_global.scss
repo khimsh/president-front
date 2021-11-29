@@ -66,6 +66,11 @@ blockquote {
       margin-top: -82px;
     }
 
+    &--no-padding {
+      padding-left: 0;
+      margin-top: 0;
+    }
+
     @media only screen and (min-width: v.$lg) {
       padding-left: 72px;
     }
