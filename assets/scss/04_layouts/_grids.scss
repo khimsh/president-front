@@ -146,3 +146,14 @@
     }
   }
 }
+
+.article-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+
+  @media only screen and (min-width: v.$xs) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+  }
+}
