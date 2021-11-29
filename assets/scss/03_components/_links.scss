@@ -2,7 +2,24 @@
 @use "../02_base/mixins" as m;
 
 .link {
-  &-red {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 5px;
+    left: 0;
+    background-color: currentColor;
+    transition: background-color 0.15s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: #c81717;
+    }
   }
 
   &-with-icon {
