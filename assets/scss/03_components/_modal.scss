@@ -9,7 +9,7 @@
   right: 0;
   width: 100%;
   min-height: 100%;
-  z-index: 1000000;
+  z-index: 100000025;
 
   display: none;
 
@@ -97,6 +97,10 @@
       font-size: 20px;
       font-weight: 700;
       color: v.$color-blue-700;
+    }
+
+    .section-title {
+      margin-bottom: 0;
     }
 
     p {
