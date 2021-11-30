@@ -35,6 +35,7 @@
     text-align: center;
     opacity: 1;
     transition: opacity 0.4s ease-in-out;
+    pointer-events: initial;
 
     h2 {
       max-width: unset !important;
@@ -44,6 +45,7 @@
 
     &.fade-out {
       opacity: 0;
+      pointer-events: none;
     }
   }
 
@@ -59,21 +61,19 @@
     align-items: center;
     border: 1px solid v.$color-white;
     border-radius: 100px;
+    opacity: 1;
+    transition: opacity 0.2s linear;
     z-index: 1000;
+
+    &.hide {
+      opacity: 0;
+    }
   }
 
   .PlayPause {
-    // transition: all 0.5s ease-in-out;
-
     &::before,
     &::after {
       background: v.$color-white;
-    }
-
-    &.is-playing {
-      // top: 50%;
-      // left: 50%;
-      // transform: translate(-50%, -50%);
     }
   }
 
@@ -84,6 +84,7 @@
   &__desc {
     max-width: 840px;
     margin: 64px auto;
+    padding: 0 12px;
 
     p:not(:last-child) {
       margin-bottom: 32px;
@@ -93,6 +94,17 @@
   &__container {
     .tour-list {
       padding-bottom: 100px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: #071021;
+      }
     }
 
     .tour-item {
@@ -126,7 +138,12 @@
 
       &:hover {
         .tour-item__count {
-          width: 162px;
+          @media only screen and (min-width: v.$lg) {
+            width: 100px;
+          }
+          @media only screen and (min-width: v.$xl) {
+            width: 162px;
+          }
         }
 
         .icon-arrow-box {
@@ -139,15 +156,26 @@
       }
 
       button {
-        position: relative;
-        width: 1086px;
         margin: 0 auto;
-        height: 136px;
-        padding: 20px 0;
+        padding: 12px;
+        position: relative;
+        width: 100%;
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+
+        @media only screen and (min-width: v.$lg) {
+          width: 80%;
+          height: 100px;
+        }
+
+        @media only screen and (min-width: v.$xl) {
+          padding: 20px 0;
+          height: 136px;
+          width: 1086px;
+        }
       }
 
       a {
@@ -160,8 +188,13 @@
         position: relative;
         z-index: 2;
         transform: translateY(10px);
-        @include m.font(v.$font-tatishvili, 36px, 700, v.$color-white);
+        @include m.font(v.$font-tatishvili, 18px, 700, v.$color-white);
+        text-align: left;
         transition: all 0.2s ease-in-out;
+
+        @media only screen and (min-width: v.$lg) {
+          font-size: 36px;
+        }
 
         @media only screen and (min-width: v.$xl) {
           font-size: 2.25rem;
@@ -177,25 +210,38 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include m.font(v.$font-tatishvili, 110px, 700, hsla(219, 34%, 15%));
+        @include m.font(v.$font-tatishvili, 44px, 700, hsla(219, 34%, 15%));
         line-height: 1;
         background-color: v.$color-white;
         overflow: hidden;
         transition: width 0.2s linear;
+
+        @media only screen and (min-width: v.$xl) {
+          font-size: 110px;
+        }
       }
 
       &__decor {
         position: absolute;
         left: 8px;
-        bottom: -12px;
+        bottom: 7px;
         z-index: 1;
         @include m.font(
           v.$font-tatishvili,
-          110px,
+          34px,
           700,
           hsla(219, 34%, 15%, 0.6)
         );
         transition: color 0.2s ease-in-out;
+
+        @media only screen and (min-width: v.$lg) {
+          font-size: 64px;
+        }
+
+        @media only screen and (min-width: v.$xl) {
+          bottom: -12px;
+          font-size: 110px;
+        }
       }
 
       .icon-arrow-box {
@@ -206,19 +252,35 @@
     }
 
     .tour-content {
-      max-width: 1000px;
       margin: 0 auto;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-in-out;
 
+      @media only screen and (min-width: v.$lg) {
+        max-width: calc(80% - 24px);
+      }
+
+      @media only screen and (min-width: v.$xl) {
+        max-width: 1042px;
+      }
+
       &__wrapper {
-        padding-bottom: 160px;
+        padding-bottom: 60px;
+
+        @media only screen and (min-width: v.$lg) {
+          padding-bottom: 160px;
+        }
       }
 
       p {
         @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
         line-height: 1.6;
+        padding: 0 24px;
+
+        @media only screen and (min-width: v.$lg) {
+          padding: 0 12px;
+        }
       }
 
       figure {

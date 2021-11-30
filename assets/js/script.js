@@ -346,8 +346,10 @@ if (document.querySelector("[data-virtual]")) {
   playBtn.addEventListener("click", () => {
     if (video.paused) {
       videoTitle.classList.add("fade-out");
+      playBtn.classList.add("hide");
     } else {
       videoTitle.classList.remove("fade-out");
+      playBtn.classList.remove("hide");
     }
     handleVideoPlay(video, playBtnState);
   });
@@ -356,6 +358,7 @@ if (document.querySelector("[data-virtual]")) {
     pauseVideo(video);
     playBtnState.classList.add("is-playing");
     videoTitle.classList.remove("fade-out");
+    playBtn.classList.remove("hide");
   });
 
   muteBtn.addEventListener("click", () => {
