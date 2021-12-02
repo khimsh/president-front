@@ -91,3 +91,28 @@
   display: flex;
   flex-direction: column;
 }
+
+// პრინტზე დამალვა
+@media print {
+  .hide-on-print {
+    display: none !important;
+  }
+
+  .sticky-container .sticky-content {
+    margin-top: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .show-on-print {
+    display: block !important;
+  }
+}
+
+.show-on-print {
+  display: none;
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 150px auto 60px 30px;
+}

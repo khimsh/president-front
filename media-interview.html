@@ -29,7 +29,7 @@
         <!-- ლოგოს დასასრული -->
 
         <!-- დესკტოპ ნავიგაცია -->
-        <nav class="site-nav" data-navigation>
+        <nav class="site-nav hide-on-print" data-navigation>
           <ul class="site-nav__list">
             <li class="site-nav__dropdown">
               <button class="site-nav__btn" data-navigation-toggle>
@@ -104,21 +104,21 @@
         </nav>
         <!-- დესკტოპ ნავიგაციის დასასრული -->
 
-        <ul class="site-languages">
+        <ul class="site-languages hide-on-print">
           <li><a href="#" class="geo active">ქარ</a></li>
           <li><a href="#" class="abkh">Аҧс</a></li>
           <li><a href="#" class="eng">Eng</a></li>
         </ul>
 
         <!-- ძიების ღილაკი -->
-        <button class="site-header__search" data-toggle-search>
+        <button class="site-header__search hide-on-print" data-toggle-search>
           <svg>
             <use href="assets/images/icons/search.svg#search" />
           </svg>
         </button>
         <!-- ძიების ღილაკის დასასრული -->
 
-        <button class="site-header__menu" data-open-nav>
+        <button class="site-header__menu hide-on-print" data-open-nav>
           <svg width="30" height="22">
             <use href="assets/images/icons/menu.svg#menu" />
           </svg>
@@ -304,9 +304,9 @@
     </div>
     <!-- end header component -->
 
-    <div class="banner banner--article" role="banner">
+    <div class="banner banner--article hide-on-print" role="banner">
       <div class="container">
-        <p class="banner__title">ინტერვიუები და სტატიები</p>
+        <p class="banner__title hide-on-print">ინტერვიუები და სტატიები</p>
       </div>
     </div>
 
@@ -319,7 +319,7 @@
           </div>
 
           <div class="sticky-container">
-            <div class="article-cta-vertical sticky">
+            <div class="article-cta-vertical sticky hide-on-print">
               <ul>
                 <li>
                   <a href="#">
@@ -474,93 +474,99 @@
           </div>
         </article>
 
-        <section class="mt-lg">
-          <div class="article-cards">
-            <div class="gallery-item">
-              <figure>
-                <img src="assets/images/article-01.png" alt="" />
-              </figure>
+        <div class="hide-on-print">
+          <section class="mt-lg">
+            <div class="article-cards">
+              <div class="gallery-item">
+                <figure>
+                  <img src="assets/images/article-01.png" alt="" />
+                </figure>
+              </div>
+
+              <div class="gallery-item">
+                <figure>
+                  <img src="assets/images/article-01.png" alt="" />
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section class="mt-lg">
+            <div class="section-heading">
+              <h2 class="section-title">განცხადებები</h2>
             </div>
 
-            <div class="gallery-item">
-              <figure>
-                <img src="assets/images/article-01.png" alt="" />
-              </figure>
+            <div class="article-cards">
+              <article class="card">
+                <a href="#" class="card__wrapper">
+                  <div class="card__meta">
+                    <figure class="card__figure">
+                      <img
+                        src="assets/images/article-01.png"
+                        alt=""
+                        class="card__image"
+                      />
+                    </figure>
+
+                    <div class="timestamp">
+                      <time datetime="" class="datetime-stamp"
+                        >16 დეკმბერი 2020</time
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card__texts">
+                    <h3 class="card__title">
+                      პრეზიდენტის ადმინისტრაციამ კონსტიტუციის ქართულ-აფხაზური
+                      ვერსია გამოსცა
+                    </h3>
+                  </div>
+                </a>
+              </article>
+
+              <article class="card">
+                <a href="#" class="card__wrapper">
+                  <div class="card__meta">
+                    <figure class="card__figure">
+                      <img
+                        src="assets/images/article-01.png"
+                        alt=""
+                        class="card__image"
+                      />
+                    </figure>
+
+                    <div class="timestamp">
+                      <time datetime="" class="datetime-stamp"
+                        >16 დეკმბერი 2020</time
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card__texts">
+                    <h3 class="card__title">
+                      პრეზიდენტის ადმინისტრაციამ კონსტიტუციის ქართულ-აფხაზური
+                      ვერსია გამოსცა
+                    </h3>
+                  </div>
+                </a>
+              </article>
             </div>
-          </div>
-        </section>
 
-        <section class="mt-lg">
-          <div class="section-heading">
-            <h2 class="section-title">განცხადებები</h2>
-          </div>
-
-          <div class="article-cards">
-            <article class="card">
-              <a href="#" class="card__wrapper">
-                <div class="card__meta">
-                  <figure class="card__figure">
-                    <img
-                      src="assets/images/article-01.png"
-                      alt=""
-                      class="card__image"
-                    />
-                  </figure>
-
-                  <div class="timestamp">
-                    <time datetime="" class="datetime-stamp"
-                      >16 დეკმბერი 2020</time
-                    >
-                  </div>
-                </div>
-
-                <div class="card__texts">
-                  <h3 class="card__title">
-                    პრეზიდენტის ადმინისტრაციამ კონსტიტუციის ქართულ-აფხაზური
-                    ვერსია გამოსცა
-                  </h3>
-                </div>
-              </a>
-            </article>
-
-            <article class="card">
-              <a href="#" class="card__wrapper">
-                <div class="card__meta">
-                  <figure class="card__figure">
-                    <img
-                      src="assets/images/article-01.png"
-                      alt=""
-                      class="card__image"
-                    />
-                  </figure>
-
-                  <div class="timestamp">
-                    <time datetime="" class="datetime-stamp"
-                      >16 დეკმბერი 2020</time
-                    >
-                  </div>
-                </div>
-
-                <div class="card__texts">
-                  <h3 class="card__title">
-                    პრეზიდენტის ადმინისტრაციამ კონსტიტუციის ქართულ-აფხაზური
-                    ვერსია გამოსცა
-                  </h3>
-                </div>
-              </a>
-            </article>
-          </div>
-
-          <div class="my-md flex-center">
-            <button class="btn btn-outline btn-outline-dark">
-              იხილე სრულად
-            </button>
-          </div>
-        </section>
+            <div class="my-md flex-center">
+              <button class="btn btn-outline btn-outline-dark">
+                იხილე სრულად
+              </button>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
 
-    <footer class="site-footer">
+    <div class="show-on-print">
+      &copy; 2021 საქართველოს პრეზიდენტის ადმინისტრაცია
+    </div>
+
+    <footer class="site-footer hide-on-print">
       <!-- Scroll To Top Button -->
       <button role="button" data-scroll-top class="scroll-to-top">
         <svg>
