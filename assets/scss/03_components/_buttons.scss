@@ -181,6 +181,11 @@ button {
   height: 1em;
   transition: clip-path 300ms ease-in-out;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  &.colored::before,
+  &.colored::after {
+    background-color: #c81717;
+  }
 }
 
 .PlayPause::before,

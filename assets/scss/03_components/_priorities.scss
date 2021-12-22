@@ -62,10 +62,22 @@
   flex-direction: column;
 
   h2 {
-    margin-left: 30px;
+    margin-left: -12px;
+
+    @media only screen and (min-width: v.$sm) {
+      margin-left: 34px;
+    }
+
+    @media only screen and (min-width: v.$md) {
+      margin-left: 38px;
+    }
 
     @media only screen and (min-width: v.$xl) {
-      margin-left: 120px;
+      margin-left: 60px;
+    }
+
+    @media only screen and (min-width: v.$xxl) {
+      margin-left: 122px;
     }
   }
 

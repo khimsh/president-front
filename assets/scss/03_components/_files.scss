@@ -2,7 +2,7 @@
 @use "../02_base/mixins" as m;
 
 .file {
-  padding: 2em 28px;
+  padding: 60px 28px;
   @include m.flex(column, space-between, flex-start);
   gap: 1em;
 
@@ -180,12 +180,17 @@
 .search-result {
   padding: 3em 0;
 
+  &-container {
+    max-width: 780px;
+  }
+
   .file {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 0;
     padding-right: 0;
     margin-left: -36px;
+    padding-block: 0;
   }
 
   &-title {
@@ -195,5 +200,10 @@
   &-action {
     display: block;
     text-align: right;
+
+    &--left {
+      margin-top: 20px;
+      text-align-last: left;
+    }
   }
 }

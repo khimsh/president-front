@@ -1,5 +1,5 @@
-@use "../02_base/variables" as v;
-@use "../02_base/mixins" as m;
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .card {
   &:hover,
@@ -93,9 +93,17 @@
 
 .address-card {
   position: relative;
+  width: 400px;
+  aspect-ratio: 6 / 8;
+  margin-right: 76px;
+
+  @media only screen and (min-width: v.$xxl) {
+    width: 400px;
+    margin-right: 96px;
+  }
 
   .timestamp {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
   }
 
   &:hover {
@@ -116,9 +124,10 @@
   }
 
   &__figure {
+    width: 100%;
+    height: 100%;
     position: relative;
     margin: 0 auto;
-    aspect-ratio: 5 / 6;
     transform: translateY(-4px);
 
     &::before {

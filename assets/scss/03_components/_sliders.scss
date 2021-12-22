@@ -120,47 +120,6 @@
 }
 
 .address-slider {
-  @media only screen and (min-width: v.$lg) {
-    width: calc(100% - 20px);
-  }
-
-  .slick-slide {
-    margin: 0 10px;
-
-    @media only screen and (min-width: v.$md) {
-      margin: 0 20px;
-    }
-
-    @media only screen and (min-width: v.$xl) {
-      margin: 0 35px;
-    }
-
-    @media only screen and (min-width: v.$xxl) {
-      margin: 0 43px;
-    }
-  }
-
-  .slick-list {
-    margin: 0 -10px;
-
-    @media only screen and (min-width: v.$md) {
-      margin: 0 -20px;
-    }
-
-    @media only screen and (min-width: v.$lg) {
-      padding: 0 100px 0 0 !important;
-    }
-
-    @media only screen and (min-width: v.$xl) {
-      margin: 0 -35px;
-    }
-
-    @media only screen and (min-width: v.$xxl) {
-      margin: 0 -43px;
-      padding: 0 140px 0 0 !important;
-    }
-  }
-
   .slick-arrow {
     svg {
       @include m.svg(45px, 12.905px, v.$color-gray-900);

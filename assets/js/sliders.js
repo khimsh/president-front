@@ -44,6 +44,7 @@ $(document).ready(function () {
     nextArrow: nextArrow,
     slidesToShow: 3,
     slidesToScroll: 1,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 992,
