@@ -1,5 +1,5 @@
-@use "./variables" as v;
-@use "./mixins" as m;
+@use './variables' as v;
+@use './mixins' as m;
 
 :is(p, li, cite, figcaption, pre) {
   @include m.font(v.$font-notosansgeo, 0.875rem, 300, v.$color-gray-900);
@@ -36,14 +36,14 @@ label {
   @include m.font(v.$font-notosansgeo, 1rem, 700, v.$color-gray-900);
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="email"],
+input[type='text'],
+input[type='tel'],
+input[type='email'],
 textarea {
   @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-gray-900);
 }
 
-input[type="search"] {
+input[type='search'] {
   @include m.font(v.$font-notosansgeo, 1rem, 300, v.$color-white);
 
   @include m.placeholder {
@@ -109,6 +109,7 @@ time {
   a {
     @include m.font(v.$font-bpgnino, 1.25rem, 700, v.$color-white);
     text-decoration: none;
+    text-transform: uppercase;
   }
 }
 
