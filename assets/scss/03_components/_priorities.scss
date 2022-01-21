@@ -1,5 +1,5 @@
-@use "../02_base/variables" as v;
-@use "../02_base/mixins" as m;
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .grid-priorities {
   margin: auto 0;
@@ -85,7 +85,6 @@
     margin: 18px 0 24px 0;
     max-height: 70px;
     width: auto;
-    object-fit: cover;
   }
 }
 
