@@ -1,5 +1,5 @@
-@use "../02_base/variables" as v;
-@use "../02_base/mixins" as m;
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 .video-banner {
   --video-height: 324px;
@@ -31,7 +31,7 @@
   }
 
   @media only screen and (min-width: v.$xxl) {
-    --video-min-height: 1080px;
+    --video-min-height: 920px;
   }
 
   &::before {
