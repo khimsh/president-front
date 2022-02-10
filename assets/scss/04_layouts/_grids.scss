@@ -1,4 +1,4 @@
-@use "../02_base/variables" as v;
+@use '../02_base/variables' as v;
 
 .grid-12 {
   display: grid;
@@ -155,5 +155,35 @@
   @media only screen and (min-width: v.$xs) {
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
+  }
+}
+
+.grid-addresses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: space-between;
+  column-gap: 40px;
+  row-gap: 50px;
+
+  @media only screen and (max-width: v.$md) {
+    grid-template-columns: 400px;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: v.$xs) {
+    grid-template-columns: 1fr;
+  }
+
+  & > .address-card {
+    width: 100% !important;
+    margin-right: 0 !important;
+
+    @media only screen and (max-width: v.$md) {
+      max-width: 400px !important;
+    }
+
+    @media only screen and (max-width: v.$xs) {
+      max-width: 100% !important;
+    }
   }
 }
