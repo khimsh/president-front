@@ -1,4 +1,4 @@
-@use "../02_base/variables" as v;
+@use '../02_base/variables' as v;
 
 .index-block {
   display: grid;
@@ -24,21 +24,42 @@
 }
 
 .orbeliani-palace {
+  position: relative;
   height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-      to left,
-      hsla(0, 79%, 44%, 0.7),
-      hsla(0, 79%, 44%, 0.7)
-    ),
-    url(../images/palace.jpg);
-  background-repeat: no-repeat;
 
   @media only screen and (min-width: v.$sm) {
     height: 100%;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  figure {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to left, hsla(0, 79%, 44%, 0.7), hsla(0, 79%, 44%, 0.7));
+    }
+
+    img {
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  h2 {
+    position: relative;
   }
 }
 

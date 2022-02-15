@@ -5586,18 +5586,37 @@ button {
 }
 
 .orbeliani-palace {
+  position: relative;
   height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to left, rgba(201, 24, 24, 0.7), rgba(201, 24, 24, 0.7)), url(../images/palace.jpg);
-  background-repeat: no-repeat;
 }
 @media only screen and (min-width: 768px) {
   .orbeliani-palace {
     height: 100%;
   }
+}
+.orbeliani-palace:hover img {
+  transform: scale(1.1);
+}
+.orbeliani-palace figure {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.orbeliani-palace figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(201, 24, 24, 0.7), rgba(201, 24, 24, 0.7));
+}
+.orbeliani-palace figure img {
+  transition: 0.2s ease-in-out;
+}
+.orbeliani-palace h2 {
+  position: relative;
 }
 
 .president-signature {
