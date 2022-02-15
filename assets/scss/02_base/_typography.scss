@@ -315,7 +315,7 @@ time {
 
 .hero {
   &__title {
-    @include m.font(v.$font-tatishvili, 1.625rem, 700, v.$color-white);
+    @include m.font(v.$font-tatishvili, 1.25rem, 700, v.$color-white);
     line-height: 1.2;
 
     @media only screen and (min-width: v.$sm) {
