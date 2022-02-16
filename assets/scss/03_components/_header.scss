@@ -1,5 +1,5 @@
-@use "../02_base/variables" as v;
-@use "../02_base/mixins" as m;
+@use '../02_base/variables' as v;
+@use '../02_base/mixins' as m;
 
 :root {
   --header-height: 50px;
@@ -185,9 +185,10 @@
     transition: color 0.1s ease-in-out;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:focus-visible {
       outline: none;
-      color: hsla(0, 0%, 100%, 0.8);
+      color: hsla(0 0% 100% / 0.6);
     }
 
     .icon {
@@ -214,9 +215,10 @@
 
       &:hover,
       &:active,
-      &:focus {
+      &:focus,
+      &:focus-visible {
         outline: none;
-        color: hsla(0, 0%, 100%, 0.8);
+        color: hsla(0 0% 100% / 0.6);
       }
     }
   }

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".fb-cards-slider").slick({
+  $('.fb-cards-slider').slick({
     arrows: false,
     dots: true,
     slidesToShow: 1,
@@ -38,7 +38,7 @@ $(document).ready(function () {
   </button>
 `;
 
-  $(".address-slider").slick({
+  $('.address-slider').slick({
     arrows: true,
     prevArrow: previousArrow,
     nextArrow: nextArrow,
@@ -61,7 +61,7 @@ $(document).ready(function () {
     ],
   });
 
-  $(".associated-media-slider").slick({
+  $('.associated-media-slider').slick({
     arrows: true,
     prevArrow: previousArrowSmall,
     nextArrow: nextArrowSmall,
@@ -83,13 +83,15 @@ $(document).ready(function () {
     ],
   });
 
-  $(".hero__slider").slick({
+  $('.hero__slider').slick({
     arrows: true,
     dots: true,
     prevArrow: previousArrow,
     nextArrow: nextArrow,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 992,
@@ -109,7 +111,7 @@ $(document).ready(function () {
     ],
   });
 
-  $(".foreign-press-slider").slick({
+  $('.foreign-press-slider').slick({
     arrows: false,
     dots: true,
     slidesToShow: 1,
@@ -117,14 +119,14 @@ $(document).ready(function () {
     variableWidth: true,
   });
 
-  $(".publications-slider").slick({
+  $('.publications-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: previousArrowSmall,
     nextArrow: nextArrowSmall,
   });
 
-  $(".slider-images").slick({
+  $('.slider-images').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
     prevArrow: previousArrowSmall,
@@ -133,22 +135,16 @@ $(document).ready(function () {
 
   // Autoplay active hero slider video
   // On slide change, pause all videos
-  $(".hero__slider").on(
-    "beforeChange",
-    function (event, slick, currentSlide, nextSlide) {
-      $(".hero__item video").each(function () {
-        $(this).get(0).pause();
-      });
-    }
-  );
+  $('.hero__slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    $('.hero__item video').each(function () {
+      $(this).get(0).pause();
+    });
+  });
 
   // On slide chnage, play a video inside the current slide
-  $(".hero__slider").on(
-    "afterChange",
-    function (event, slick, currentSlide, nextSlide) {
-      if ($(".hero__item.slick-current").find("video").length !== 0) {
-        $(".hero__slider .slick-current video")[0].play();
-      }
+  $('.hero__slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    if ($('.hero__item.slick-current').find('video').length !== 0) {
+      $('.hero__slider .slick-current video')[0].play();
     }
-  );
+  });
 });
