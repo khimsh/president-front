@@ -4573,13 +4573,14 @@ button {
   display: block;
   width: 14px;
   height: 14px;
-  transform: scale(0.7);
+  transform: scale(0.4);
   border-radius: 14px;
   color: transparent;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 .slick-dotted .slick-active button[role=tab] {
+  transform: scale(0.7);
   background: transparent;
 }
 
