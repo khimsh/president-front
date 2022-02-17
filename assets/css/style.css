@@ -21,8 +21,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -65,8 +65,8 @@ select {
   }
 
   *,
-  *::before,
-  *::after {
+*::before,
+*::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -121,9 +121,8 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
-.slick-track:before,
-.slick-track:after {
-  content: '';
+.slick-track:before, .slick-track:after {
+  content: "";
   display: table;
 }
 .slick-track:after {
@@ -139,7 +138,7 @@ select {
   min-height: 1px;
   display: none;
 }
-[dir='rtl'] .slick-slide {
+[dir=rtl] .slick-slide {
   float: right;
 }
 .slick-slide img {
@@ -168,81 +167,71 @@ select {
 }
 
 @font-face {
-  font-family: 'GL Tatishvili Metal';
-  src: url('../fonts/GLTatishviliMetal-Bold.woff2') format('woff2'),
-    url('../fonts/GLTatishviliMetal-Bold.woff') format('woff');
+  font-family: "GL Tatishvili Metal";
+  src: url("../fonts/GLTatishviliMetal-Bold.woff2") format("woff2"), url("../fonts/GLTatishviliMetal-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Fira Sans Compressed';
-  src: url('../fonts/FiraSansCompressed-Medium.woff2') format('woff2'),
-    url('../fonts/FiraSansCompressed-Medium.woff') format('woff');
+  font-family: "Fira Sans Compressed";
+  src: url("../fonts/FiraSansCompressed-Medium.woff2") format("woff2"), url("../fonts/FiraSansCompressed-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'BPG Nino Mtavruli';
-  src: url('../fonts/BPGNinoMtavruli-Bold.woff2') format('woff2'),
-    url('../fonts/BPGNinoMtavruli-Bold.woff') format('woff');
+  font-family: "BPG Nino Mtavruli";
+  src: url("../fonts/BPGNinoMtavruli-Bold.woff2") format("woff2"), url("../fonts/BPGNinoMtavruli-Bold.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Noto Sans Georgian AG';
-  src: url('../fonts/NotoSansGeorgianAG-Bold.woff2') format('woff2'),
-    url('../fonts/NotoSansGeorgianAG-Bold.woff') format('woff');
+  font-family: "Noto Sans Georgian AG";
+  src: url("../fonts/NotoSansGeorgianAG-Bold.woff2") format("woff2"), url("../fonts/NotoSansGeorgianAG-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Noto Sans Georgian AG';
-  src: url('../fonts/NotoSansGeorgianAG-Medium.woff2') format('woff2'),
-    url('../fonts/NotoSansGeorgianAG-Medium.woff') format('woff');
+  font-family: "Noto Sans Georgian AG";
+  src: url("../fonts/NotoSansGeorgianAG-Medium.woff2") format("woff2"), url("../fonts/NotoSansGeorgianAG-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Noto Sans Georgian AG';
-  src: url('../fonts/NotoSansGeorgianAG-Light.woff2') format('woff2'),
-    url('../fonts/NotoSansGeorgianAG-Light.woff') format('woff');
+  font-family: "Noto Sans Georgian AG";
+  src: url("../fonts/NotoSansGeorgianAG-Light.woff2") format("woff2"), url("../fonts/NotoSansGeorgianAG-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Noto Sans';
-  src: url('../fonts/NotoSans-Bold.woff2') format('woff2'),
-    url('../fonts/NotoSans-Bold.woff') format('woff');
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Bold.woff2") format("woff2"), url("../fonts/NotoSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('../fonts/FiraSans-Bold.woff2') format('woff2'),
-    url('../fonts/FiraSans-Bold.woff') format('woff');
+  font-family: "Fira Sans";
+  src: url("../fonts/FiraSans-Bold.woff2") format("woff2"), url("../fonts/FiraSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('../fonts/FiraSans-Medium.woff2') format('woff2'),
-    url('../fonts/FiraSans-Medium.woff') format('woff');
+  font-family: "Fira Sans";
+  src: url("../fonts/FiraSans-Medium.woff2") format("woff2"), url("../fonts/FiraSans-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('../fonts/FiraSans-Light.woff2') format('woff2'),
-    url('../fonts/FiraSans-Light.woff') format('woff');
+  font-family: "Fira Sans";
+  src: url("../fonts/FiraSans-Light.woff2") format("woff2"), url("../fonts/FiraSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -268,9 +257,7 @@ a {
   color: #c81717;
   transition: color 0.15s ease-in-out;
 }
-a:hover,
-a:focus,
-a:active {
+a:hover, a:focus, a:active {
   color: #d35454;
 }
 
@@ -280,7 +267,7 @@ blockquote {
   margin: 4em auto 3em;
 }
 blockquote::before {
-  content: '“';
+  content: "“";
   position: absolute;
   top: -52px;
   left: -14px;
@@ -441,7 +428,7 @@ blockquote::before {
 }
 
 :is(p, li, cite, figcaption, pre) {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: #1a1a1a;
@@ -453,14 +440,14 @@ blockquote::before {
 }
 
 .article h1 {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1.625rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 
 h2 {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1.375rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -468,78 +455,78 @@ h2 {
 
 h3,
 h4 {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 
 blockquote::before {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 5rem;
   font-weight: 700;
   color: #c81717;
 }
 blockquote p {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #c81717;
 }
 
 label {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 
-input[type='text'],
-input[type='tel'],
-input[type='email'],
+input[type=text],
+input[type=tel],
+input[type=email],
 textarea {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
 }
 
-input[type='search'] {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+input[type=search] {
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
 }
-input[type='search']::-webkit-input-placeholder {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #fff;
-}
-
-input[type='search']:-moz-placeholder {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+input[type=search]::-webkit-input-placeholder {
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
 }
 
-input[type='search']::-moz-placeholder {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+input[type=search]:-moz-placeholder {
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
 }
 
-input[type='search']:-ms-input-placeholder {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+input[type=search]::-moz-placeholder {
+  font-family: "Noto Sans Georgian AG", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+input[type=search]:-ms-input-placeholder {
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
 }
 
 time {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: #1a1a1a;
@@ -551,48 +538,42 @@ time {
 }
 
 .form-msg {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: #1a1a1a;
 }
 
 .btn {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   color: #1a1a1a;
 }
 .btn span {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   color: #1a1a1a;
 }
-.btn-red,
-.btn-blue,
-.btn-outline {
+.btn-red, .btn-blue, .btn-outline {
   color: #fff;
 }
-.btn-red-dark,
-.btn-blue-dark,
-.btn-outline-dark {
+.btn-red-dark, .btn-blue-dark, .btn-outline-dark {
   color: #102b4e;
 }
-.btn-red span,
-.btn-blue span,
-.btn-outline span {
+.btn-red span, .btn-blue span, .btn-outline span {
   color: #fff;
 }
 
 .link {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: #1a1a1a;
 }
 .link span {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: #1a1a1a;
@@ -605,13 +586,13 @@ time {
 }
 
 .site-nav button {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.375rem;
   font-weight: 700;
   color: #fff;
 }
 .site-nav a {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: #fff;
@@ -621,13 +602,13 @@ time {
 
 .mobile-nav button,
 .mobile-nav button span {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.875rem;
   font-weight: 700;
   color: #fff;
 }
 .mobile-nav a {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.375rem;
   font-weight: 700;
   color: #fff;
@@ -635,7 +616,7 @@ time {
 }
 
 .site-languages a {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #fff;
@@ -643,9 +624,7 @@ time {
   text-transform: capitalize;
   opacity: 0.6;
 }
-.site-languages a:hover,
-.site-languages a:focus,
-.site-languages a:active {
+.site-languages a:hover, .site-languages a:focus, .site-languages a:active {
   opacity: 1;
 }
 @media only screen and (min-width: 380px) {
@@ -658,7 +637,7 @@ time {
 }
 
 .page-title {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1.375rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -670,7 +649,7 @@ time {
 }
 
 .file-title {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -682,14 +661,14 @@ time {
 }
 
 .file-link {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: #666666;
 }
 
 .useful-link a {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
@@ -697,7 +676,7 @@ time {
 }
 
 .search-result-title {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -708,7 +687,7 @@ time {
 }
 
 .search-result-action {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: #102b4e;
@@ -718,7 +697,7 @@ time {
   display: inline-block;
   margin: 32px 0 16px 0;
   border-bottom: 4px solid #c81717;
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.375rem;
   font-weight: 700;
   color: #000;
@@ -726,21 +705,21 @@ time {
 }
 
 .image figcaption {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
 }
 
 .gallery-item-title {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #1a1a1a;
 }
 
 .symbols-container figcaption {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -752,7 +731,7 @@ time {
 }
 
 .hero-item h2 {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.625rem;
   font-weight: 700;
   color: #fff;
@@ -788,14 +767,14 @@ time {
   font-style: normal;
 }
 .site-footer address h3 {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   color: #acb9bb;
   text-transform: uppercase;
 }
 .site-footer address :is(li, a) {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.75rem;
   font-weight: 300;
   color: #acb9bb;
@@ -804,34 +783,30 @@ time {
 .site-footer address a {
   transition: all 0.2s ease-in-out;
 }
-.site-footer address a:hover,
-.site-footer address a:focus,
-.site-footer address a:active {
+.site-footer address a:hover, .site-footer address a:focus, .site-footer address a:active {
   outline: none;
   color: #c81717;
 }
 .site-footer__navigation a {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   color: #acb9bb;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
-.site-footer__navigation a:hover,
-.site-footer__navigation a:focus,
-.site-footer__navigation a:active {
+.site-footer__navigation a:hover, .site-footer__navigation a:focus, .site-footer__navigation a:active {
   outline: none;
   color: #c81717;
 }
 .site-footer__copy {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.75rem;
   font-weight: 300;
   color: #dddddd;
 }
 .site-footer__cta a {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   color: #fff;
@@ -840,7 +815,7 @@ time {
 }
 
 .banner__title {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.625rem;
   font-weight: 700;
   color: #fff;
@@ -856,14 +831,14 @@ time {
   }
 }
 .banner__subtitle {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
 }
 
 .hero__title {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: #fff;
@@ -895,7 +870,7 @@ time {
   }
 }
 .hero__timeline span {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
   color: #fff;
@@ -906,14 +881,14 @@ time {
 }
 
 .section-title {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #071021;
   line-height: 1;
 }
 .section-link {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #071021;
@@ -921,7 +896,7 @@ time {
 }
 
 .card__title {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #071021;
@@ -929,14 +904,14 @@ time {
 }
 
 .card-fb time {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
   color: #071021;
 }
 
 .fb-handle a {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.5rem;
   font-weight: 500;
   color: #071021;
@@ -944,21 +919,21 @@ time {
 }
 
 .address-card__title {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #fff;
 }
 
 .datetime-stamp {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   color: #fff;
 }
 
 .orbeliani-palace h2 {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
@@ -971,21 +946,21 @@ time {
   }
 }
 .orbeliani-palace a {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: #fff;
 }
 
 .priorities h2 {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 2.25rem;
   font-weight: 700;
   color: #c81717;
 }
 
 .priority h3 {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #102b4e;
@@ -996,7 +971,7 @@ time {
   }
 }
 .priority a {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.625rem;
   font-weight: 300;
   color: #102b4e;
@@ -1008,7 +983,7 @@ time {
 }
 
 .foreign-press h3 {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #fff;
@@ -1018,7 +993,7 @@ time {
   text-decoration: none;
 }
 .foreign-press figcaption {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
@@ -1026,14 +1001,14 @@ time {
 }
 
 .aside-title {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 1.375rem;
   font-weight: 700;
   color: #fff;
 }
 
 .administration-official h2 {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #000;
@@ -1044,7 +1019,7 @@ time {
 }
 
 .medal h2 {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #1a1a1a;
@@ -1052,19 +1027,17 @@ time {
 }
 
 .dropdown-content li {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: #102b4e;
 }
-.dropdown-content li:hover,
-.dropdown-content li:active,
-.dropdown-content li.active {
+.dropdown-content li:hover, .dropdown-content li:active, .dropdown-content li.active {
   color: #c81717;
 }
 
 .event__date {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 3.125rem;
   font-weight: 700;
   color: #c81717;
@@ -1076,7 +1049,7 @@ time {
   }
 }
 .event__title {
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -1191,7 +1164,7 @@ time {
 }
 .show-on-print {
   display: none;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: #1a1a1a;
@@ -1242,7 +1215,7 @@ time {
   }
 }
 .article__caption::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -21px;
   left: 0;
@@ -1320,7 +1293,7 @@ time {
   margin-top: 6em;
 }
 .article__footer::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 40px;
@@ -1369,7 +1342,7 @@ time {
   margin-bottom: 32px;
 }
 .aside-heading::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -1392,7 +1365,7 @@ time {
   padding-top: 12px;
 }
 .aside-line::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 82px;
@@ -1429,14 +1402,14 @@ time {
 }
 .audio-player__time {
   text-align: right;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #000;
 }
 .audio-player__title {
   margin-top: 12px;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #000;
@@ -1483,7 +1456,7 @@ time {
   height: 240px;
   display: flex;
   align-items: flex-end;
-  background: url('../images/banner-occupied-territories.jpg');
+  background: url("../images/banner-occupied-territories.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1500,7 +1473,7 @@ time {
   }
 }
 .banner--overlay::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1589,16 +1562,14 @@ button {
   background-color: #c81717;
   transition: background-color 0.15s ease-in-out;
 }
-.btn-red:hover,
-.btn-red:focus {
+.btn-red:hover, .btn-red:focus {
   background-color: #d22f28;
 }
 .btn-blue {
   background-color: #1a4680;
   transition: background-color 0.15s ease-in-out;
 }
-.btn-blue:hover,
-.btn-blue:focus {
+.btn-blue:hover, .btn-blue:focus {
   background-color: #102b4e;
 }
 .btn-outline {
@@ -1658,7 +1629,7 @@ button {
   z-index: 2;
 }
 .btn-play::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1686,12 +1657,10 @@ button {
   bottom: 16px;
   right: 16px;
 }
-.image-to-fullscreen:hover,
-.image-to-fullscreen:focus {
+.image-to-fullscreen:hover, .image-to-fullscreen:focus {
   outline: none;
 }
-.image-to-fullscreen:hover svg,
-.image-to-fullscreen:focus svg {
+.image-to-fullscreen:hover svg, .image-to-fullscreen:focus svg {
   fill: #c81717;
 }
 .image-to-fullscreen svg {
@@ -1725,15 +1694,11 @@ button {
     width: 88px;
   }
 }
-.scroll-to-top:hover,
-.scroll-to-top:focus,
-.scroll-to-top:active {
+.scroll-to-top:hover, .scroll-to-top:focus, .scroll-to-top:active {
   outline: none;
   background: #071021;
 }
-.scroll-to-top:hover svg,
-.scroll-to-top:focus svg,
-.scroll-to-top:active svg {
+.scroll-to-top:hover svg, .scroll-to-top:focus svg, .scroll-to-top:active svg {
   fill: #c81717;
 }
 .scroll-to-top svg {
@@ -1752,14 +1717,13 @@ button {
   transition: clip-path 300ms ease-in-out;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-.PlayPause.colored::before,
-.PlayPause.colored::after {
+.PlayPause.colored::before, .PlayPause.colored::after {
   background-color: #c81717;
 }
 
 .PlayPause::before,
 .PlayPause::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1891,7 +1855,7 @@ button {
   margin-bottom: 100px;
 }
 .year__title {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 76px;
   font-weight: 700;
   color: #102b4e;
@@ -1939,8 +1903,7 @@ button {
     gap: 2em;
   }
 }
-.award-image,
-.award-video {
+.award-image, .award-video {
   position: relative;
 }
 .award img,
@@ -1985,7 +1948,7 @@ button {
   }
 }
 .award-heading {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #102b4e;
@@ -2005,7 +1968,7 @@ button {
   }
 }
 .award-date::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 140px;
@@ -2016,14 +1979,14 @@ button {
   z-index: -1;
 }
 .award-date-day {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 76px;
   font-weight: 700;
   color: #102b4e;
   line-height: 1;
 }
 .award-date-month {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #102b4e;
@@ -2037,19 +2000,13 @@ button {
     transform: scaleY(1);
   }
 }
-.card:hover > *,
-.card:focus > *,
-.card:focus-within > * {
+.card:hover > *, .card:focus > *, .card:focus-within > * {
   outline: none;
 }
-.card:hover figure::after,
-.card:focus figure::after,
-.card:focus-within figure::after {
+.card:hover figure::after, .card:focus figure::after, .card:focus-within figure::after {
   background-color: rgba(255, 255, 255, 0.5);
 }
-.card:hover .timestamp::before,
-.card:focus .timestamp::before,
-.card:focus-within .timestamp::before {
+.card:hover .timestamp::before, .card:focus .timestamp::before, .card:focus-within .timestamp::before {
   width: calc(100% + 5px);
 }
 .card--featured .card__figure {
@@ -2068,7 +2025,7 @@ button {
   aspect-ratio: 3/2;
 }
 .card__figure::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -2079,8 +2036,7 @@ button {
   transition: all 0.2s linear;
   pointer-events: none;
 }
-.card__image,
-.card__video {
+.card__image, .card__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2140,6 +2096,9 @@ button {
 .address-card:hover .timestamp::before {
   width: calc(100% + 5px);
 }
+.address-card:hover .address-card__title {
+  max-height: 500px;
+}
 .address-card__wrapper {
   display: block;
   height: 100%;
@@ -2152,14 +2111,14 @@ button {
   transform: translateY(-4px);
 }
 .address-card__figure::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom, #071021, rgba(7, 16, 34, 0));
+  background: linear-gradient(to top, #071021, rgba(7, 16, 34, 0));
   transition: all 0.2s linear;
   pointer-events: none;
 }
@@ -2171,9 +2130,12 @@ button {
 }
 .address-card__title {
   position: absolute;
-  top: 0;
   left: 0;
-  padding: 32px;
+  bottom: 40px;
+  padding: 0 32px;
+  max-height: 76px;
+  overflow-y: hidden;
+  transition: all 0.4s ease-in-out;
 }
 
 .publication {
@@ -2190,20 +2152,20 @@ button {
   height: auto;
 }
 .publication h3 {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #000;
 }
 .publication p {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #1a1a1a;
 }
 .publication a {
   margin-top: 4px;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #1a1a1a;
@@ -2311,13 +2273,13 @@ button {
   object-position: center;
 }
 .former-president-years {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #000;
 }
 .former-president-name {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 17px;
   font-weight: 700;
   color: #000;
@@ -2380,8 +2342,7 @@ button {
   height: 40px;
   margin: 0 !important;
 }
-.article-cta-vertical li:first-child,
-.article-cta-vertical li:nth-child(2) {
+.article-cta-vertical li:first-child, .article-cta-vertical li:nth-child(2) {
   background: #c81717;
 }
 .article-cta-vertical li:last-child {
@@ -2449,7 +2410,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 .faq-heading {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #102b4e;
@@ -2720,7 +2681,7 @@ button {
   height: 100%;
   background: #102b4e;
   cursor: pointer;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
@@ -2793,7 +2754,7 @@ button {
   color: #c81717;
 }
 .filter__item span {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #102b4e;
@@ -2842,9 +2803,9 @@ button {
   display: block;
   margin-bottom: 8px;
 }
-.form input[type='text'],
-.form input[type='tel'],
-.form input[type='email'] {
+.form input[type=text],
+.form input[type=tel],
+.form input[type=email] {
   height: 48px;
   padding: 0 16px;
 }
@@ -2856,7 +2817,7 @@ button {
 .form textarea {
   border: 1px solid #cccccc;
 }
-.form button[type='submit'] {
+.form button[type=submit] {
   align-self: start;
 }
 .form-msg {
@@ -2868,7 +2829,7 @@ button {
   width: 100%;
   height: 50px;
 }
-.form .file-upload-button input[type='file'] {
+.form .file-upload-button input[type=file] {
   position: absolute;
   top: 0;
   left: 0;
@@ -2878,7 +2839,7 @@ button {
   align-items: center;
   width: 100%;
   height: 50px;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
@@ -2895,7 +2856,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
@@ -3020,9 +2981,7 @@ button {
     padding: 0 20px 0 28px;
   }
 }
-.site-footer__cta a:hover,
-.site-footer__cta a:focus,
-.site-footer__cta a:active {
+.site-footer__cta a:hover, .site-footer__cta a:focus, .site-footer__cta a:active {
   outline: none;
   background: rgba(201, 24, 24, 0.8);
 }
@@ -3064,14 +3023,10 @@ button {
 .social-media svg {
   transition: all 0.2s ease-in-out;
 }
-.social-media a:hover,
-.social-media a:focus,
-.social-media a:active {
+.social-media a:hover, .social-media a:focus, .social-media a:active {
   outline: none;
 }
-.social-media a:hover svg,
-.social-media a:focus svg,
-.social-media a:active svg {
+.social-media a:hover svg, .social-media a:focus svg, .social-media a:active svg {
   fill: #c81717;
 }
 
@@ -3122,14 +3077,10 @@ button {
   z-index: 100;
   display: none;
 }
-.site-header__search:hover,
-.site-header__search:focus,
-.site-header__search:active {
+.site-header__search:hover, .site-header__search:focus, .site-header__search:active {
   outline: none;
 }
-.site-header__search:hover svg,
-.site-header__search:focus svg,
-.site-header__search:active svg {
+.site-header__search:hover svg, .site-header__search:focus svg, .site-header__search:active svg {
   fill: #c81717;
 }
 @media only screen and (min-width: 576px) {
@@ -3282,11 +3233,9 @@ button {
   cursor: pointer;
   transition: color 0.1s ease-in-out;
 }
-.site-nav__btn:hover,
-.site-nav__btn:focus,
-.site-nav__btn:focus-visible {
+.site-nav__btn:hover, .site-nav__btn:focus, .site-nav__btn:focus-visible {
   outline: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
 }
 .site-nav__btn .icon {
   display: none;
@@ -3307,12 +3256,9 @@ button {
   display: block;
   padding: 8px 0;
 }
-.site-nav__content a:hover,
-.site-nav__content a:active,
-.site-nav__content a:focus,
-.site-nav__content a:focus-visible {
+.site-nav__content a:hover, .site-nav__content a:active, .site-nav__content a:focus, .site-nav__content a:focus-visible {
   outline: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .site-languages {
@@ -3348,8 +3294,7 @@ button {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
-.site-languages li a:hover,
-.site-languages li a:focus {
+.site-languages li a:hover, .site-languages li a:focus {
   outline: none;
 }
 
@@ -3411,8 +3356,7 @@ button {
   transform: translateY(-12px);
   transition: all 0.2s ease-in-out;
 }
-.main-search__btn:hover,
-.main-search__btn:active {
+.main-search__btn:hover, .main-search__btn:active {
   background: #c81717;
   border-color: #fff;
 }
@@ -3425,7 +3369,7 @@ button {
 .main-search small {
   display: block;
   margin-top: 0.25em;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #808080;
@@ -3461,7 +3405,7 @@ button {
   position: relative;
 }
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -3512,19 +3456,14 @@ button {
   height: var(--video-height);
 }
 .hero__item::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    to top,
-    rgba(7, 16, 34, 0.8),
-    rgba(7, 16, 34, 0.5),
-    rgba(7, 16, 34, 0)
-  );
+  background: linear-gradient(to top, rgba(7, 16, 34, 0.8), rgba(7, 16, 34, 0.5), rgba(7, 16, 34, 0));
   z-index: 1;
   pointer-events: none;
 }
@@ -3574,10 +3513,10 @@ button {
   outline: none;
   background: #d22f28;
 }
-.search-box input[type='search']::-webkit-search-decoration,
-.search-box input[type='search']::-webkit-search-cancel-button,
-.search-box input[type='search']::-webkit-search-results-button,
-.search-box input[type='search']::-webkit-search-results-decoration {
+.search-box input[type=search]::-webkit-search-decoration,
+.search-box input[type=search]::-webkit-search-cancel-button,
+.search-box input[type=search]::-webkit-search-results-button,
+.search-box input[type=search]::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
 .search-box input:-webkit-autofill {
@@ -3649,7 +3588,7 @@ button {
   margin-top: 40px;
 }
 .image figcaption::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: 0;
@@ -3666,8 +3605,7 @@ button {
   overflow: hidden;
   aspect-ratio: 7/5;
 }
-.gallery-item figure:hover img,
-.gallery-item figure:focus img {
+.gallery-item figure:hover img, .gallery-item figure:focus img {
   transform: scale(1.1);
 }
 .gallery-item img {
@@ -3692,7 +3630,7 @@ button {
   text-decoration: none;
 }
 .link::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -3703,8 +3641,7 @@ button {
   opacity: 0.9;
   transition: background-color 0.15s ease-in-out;
 }
-.link::after:hover,
-.link::after:focus {
+.link::after:hover, .link::after:focus {
   background-color: #c81717;
 }
 .link--priorities::after {
@@ -3726,7 +3663,7 @@ button {
 .constitution-download {
   display: inline-block;
   margin-top: 40px;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
@@ -3770,14 +3707,14 @@ button {
 }
 .anthem__heading {
   margin-bottom: 26px;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
 }
 .anthem__text {
   margin-bottom: 26px;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
@@ -3787,7 +3724,7 @@ button {
   position: relative;
 }
 .virtual-tour::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 200px;
@@ -3809,7 +3746,7 @@ button {
 }
 .virtual-tour__heading h2 {
   max-width: unset !important;
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 46px;
   font-weight: 700;
   color: #fff;
@@ -3838,8 +3775,7 @@ button {
 .virtual-tour [data-virtual-play].hide {
   opacity: 0;
 }
-.virtual-tour .PlayPause::before,
-.virtual-tour .PlayPause::after {
+.virtual-tour .PlayPause::before, .virtual-tour .PlayPause::after {
   background: #fff;
 }
 .virtual-tour__btn {
@@ -3858,7 +3794,7 @@ button {
   position: relative;
 }
 .virtual-tour__container .tour-list::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3940,7 +3876,7 @@ button {
   position: relative;
   z-index: 2;
   transform: translateY(10px);
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
@@ -3966,7 +3902,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 44px;
   font-weight: 700;
   color: #192233;
@@ -3985,7 +3921,7 @@ button {
   left: 8px;
   bottom: 7px;
   z-index: 1;
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 34px;
   font-weight: 700;
   color: rgba(25, 34, 51, 0.6);
@@ -4030,7 +3966,7 @@ button {
   }
 }
 .virtual-tour__container .tour-content p {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #1a1a1a;
@@ -4107,7 +4043,7 @@ button {
   top: 0;
   right: 0;
   background: #fff;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   overflow-y: scroll;
   /* width */
   /* Track */
@@ -4128,7 +4064,7 @@ button {
 }
 .modal-regions h3 {
   margin-bottom: 32px;
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 26px;
   font-weight: 700;
   color: #1a1a1a;
@@ -4242,7 +4178,7 @@ button {
 .photo-gallery-modal [data-images] img {
   cursor: pointer;
 }
-.photo-gallery-modal button[role='button'] {
+.photo-gallery-modal button[role=button] {
   display: block;
   border: none;
   background-color: transparent;
@@ -4257,7 +4193,7 @@ button {
   left: 8px;
   display: flex;
   gap: 4px;
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: #fff;
@@ -4283,7 +4219,7 @@ button {
   }
 }
 .photo-gallery-modal__footer h2 {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
@@ -4295,13 +4231,12 @@ button {
   color: #fff;
   transition: all 0.15s ease-in-out;
 }
-.photo-gallery-modal__footer a:hover,
-.photo-gallery-modal__footer a:focus {
+.photo-gallery-modal__footer a:hover, .photo-gallery-modal__footer a:focus {
   outline: none;
   color: #c81717;
 }
 .photo-gallery-modal__footer a span {
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: inherit;
@@ -4346,7 +4281,7 @@ button {
     right: 30px;
   }
 }
-.photo-gallery-modal__arrows button[role='button'] {
+.photo-gallery-modal__arrows button[role=button] {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -4358,8 +4293,7 @@ button {
   fill: #fff;
   transition: all 0.15s ease-in-out;
 }
-.photo-gallery-modal__arrows button[role='button']:hover,
-.photo-gallery-modal__arrows button[role='button']:focus {
+.photo-gallery-modal__arrows button[role=button]:hover, .photo-gallery-modal__arrows button[role=button]:focus {
   outline: none;
   border-color: #c81717;
 }
@@ -4417,8 +4351,7 @@ button {
     padding: 0.25em 0;
     transition: all 0.2s ease-in-out;
   }
-  .mobile-nav-wrapper .mobile-nav-dropdown-content a:hover,
-  .mobile-nav-wrapper .mobile-nav-dropdown-content a:active {
+  .mobile-nav-wrapper .mobile-nav-dropdown-content a:hover, .mobile-nav-wrapper .mobile-nav-dropdown-content a:active {
     opacity: 0.6;
   }
   .mobile-nav-wrapper .mobile-nav .icon {
@@ -4512,7 +4445,7 @@ button {
   align-items: center;
   width: 100%;
   height: 100%;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -4520,16 +4453,14 @@ button {
   background-color: #102b4e;
   transition: background-color 0.15s ease-in-out;
 }
-.pagination li a:hover,
-.pagination li a:focus {
+.pagination li a:hover, .pagination li a:focus {
   background-color: #1a4680;
 }
 .pagination li a.active {
   background-color: #c81717;
   transition: background-color 0.15s ease-in-out;
 }
-.pagination li a.active:hover,
-.pagination li a.active:focus {
+.pagination li a.active:hover, .pagination li a.active:focus {
   background-color: #d22f28;
 }
 .pagination li svg {
@@ -4625,7 +4556,7 @@ button {
   margin-bottom: 64px;
 }
 .priorities-section__title {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: #1a1a1a;
@@ -4644,7 +4575,7 @@ button {
   gap: 6px;
   list-style: none;
 }
-.slick-dotted button[role='tab'] {
+.slick-dotted button[role=tab] {
   display: block;
   width: 14px;
   height: 14px;
@@ -4654,7 +4585,7 @@ button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.slick-dotted .slick-active button[role='tab'] {
+.slick-dotted .slick-active button[role=tab] {
   transform: scale(0.7);
   background: transparent;
 }
@@ -4686,8 +4617,7 @@ button {
   bottom: 1.5em;
   z-index: 1000;
 }
-.hero__slider .slick-arrow:hover svg,
-.hero__slider .slick-arrow:active svg {
+.hero__slider .slick-arrow:hover svg, .hero__slider .slick-arrow:active svg {
   fill: #c81717;
 }
 .hero__slider .slick-arrow svg {
@@ -4921,13 +4851,13 @@ button {
 .structure__president {
   position: relative;
   margin-bottom: 2em;
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 26px;
   font-weight: 700;
   color: #c81717;
 }
 .structure__president::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 2px;
@@ -4947,7 +4877,7 @@ button {
 }
 @media only screen and (min-width: 1200px) {
   .structure__president::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 180px;
@@ -4962,7 +4892,7 @@ button {
   max-width: 380px;
   padding-left: 2em;
   margin-bottom: 2em;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #fff;
@@ -4981,7 +4911,7 @@ button {
     padding-left: 1em;
   }
   .structure .group--3 > div:first-child::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 2px;
@@ -5022,7 +4952,7 @@ button {
   position: relative;
 }
 .structure .group__line-left::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 20px;
@@ -5042,7 +4972,7 @@ button {
   padding-left: 2em;
 }
 .structure .group__with-lines::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 2px;
@@ -5053,7 +4983,7 @@ button {
   opacity: 0.5;
 }
 .structure .group__with-lines::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 20px;
@@ -5065,7 +4995,7 @@ button {
 }
 @media only screen and (min-width: 1200px) {
   .structure .group .line-up::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 2px;
@@ -5076,7 +5006,7 @@ button {
     opacity: 0.5;
   }
   .structure .group .line-up::before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 222px;
@@ -5095,7 +5025,7 @@ button {
   width: 100%;
 }
 .timestamp::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: -20px;
@@ -5148,19 +5078,14 @@ button {
   }
 }
 .video-banner::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    to top,
-    rgba(7, 16, 34, 0.8),
-    rgba(7, 16, 34, 0.5),
-    rgba(7, 16, 34, 0)
-  );
+  background: linear-gradient(to top, rgba(7, 16, 34, 0.8), rgba(7, 16, 34, 0.5), rgba(7, 16, 34, 0));
   z-index: 1;
   pointer-events: none;
 }
@@ -5541,7 +5466,7 @@ button {
     grid-column: span 7;
   }
   .news-section-grid .fb-cards-slider,
-  .news-section-grid > div {
+.news-section-grid > div {
     grid-column: span 5;
   }
 }
@@ -5553,7 +5478,7 @@ button {
     grid-column: span 8;
   }
   .news-section-grid .fb-cards-slider,
-  .news-section-grid > div {
+.news-section-grid > div {
     grid-column: span 4;
   }
 }
@@ -5631,16 +5556,14 @@ button {
 .section-link {
   position: relative;
 }
-.section-link:hover,
-.section-link:focus {
+.section-link:hover, .section-link:focus {
   outline: none;
 }
-.section-link:hover::after,
-.section-link:focus::after {
+.section-link:hover::after, .section-link:focus::after {
   background-color: #c81717;
 }
 .section-link::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -5698,7 +5621,7 @@ button {
   overflow: hidden;
 }
 .orbeliani-palace figure::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to left, rgba(201, 24, 24, 0.7), rgba(201, 24, 24, 0.7));
@@ -5894,7 +5817,7 @@ p.lead {
   }
 }
 .about-georgia__main-img figcaption::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -21px;
   left: 0;
@@ -5920,7 +5843,7 @@ p.lead {
   }
 }
 .about-georgia__main-img--right figcaption::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -21px;
   left: 0;
@@ -6013,7 +5936,7 @@ p.lead {
   }
 }
 .bio h1 {
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 26px;
   font-weight: 700;
   color: #1a1a1a;
@@ -6035,7 +5958,7 @@ p.lead {
   position: relative;
   display: inline-block;
   padding: 6px 12px;
-  font-family: 'GL Tatishvili Metal', sans-serif;
+  font-family: "GL Tatishvili Metal", sans-serif;
   font-size: 21px;
   font-weight: 700;
   color: #fff;
@@ -6049,7 +5972,7 @@ p.lead {
   }
 }
 .bio .section-title-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: -5px;
@@ -6134,7 +6057,7 @@ p.lead {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../images/banner-calendar-02.jpg');
+  background: url("../images/banner-calendar-02.jpg");
 }
 @media only screen and (min-width: 768px) {
   .medals-banner {
@@ -6170,7 +6093,7 @@ p.lead {
 
 .standard h2 {
   margin-bottom: 48px;
-  font-family: 'BPG Nino Mtavruli', sans-serif;
+  font-family: "BPG Nino Mtavruli", sans-serif;
   font-size: 26px;
   font-weight: 700;
   color: #000;
@@ -6195,7 +6118,7 @@ p.lead {
 .dated time,
 .dated .date {
   min-width: 122px;
-  font-family: 'Noto Sans Georgian AG', sans-serif;
+  font-family: "Noto Sans Georgian AG", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #1a1a1a;

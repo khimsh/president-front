@@ -116,6 +116,10 @@
     .timestamp::before {
       width: calc(100% + 5px);
     }
+
+    .address-card__title {
+      max-height: 500px;
+    }
   }
 
   &__wrapper {
@@ -134,7 +138,7 @@
       @include m.pseudo($width: 100%, $height: 100%);
       top: 0;
       left: 0;
-      background: linear-gradient(to bottom, #071021, rgba(7, 16, 34, 0));
+      background: linear-gradient(to top, #071021, rgba(7, 16, 34, 0));
       transition: all 0.2s linear;
       pointer-events: none;
     }
@@ -147,9 +151,12 @@
 
   &__title {
     position: absolute;
-    top: 0;
     left: 0;
-    padding: 32px;
+    bottom: 40px;
+    padding: 0 32px;
+    max-height: 76px;
+    overflow-y: hidden;
+    transition: all 0.4s ease-in-out;
   }
 }
 
