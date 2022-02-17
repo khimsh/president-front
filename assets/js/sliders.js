@@ -91,7 +91,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 992,
@@ -109,6 +109,14 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+
+  $('.hero__slider').on('afterChange', function () {
+    $('.hero__line').removeClass('animate');
+
+    setTimeout(() => {
+      $('.hero__line').addClass('animate');
+    }, 50);
   });
 
   $('.foreign-press-slider').slick({
