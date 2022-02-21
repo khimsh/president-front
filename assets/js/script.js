@@ -665,3 +665,72 @@ if (document.querySelector('[data-publications-modal]')) {
     modal.classList.remove('shown');
   });
 }
+
+// გალერეის სურათები fullscreen
+if (document.querySelector('[data-fullscreen-image]')) {
+  const lightboxes = document.querySelectorAll('.gallery-item');
+
+  lightboxes.forEach((lightbox) => {
+    if (!lightbox.querySelector('[data-fullscreen-image]')) return;
+
+    lightbox
+      .querySelector('[data-fullscreen-image]')
+      .addEventListener('click', (e) => {
+        let imgSrc = lightbox.querySelector('img').src;
+        openModal(imgSrc);
+      });
+  });
+
+  function openModal(src) {
+    document.body.appendChild(createImageModal(src));
+  }
+
+  function createImageModal(imgSrc, imgAlt = '') {
+    // Create DOM elements
+    const modalElement = document.createElement('div');
+    modalElement.className = 'lightbox-modal';
+
+    const figure = document.createElement('figure');
+    const img = document.createElement('img');
+
+    // Set img and figcaption attributes
+    img.src = imgSrc;
+
+    // Append elements to parent modalElement
+    figure.appendChild(img);
+
+    // Create & append figcaption if the image alt text is not empty
+    if (imgAlt != '') {
+      const figcaption = document.createElement('figcaption');
+      img.alt = imgAlt;
+      figcaption.innerText = imgAlt;
+      figure.appendChild(figcaption);
+    }
+
+    modalElement.appendChild(figure);
+
+    // Button element to close modal on click
+    const closeBtn = document.createElement('button');
+    closeBtn.innerHTML = `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 8 8"
+    >
+      <path
+        d="M16.783,9.64l-2.5,2.5-2.5-2.5-1.5,1.5,2.5,2.5-2.5,2.5,1.5,1.5,2.5-2.5,2.5,2.5,1.5-1.5-2.5-2.5,2.5-2.5Z"
+        transform="translate(-10.283 -9.64)"
+      />
+    </svg>
+  `;
+
+    modalElement.appendChild(closeBtn);
+
+    closeBtn.addEventListener('click', () => {
+      document.body.removeChild(modalElement);
+    });
+
+    return modalElement;
+  }
+}
